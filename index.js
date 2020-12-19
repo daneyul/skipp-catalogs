@@ -182,3 +182,117 @@ baseCabColor3.addEventListener('click', function () {
     baseCabImg2.style.display = 'none';
     baseCabText2.style.display = 'none';
 })
+
+//cabinet hardware section
+cabBarImg = document.querySelector('#cab-bar-img');
+cabLatchImg = document.querySelector('#cab-latch-img');
+cabKnobImg = document.querySelector('#cab-knob-img');
+cabCupImg = document.querySelector('#cab-cup-img');
+cabEdgeImg = document.querySelector('#cab-edge-img');
+
+cabBarBtn = document.querySelector('#cab-bar-btn');
+cabLatchBtn = document.querySelector('#cab-latch-btn');
+cabKnobBtn = document.querySelector('#cab-knob-btn');
+cabCupBtn = document.querySelector('#cab-cup-btn');
+cabEdgeBtn = document.querySelector('#cab-edge-btn');
+
+
+cabBarBtn.addEventListener('click', function () {
+    cabBarImg.style.display = 'inline-block';
+    cabBarBtn.style.opacity = 1;
+    cabLatchBtn.style.opacity = 0.4;
+    cabKnobBtn.style.opacity = 0.4;
+    cabCupBtn.style.opacity = 0.4;
+    cabEdgeBtn.style.opacity = 0.4;
+    cabLatchImg.style.display = 'none';
+    cabKnobImg.style.display = 'none';
+    cabCupImg.style.display = 'none';
+    cabEdgeImg.style.display = 'none';
+
+})
+cabLatchBtn.addEventListener('click', function () {
+    cabLatchImg.style.display = 'inline-block';
+    cabLatchBtn.style.opacity = 1;
+    cabBarBtn.style.opacity = 0.4;
+    cabKnobBtn.style.opacity = 0.4;
+    cabCupBtn.style.opacity = 0.4;
+    cabEdgeBtn.style.opacity = 0.4;
+    cabBarImg.style.display = 'none';
+    cabKnobImg.style.display = 'none';
+    cabCupImg.style.display = 'none';
+    cabEdgeImg.style.display = 'none';
+
+})
+cabKnobBtn.addEventListener('click', function () {
+    cabKnobImg.style.display = 'inline-block';
+    cabKnobBtn.style.opacity = 1;
+    cabBarBtn.style.opacity = 0.4;
+    cabLatchBtn.style.opacity = 0.4;
+    cabCupBtn.style.opacity = 0.4;
+    cabEdgeBtn.style.opacity = 0.4;
+    cabBarImg.style.display = 'none';
+    cabLatchImg.style.display = 'none';
+    cabCupImg.style.display = 'none';
+    cabEdgeImg.style.display = 'none';
+
+})
+cabCupBtn.addEventListener('click', function () {
+    cabCupImg.style.display = 'inline-block';
+    cabCupBtn.style.opacity = 1;
+    cabBarBtn.style.opacity = 0.4;
+    cabLatchBtn.style.opacity = 0.4;
+    cabKnobBtn.style.opacity = 0.4;
+    cabEdgeBtn.style.opacity = 0.4;
+    cabBarImg.style.display = 'none';
+    cabLatchImg.style.display = 'none';
+    cabKnobImg.style.display = 'none';
+    cabEdgeImg.style.display = 'none';
+})
+cabEdgeBtn.addEventListener('click', function () {
+    cabEdgeImg.style.display = 'inline-block';
+    cabEdgeBtn.style.opacity = 1;
+    cabBarBtn.style.opacity = 0.4;
+    cabLatchBtn.style.opacity = 0.4;
+    cabKnobBtn.style.opacity = 0.4;
+    cabCupBtn.style.opacity = 0.4;
+    cabBarImg.style.display = 'none';
+    cabLatchImg.style.display = 'none';
+    cabKnobImg.style.display = 'none';
+    cabCupImg.style.display = 'none';
+})
+
+
+cabImg1 = document.querySelector('#cab-images-1');
+cabImg2 = document.querySelector('#cab-images-2');
+cabImg3 = document.querySelector('#cab-images-3');
+cabColor1 = document.querySelector('#cab-color-1');
+cabColor2 = document.querySelector('#cab-color-2');
+cabColor3 = document.querySelector('#cab-color-3');
+cabText1 = document.querySelector('#cab-text-1');
+cabText2 = document.querySelector('#cab-text-2');
+cabText3 = document.querySelector('#cab-text-3');
+
+cabColor1.addEventListener('click', function () {
+    cabImg1.style.display = 'grid';
+    cabText1.style.display = 'inline-block';
+    cabImg2.style.display = 'none';
+    cabText2.style.display = 'none';
+    cabImg3.style.display = 'none';
+    cabText3.style.display = 'none';
+})
+cabColor2.addEventListener('click', function () {
+    cabImg2.style.display = 'grid';
+    cabText2.style.display = 'inline-block';
+    cabImg1.style.display = 'none';
+    cabText1.style.display = 'none';
+    cabImg3.style.display = 'none';
+    cabText3.style.display = 'none';
+})
+cabColor3.addEventListener('click', function () {
+    cabImg3.style.display = 'grid';
+    cabText3.style.display = 'inline-block';
+    cabImg1.style.display = 'none';
+    cabText1.style.display = 'none';
+    cabImg2.style.display = 'none';
+    cabText2.style.display = 'none';
+})
