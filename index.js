@@ -296,3 +296,105 @@ cabColor3.addEventListener('click', function () {
     cabImg2.style.display = 'none';
     cabText2.style.display = 'none';
 })
+
+// surfaces section
+srfImg11 = document.querySelector('#srf-image-1-1');
+srfImg12 = document.querySelector('#srf-image-1-2');
+srfImg13 = document.querySelector('#srf-image-1-3');
+srfImg21 = document.querySelector('#srf-image-2-1');
+srfImg22 = document.querySelector('#srf-image-2-2');
+srfImg23 = document.querySelector('#srf-image-2-3');
+srfImg31 = document.querySelector('#srf-image-3-1');
+srfImg32 = document.querySelector('#srf-image-3-2');
+srfImg33 = document.querySelector('#srf-image-3-3');
+srfThumb11 = document.querySelector('#srf-thumb-1-1');
+srfThumb12 = document.querySelector('#srf-thumb-1-2');
+srfThumb13 = document.querySelector('#srf-thumb-1-3');
+srfThumb21 = document.querySelector('#srf-thumb-2-1');
+srfThumb22 = document.querySelector('#srf-thumb-2-2');
+srfThumb23 = document.querySelector('#srf-thumb-2-3');
+srfThumb31 = document.querySelector('#srf-thumb-3-1');
+srfThumb32 = document.querySelector('#srf-thumb-3-2');
+srfThumb33 = document.querySelector('#srf-thumb-3-3');
+srfText11 = document.querySelector('#srf-text-1-1');
+srfText12 = document.querySelector('#srf-text-1-2');
+srfText13 = document.querySelector('#srf-text-1-3');
+srfText21 = document.querySelector('#srf-text-2-1');
+srfText22 = document.querySelector('#srf-text-2-2');
+srfText23 = document.querySelector('#srf-text-2-3');
+srfText31 = document.querySelector('#srf-text-3-1');
+srfText32 = document.querySelector('#srf-text-3-2');
+srfText33 = document.querySelector('#srf-text-3-3');
+
+srfThumb11.addEventListener('click', function () {
+    srfImg11.style.display = 'inline-block';
+    srfText11.style.display = 'inline-block';
+    srfImg12.style.display = 'none';
+    srfText12.style.display = 'none';
+    srfImg13.style.display = 'none';
+    srfText13.style.display = 'none';
+})
+srfThumb12.addEventListener('click', function () {
+    srfImg12.style.display = 'inline-block';
+    srfText12.style.display = 'inline-block';
+    srfImg11.style.display = 'none';
+    srfText11.style.display = 'none';
+    srfImg13.style.display = 'none';
+    srfText13.style.display = 'none';
+})
+srfThumb13.addEventListener('click', function () {
+    srfImg13.style.display = 'inline-block';
+    srfText13.style.display = 'inline-block';
+    srfImg11.style.display = 'none';
+    srfText11.style.display = 'none';
+    srfImg12.style.display = 'none';
+    srfText12.style.display = 'none';
+})
+srfThumb21.addEventListener('click', function () {
+    srfImg21.style.display = 'inline-block';
+    srfText21.style.display = 'inline-block';
+    srfImg22.style.display = 'none';
+    srfText22.style.display = 'none';
+    srfImg23.style.display = 'none';
+    srfText23.style.display = 'none';
+})
+srfThumb22.addEventListener('click', function () {
+    srfImg22.style.display = 'inline-block';
+    srfText22.style.display = 'inline-block';
+    srfImg21.style.display = 'none';
+    srfText21.style.display = 'none';
+    srfImg23.style.display = 'none';
+    srfText23.style.display = 'none';
+})
+srfThumb23.addEventListener('click', function () {
+    srfImg23.style.display = 'inline-block';
+    srfText23.style.display = 'inline-block';
+    srfImg21.style.display = 'none';
+    srfText21.style.display = 'none';
+    srfImg22.style.display = 'none';
+    srfText22.style.display = 'none';
+})
+srfThumb31.addEventListener('click', function () {
+    srfImg31.style.display = 'inline-block';
+    srfText31.style.display = 'inline-block';
+    srfImg32.style.display = 'none';
+    srfText32.style.display = 'none';
+    srfImg33.style.display = 'none';
+    srfText33.style.display = 'none';
+})
+srfThumb32.addEventListener('click', function () {
+    srfImg32.style.display = 'inline-block';
+    srfText32.style.display = 'inline-block';
+    srfImg31.style.display = 'none';
+    srfText31.style.display = 'none';
+    srfImg33.style.display = 'none';
+    srfText33.style.display = 'none';
+})
+srfThumb33.addEventListener('click', function () {
+    srfImg33.style.display = 'inline-block';
+    srfText33.style.display = 'inline-block';
+    srfImg31.style.display = 'none';
+    srfText31.style.display = 'none';
+    srfImg32.style.display = 'none';
+    srfText32.style.display = 'none';
+})
