@@ -10,6 +10,19 @@ let saveData = {
     flooring: '',
 }
 
+//save button
+saveButton = document.querySelector('#save-button');
+
+saveButton.addEventListener('click', function() {
+    let url = new URL('google.com');
+    url.searchParams.set('userId', saveData.userId.toString());
+    url.searchParams.set('cabinetry', saveData.cabinetry.toString());
+    url.searchParams.set('cabinethw', saveData.cabinetHw.toString());
+    url.searchParams.set('countertop', saveData.countertop.toString());
+    url.searchParams.set('backsplash', saveData.backsplash.toString());
+    url.searchParams.set('flooring', saveData.flooring.toString());
+    location.href = url;
+})
 
 //cabinetry section
 cabinetryImg1 = document.querySelector('#cabinetry-images-1');
