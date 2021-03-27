@@ -11,7 +11,7 @@ cabinetryText2 = document.querySelector('#cabinetry-text-2');
 cabinetryText3 = document.querySelector('#cabinetry-text-3');
 
 cabinetryColor1.addEventListener('click', function () {
-    cabinetryImg1.style.display = 'grid';
+    cabinetryImg1.style.display = 'block';
     cabinetryText1.style.display = 'inline-block';
     cabinetryImg2.style.display = 'none';
     cabinetryText2.style.display = 'none';
@@ -19,7 +19,7 @@ cabinetryColor1.addEventListener('click', function () {
     cabinetryText3.style.display = 'none';
 })
 cabinetryColor2.addEventListener('click', function () {
-    cabinetryImg2.style.display = 'grid';
+    cabinetryImg2.style.display = 'block';
     cabinetryText2.style.display = 'inline-block';
     cabinetryImg1.style.display = 'none';
     cabinetryText1.style.display = 'none';
@@ -27,7 +27,7 @@ cabinetryColor2.addEventListener('click', function () {
     cabinetryText3.style.display = 'none';
 })
 cabinetryColor3.addEventListener('click', function () {
-    cabinetryImg3.style.display = 'grid';
+    cabinetryImg3.style.display = 'block';
     cabinetryText3.style.display = 'inline-block';
     cabinetryImg1.style.display = 'none';
     cabinetryText1.style.display = 'none';
@@ -47,7 +47,7 @@ cabinethwText2 = document.querySelector('#cabinet-hw-text-2');
 cabinethwText3 = document.querySelector('#cabinet-hw-text-3');
 
 cabinethwColor1.addEventListener('click', function () {
-    cabinethwImg1.style.display = 'grid';
+    cabinethwImg1.style.display = 'block';
     cabinethwText1.style.display = 'inline-block';
     cabinethwImg2.style.display = 'none';
     cabinethwText2.style.display = 'none';
@@ -55,7 +55,7 @@ cabinethwColor1.addEventListener('click', function () {
     cabinethwText3.style.display = 'none';
 })
 cabinethwColor2.addEventListener('click', function () {
-    cabinethwImg2.style.display = 'grid';
+    cabinethwImg2.style.display = 'block';
     cabinethwText2.style.display = 'inline-block';
     cabinethwImg1.style.display = 'none';
     cabinethwText1.style.display = 'none';
@@ -63,7 +63,7 @@ cabinethwColor2.addEventListener('click', function () {
     cabinethwText3.style.display = 'none';
 })
 cabinethwColor3.addEventListener('click', function () {
-    cabinethwImg3.style.display = 'grid';
+    cabinethwImg3.style.display = 'block';
     cabinethwText3.style.display = 'inline-block';
     cabinethwImg1.style.display = 'none';
     cabinethwText1.style.display = 'none';
@@ -83,7 +83,7 @@ countertopText2 = document.querySelector('#countertop-text-2');
 countertopText3 = document.querySelector('#countertop-text-3');
 
 countertopColor1.addEventListener('click', function () {
-    countertopImg1.style.display = 'grid';
+    countertopImg1.style.display = 'block';
     countertopText1.style.display = 'inline-block';
     countertopImg2.style.display = 'none';
     countertopText2.style.display = 'none';
@@ -91,7 +91,7 @@ countertopColor1.addEventListener('click', function () {
     countertopText3.style.display = 'none';
 })
 countertopColor2.addEventListener('click', function () {
-    countertopImg2.style.display = 'grid';
+    countertopImg2.style.display = 'block';
     countertopText2.style.display = 'inline-block';
     countertopImg1.style.display = 'none';
     countertopText1.style.display = 'none';
@@ -99,7 +99,7 @@ countertopColor2.addEventListener('click', function () {
     countertopText3.style.display = 'none';
 })
 countertopColor3.addEventListener('click', function () {
-    countertopImg3.style.display = 'grid';
+    countertopImg3.style.display = 'block';
     countertopText3.style.display = 'inline-block';
     countertopImg1.style.display = 'none';
     countertopText1.style.display = 'none';
@@ -119,7 +119,7 @@ backsplashText2 = document.querySelector('#backsplash-text-2');
 backsplashText3 = document.querySelector('#backsplash-text-3');
 
 backsplashColor1.addEventListener('click', function () {
-    backsplashImg1.style.display = 'grid';
+    backsplashImg1.style.display = 'block';
     backsplashText1.style.display = 'inline-block';
     backsplashImg2.style.display = 'none';
     backsplashText2.style.display = 'none';
@@ -127,7 +127,7 @@ backsplashColor1.addEventListener('click', function () {
     backsplashText3.style.display = 'none';
 })
 backsplashColor2.addEventListener('click', function () {
-    backsplashImg2.style.display = 'grid';
+    backsplashImg2.style.display = 'block';
     backsplashText2.style.display = 'inline-block';
     backsplashImg1.style.display = 'none';
     backsplashText1.style.display = 'none';
@@ -135,7 +135,7 @@ backsplashColor2.addEventListener('click', function () {
     backsplashText3.style.display = 'none';
 })
 backsplashColor3.addEventListener('click', function () {
-    backsplashImg3.style.display = 'grid';
+    backsplashImg3.style.display = 'block';
     backsplashText3.style.display = 'inline-block';
     backsplashImg1.style.display = 'none';
     backsplashText1.style.display = 'none';
@@ -155,7 +155,7 @@ flooringText2 = document.querySelector('#flooring-text-2');
 flooringText3 = document.querySelector('#flooring-text-3');
 
 flooringColor1.addEventListener('click', function () {
-    flooringImg1.style.display = 'grid';
+    flooringImg1.style.display = 'block';
     flooringText1.style.display = 'inline-block';
     flooringImg2.style.display = 'none';
     flooringText2.style.display = 'none';
@@ -163,7 +163,7 @@ flooringColor1.addEventListener('click', function () {
     flooringText3.style.display = 'none';
 })
 flooringColor2.addEventListener('click', function () {
-    flooringImg2.style.display = 'grid';
+    flooringImg2.style.display = 'block';
     flooringText2.style.display = 'inline-block';
     flooringImg1.style.display = 'none';
     flooringText1.style.display = 'none';
@@ -171,7 +171,7 @@ flooringColor2.addEventListener('click', function () {
     flooringText3.style.display = 'none';
 })
 flooringColor3.addEventListener('click', function () {
-    flooringImg3.style.display = 'grid';
+    flooringImg3.style.display = 'block';
     flooringText3.style.display = 'inline-block';
     flooringImg1.style.display = 'none';
     flooringText1.style.display = 'none';
