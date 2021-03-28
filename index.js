@@ -1,6 +1,6 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const user = atob(urlParams.get('userData'));
+const user = urlParams.get('userData');
 let preferenceData = {
     cabinetry: '',
     cabinethw: '',
@@ -13,8 +13,11 @@ let preferenceData = {
 saveButton = document.querySelector('#save-button');
 
 saveButton.addEventListener('click', function() {
-    let baseUrl = 'user-portal-domain.skipp.co?;
-    let userParam = 'userData=' + user
+    let baseUrl = 'user-portal-domain.skipp.co?';
+    let userParam = 'userData=';
+    if (user){
+        userParam += atob(user);
+    }
     let dataParam = 'preferenceData=' + btoa(JSON.stringify(preferenceData));
     location.href = baseUrl + userParam + dataParam;
 })
@@ -46,7 +49,7 @@ cabinetryColor1.addEventListener('click', function () {
     cabinetryColor1.style.border = '5px solid #26cbff';
     cabinetryColor2.style.border = 'none';
     cabinetryColor3.style.border = 'none';
-    saveData.cabinetry = '1';
+    preferenceData.cabinetry = '1';
 })
 cabinetryColor2.addEventListener('click', function () {
     cabinetryImg2.style.display = 'block';
@@ -61,7 +64,7 @@ cabinetryColor2.addEventListener('click', function () {
     cabinetryColor1.style.border = 'none';
     cabinetryColor2.style.border = '5px solid #26cbff';
     cabinetryColor3.style.border = 'none';
-    saveData.cabinetry = '2';
+    preferenceData.cabinetry = '2';
 })
 cabinetryColor3.addEventListener('click', function () {
     cabinetryImg3.style.display = 'block';
@@ -76,7 +79,7 @@ cabinetryColor3.addEventListener('click', function () {
     cabinetryColor1.style.border = 'none';
     cabinetryColor2.style.border = 'none';
     cabinetryColor3.style.border = '5px solid #26cbff';
-    saveData.cabinetry = '3';
+    preferenceData.cabinetry = '3';
 })
 
 //cabinet hardware section
@@ -106,7 +109,7 @@ cabinethwColor1.addEventListener('click', function () {
     cabinethwColor1.style.border = '5px solid #26cbff';
     cabinethwColor2.style.border = 'none';
     cabinethwColor3.style.border = 'none';
-    saveData.cabinethw = '1';
+    preferenceData.cabinethw = '1';
 })
 cabinethwColor2.addEventListener('click', function () {
     cabinethwImg2.style.display = 'block';
@@ -121,7 +124,7 @@ cabinethwColor2.addEventListener('click', function () {
     cabinethwColor1.style.border = 'none';
     cabinethwColor2.style.border = '5px solid #26cbff';
     cabinethwColor3.style.border = 'none';
-    saveData.cabinethw = '2';
+    preferenceData.cabinethw = '2';
 })
 cabinethwColor3.addEventListener('click', function () {
     cabinethwImg3.style.display = 'block';
@@ -136,7 +139,7 @@ cabinethwColor3.addEventListener('click', function () {
     cabinethwColor1.style.border = 'none';
     cabinethwColor2.style.border = 'none';
     cabinethwColor3.style.border = '5px solid #26cbff';
-    saveData.cabinethw = '3';
+    preferenceData.cabinethw = '3';
 })
 
 //countertops section
@@ -166,7 +169,7 @@ countertopColor1.addEventListener('click', function () {
     countertopColor1.style.border = '5px solid #26cbff';
     countertopColor2.style.border = 'none';
     countertopColor3.style.border = 'none';
-    saveData.countertop = '1';
+    preferenceData.countertop = '1';
 })
 countertopColor2.addEventListener('click', function () {
     countertopImg2.style.display = 'block';
@@ -181,7 +184,7 @@ countertopColor2.addEventListener('click', function () {
     countertopColor1.style.border = 'none';
     countertopColor2.style.border = '5px solid #26cbff';
     countertopColor3.style.border = 'none';
-    saveData.countertop = '2';
+    preferenceData.countertop = '2';
 })
 countertopColor3.addEventListener('click', function () {
     countertopImg3.style.display = 'block';
@@ -196,7 +199,7 @@ countertopColor3.addEventListener('click', function () {
     countertopColor1.style.border = 'none';
     countertopColor2.style.border = 'none';
     countertopColor3.style.border = '5px solid #26cbff';
-    saveData.countertop = '3';
+    preferenceData.countertop = '3';
 })
 
 //backsplash section
@@ -226,7 +229,7 @@ backsplashColor1.addEventListener('click', function () {
     backsplashColor1.style.border = '5px solid #26cbff';
     backsplashColor2.style.border = 'none';
     backsplashColor3.style.border = 'none';
-    saveData.backsplash = '1';
+    preferenceData.backsplash = '1';
 })
 backsplashColor2.addEventListener('click', function () {
     backsplashImg2.style.display = 'block';
@@ -241,7 +244,7 @@ backsplashColor2.addEventListener('click', function () {
     backsplashColor1.style.border = 'none';
     backsplashColor2.style.border = '5px solid #26cbff';
     backsplashColor3.style.border = 'none';
-    saveData.backsplash = '2';
+    preferenceData.backsplash = '2';
 })
 backsplashColor3.addEventListener('click', function () {
     backsplashImg3.style.display = 'block';
@@ -256,7 +259,7 @@ backsplashColor3.addEventListener('click', function () {
     backsplashColor1.style.border = 'none';
     backsplashColor2.style.border = 'none';
     backsplashColor3.style.border = '5px solid #26cbff';
-    saveData.backsplash = '3';
+    preferenceData.backsplash = '3';
 })
 
 //flooring section
@@ -286,7 +289,7 @@ flooringColor1.addEventListener('click', function () {
     flooringColor1.style.border = '5px solid #26cbff';
     flooringColor2.style.border = 'none';
     flooringColor3.style.border = 'none';
-    saveData.flooring = '1';
+    preferenceData.flooring = '1';
 })
 flooringColor2.addEventListener('click', function () {
     flooringImg2.style.display = 'block';
@@ -301,7 +304,7 @@ flooringColor2.addEventListener('click', function () {
     flooringColor1.style.border = 'none';
     flooringColor2.style.border = '5px solid #26cbff';
     flooringColor3.style.border = 'none';
-    saveData.flooring = '2';
+    preferenceData.flooring = '2';
 })
 flooringColor3.addEventListener('click', function () {
     flooringImg3.style.display = 'block';
@@ -316,6 +319,6 @@ flooringColor3.addEventListener('click', function () {
     flooringColor1.style.border = 'none';
     flooringColor2.style.border = 'none';
     flooringColor3.style.border = '5px solid #26cbff';
-    saveData.flooring = '3';
+    preferenceData.flooring = '3';
 })
 
