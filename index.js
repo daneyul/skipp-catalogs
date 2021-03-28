@@ -13,12 +13,12 @@ let preferenceData = {
 saveButton = document.querySelector('#save-button');
 
 saveButton.addEventListener('click', function() {
-    let baseUrl = 'user-portal-domain.skipp.co?';
+    let baseUrl = 'https://user-portal-domain.skipp.co?';
     let userParam = 'userData=';
     if (user){
-        userParam += atob(user);
+        userParam += user;
     }
-    let dataParam = 'preferenceData=' + btoa(JSON.stringify(preferenceData));
+    let dataParam = '&preferenceData=' + btoa(JSON.stringify(preferenceData));
     location.href = baseUrl + userParam + dataParam;
 })
 
