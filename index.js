@@ -2,9 +2,9 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const user = urlParams.get('userId');
 let saveData = {
-    userId: user,
+    userid: user,
     cabinetry: '',
-    cabinetHw: '',
+    cabinethw: '',
     countertop: '',
     backsplash: '',
     flooring: '',
@@ -14,13 +14,25 @@ let saveData = {
 saveButton = document.querySelector('#save-button');
 
 saveButton.addEventListener('click', function() {
-    let url = new URL('google.com');
-    url.searchParams.set('userId', saveData.userId.toString());
-    url.searchParams.set('cabinetry', saveData.cabinetry.toString());
-    url.searchParams.set('cabinethw', saveData.cabinetHw.toString());
-    url.searchParams.set('countertop', saveData.countertop.toString());
-    url.searchParams.set('backsplash', saveData.backsplash.toString());
-    url.searchParams.set('flooring', saveData.flooring.toString());
+    let url = new URL('https://google.com');
+    if (saveData.userid){
+        url.searchParams.set('userid', saveData.userid.toString());
+    }
+    if (saveData.cabinetry != ''){
+        url.searchParams.set('cabinetry', saveData.cabinetry.toString());
+    }
+    if (saveData.cabinethw != ''){
+        url.searchParams.set('cabinethw', saveData.cabinethw.toString());
+    }
+    if (saveData.countertop != ''){
+        url.searchParams.set('countertop', saveData.countertop.toString());
+    }
+    if (saveData.backsplash != ''){
+        url.searchParams.set('backsplash', saveData.backsplash.toString());
+    }
+    if (saveData.flooring != ''){
+        url.searchParams.set('flooring', saveData.flooring.toString());
+    }
     location.href = url;
 })
 
@@ -111,7 +123,7 @@ cabinethwColor1.addEventListener('click', function () {
     cabinethwColor1.style.border = '5px solid #26cbff';
     cabinethwColor2.style.border = 'none';
     cabinethwColor3.style.border = 'none';
-    saveData.cabinetHw = '1';
+    saveData.cabinethw = '1';
 })
 cabinethwColor2.addEventListener('click', function () {
     cabinethwImg2.style.display = 'block';
@@ -126,7 +138,7 @@ cabinethwColor2.addEventListener('click', function () {
     cabinethwColor1.style.border = 'none';
     cabinethwColor2.style.border = '5px solid #26cbff';
     cabinethwColor3.style.border = 'none';
-    saveData.cabinetHw = '2';
+    saveData.cabinethw = '2';
 })
 cabinethwColor3.addEventListener('click', function () {
     cabinethwImg3.style.display = 'block';
@@ -141,7 +153,7 @@ cabinethwColor3.addEventListener('click', function () {
     cabinethwColor1.style.border = 'none';
     cabinethwColor2.style.border = 'none';
     cabinethwColor3.style.border = '5px solid #26cbff';
-    saveData.cabinetHw = '3';
+    saveData.cabinethw = '3';
 })
 
 //countertops section
