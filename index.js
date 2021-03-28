@@ -1,8 +1,7 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const user = urlParams.get('userId');
-let saveData = {
-    userid: user,
+const user = atob(urlParams.get('userData'));
+let preferenceData = {
     cabinetry: '',
     cabinethw: '',
     countertop: '',
@@ -14,26 +13,10 @@ let saveData = {
 saveButton = document.querySelector('#save-button');
 
 saveButton.addEventListener('click', function() {
-    let url = new URL('https://google.com');
-    if (saveData.userid){
-        url.searchParams.set('userid', saveData.userid.toString());
-    }
-    if (saveData.cabinetry != ''){
-        url.searchParams.set('cabinetry', saveData.cabinetry.toString());
-    }
-    if (saveData.cabinethw != ''){
-        url.searchParams.set('cabinethw', saveData.cabinethw.toString());
-    }
-    if (saveData.countertop != ''){
-        url.searchParams.set('countertop', saveData.countertop.toString());
-    }
-    if (saveData.backsplash != ''){
-        url.searchParams.set('backsplash', saveData.backsplash.toString());
-    }
-    if (saveData.flooring != ''){
-        url.searchParams.set('flooring', saveData.flooring.toString());
-    }
-    location.href = url;
+    let baseUrl = 'user-portal-domain.skipp.co?;
+    let userParam = 'userData=' + user
+    let dataParam = 'preferenceData=' + btoa(JSON.stringify(preferenceData));
+    location.href = baseUrl + userParam + dataParam;
 })
 
 //cabinetry section
