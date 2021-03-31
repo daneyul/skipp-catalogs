@@ -150,7 +150,7 @@ cabinethwColor2.addEventListener('click', function () {
     cabinethwImg1.style.display = 'none';
     cabinethwText1.style.display = 'none';
     cabinethwSel1.style.display = 'none';
-    cabinethwTit2.style.display = 'none';
+    cabinethwTit1.style.display = 'none';
 
     cabinethwImg3.style.display = 'none';
     cabinethwText3.style.display = 'none';
@@ -434,7 +434,7 @@ flooringColor3.addEventListener('click', function () {
     flooringColor1.style.border = 'none';
     flooringColor2.style.border = 'none';
     flooringColor3.style.border = '5px solid #26cbff';
-    
+
     preferenceData.flooring = '3';
 })
 
