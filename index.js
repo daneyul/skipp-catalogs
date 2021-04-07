@@ -12,10 +12,10 @@ let preferenceData = {
 //save button
 saveButton = document.querySelector('#save-button');
 
-saveButton.addEventListener('click', function() {
+saveButton.addEventListener('click', function () {
     let baseUrl = 'https://user-portal-domain.skipp.co?';
     let userParam = 'userData=';
-    if (user){
+    if (user) {
         userParam += user;
     }
     let dataParam = '&preferenceData=' + btoa(JSON.stringify(preferenceData));
@@ -203,7 +203,8 @@ countertopTit1 = document.querySelector('#countertop-title-1');
 countertopTit2 = document.querySelector('#countertop-title-2');
 countertopTit3 = document.querySelector('#countertop-title-3');
 
-countertopColor1.addEventListener('click', function () {
+countertopColor1.addEventListener('click', function (e) {
+    e.preventDefault();
     countertopImg1.style.display = 'block';
     countertopText1.style.display = 'inline-block';
     countertopSel1.style.display = 'block';
@@ -225,7 +226,8 @@ countertopColor1.addEventListener('click', function () {
 
     preferenceData.countertop = '1';
 })
-countertopColor2.addEventListener('click', function () {
+countertopColor2.addEventListener('click', function (e) {
+    e.preventDefault();
     countertopImg2.style.display = 'block';
     countertopText2.style.display = 'inline-block';
     countertopSel2.style.display = 'block';
@@ -247,7 +249,8 @@ countertopColor2.addEventListener('click', function () {
 
     preferenceData.countertop = '2';
 })
-countertopColor3.addEventListener('click', function () {
+countertopColor3.addEventListener('click', function (e) {
+    e.preventDefault();
     countertopImg3.style.display = 'block';
     countertopText3.style.display = 'inline-block';
     countertopSel3.style.display = 'block';
@@ -287,7 +290,8 @@ backsplashTit1 = document.querySelector('#backsplash-title-1');
 backsplashTit2 = document.querySelector('#backsplash-title-2');
 backsplashTit3 = document.querySelector('#backsplash-title-3');
 
-backsplashColor1.addEventListener('click', function () {
+backsplashColor1.addEventListener('click', function (e) {
+    e.preventDefault();
     backsplashImg1.style.display = 'block';
     backsplashText1.style.display = 'inline-block';
     backsplashSel1.style.display = 'block';
@@ -309,7 +313,8 @@ backsplashColor1.addEventListener('click', function () {
 
     preferenceData.backsplash = '1';
 })
-backsplashColor2.addEventListener('click', function () {
+backsplashColor2.addEventListener('click', function (e) {
+    e.preventDefault();
     backsplashImg2.style.display = 'block';
     backsplashText2.style.display = 'inline-block';
     backsplashSel2.style.display = 'block';
@@ -331,7 +336,8 @@ backsplashColor2.addEventListener('click', function () {
 
     preferenceData.backsplash = '2';
 })
-backsplashColor3.addEventListener('click', function () {
+backsplashColor3.addEventListener('click', function (e) {
+    e.preventDefault();
     backsplashImg3.style.display = 'block';
     backsplashText3.style.display = 'inline-block';
     backsplashSel3.style.display = 'block';
@@ -371,7 +377,8 @@ flooringTit1 = document.querySelector('#flooring-title-1');
 flooringTit2 = document.querySelector('#flooring-title-2');
 flooringTit3 = document.querySelector('#flooring-title-3');
 
-flooringColor1.addEventListener('click', function () {
+flooringColor1.addEventListener('click', function (e) {
+    e.preventDefault();
     flooringImg1.style.display = 'block';
     flooringText1.style.display = 'inline-block';
     flooringSel1.style.display = 'block';
@@ -393,7 +400,8 @@ flooringColor1.addEventListener('click', function () {
 
     preferenceData.flooring = '1';
 })
-flooringColor2.addEventListener('click', function () {
+flooringColor2.addEventListener('click', function (e) {
+    e.preventDefault();
     flooringImg2.style.display = 'block';
     flooringText2.style.display = 'inline-block';
     flooringSel2.style.display = 'block';
@@ -415,7 +423,8 @@ flooringColor2.addEventListener('click', function () {
 
     preferenceData.flooring = '2';
 })
-flooringColor3.addEventListener('click', function () {
+flooringColor3.addEventListener('click', function (e) {
+    e.preventDefault();
     flooringImg3.style.display = 'block';
     flooringText3.style.display = 'inline-block';
     flooringSel3.style.display = 'block';
