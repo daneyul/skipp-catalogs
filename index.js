@@ -1,6 +1,7 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const user = urlParams.get('userData');
+const redirect = urlParams.get('redirectUri');
 let preferenceData = {
     cabinetry: '',
     cabinethw: '',
@@ -13,10 +14,14 @@ let preferenceData = {
 saveButton = document.querySelector('#save-button');
 
 saveButton.addEventListener('click', function () {
-    let baseUrl = 'https://user-portal-domain.skipp.co?';
+    let baseUrl = 'https://staging-app.skipp.co?';
     let userParam = 'userData=';
+    let redirectUri = 'redirectUri=';
     if (user) {
         userParam += user;
+    }
+    if (redirect) {
+        redirectUri += decodeURIComponent(redirect);
     }
     let dataParam = '&preferenceData=' + btoa(JSON.stringify(preferenceData));
     location.href = baseUrl + userParam + dataParam;
@@ -39,7 +44,8 @@ cabinetryTit1 = document.querySelector('#cabinetry-title-1');
 cabinetryTit2 = document.querySelector('#cabinetry-title-2');
 cabinetryTit3 = document.querySelector('#cabinetry-title-3');
 
-cabinetryColor1.addEventListener('click', function () {
+cabinetryColor1.addEventListener('click', function (e) {
+    e.preventDefault();
     cabinetryImg1.style.display = 'block';
     cabinetryText1.style.display = 'inline-block';
     cabinetrySel1.style.display = 'block';
@@ -61,7 +67,8 @@ cabinetryColor1.addEventListener('click', function () {
 
     preferenceData.cabinetry = '1';
 })
-cabinetryColor2.addEventListener('click', function () {
+cabinetryColor2.addEventListener('click', function (e) {
+    e.preventDefault();
     cabinetryImg2.style.display = 'block';
     cabinetryText2.style.display = 'inline-block';
     cabinetrySel2.style.display = 'block';
@@ -79,7 +86,8 @@ cabinetryColor2.addEventListener('click', function () {
     cabinetryColor3.style.border = 'none';
     preferenceData.cabinetry = '2';
 })
-cabinetryColor3.addEventListener('click', function () {
+cabinetryColor3.addEventListener('click', function (e) {
+    e.preventDefault();
     cabinetryImg3.style.display = 'block';
     cabinetryText3.style.display = 'inline-block';
     cabinetrySel3.style.display = 'block';
@@ -119,7 +127,8 @@ cabinethwTit1 = document.querySelector('#cabinet-hw-title-1');
 cabinethwTit2 = document.querySelector('#cabinet-hw-title-2');
 cabinethwTit3 = document.querySelector('#cabinet-hw-title-3');
 
-cabinethwColor1.addEventListener('click', function () {
+cabinethwColor1.addEventListener('click', function (e) {
+    e.preventDefault();
     cabinethwImg1.style.display = 'block';
     cabinethwText1.style.display = 'inline-block';
     cabinethwSel1.style.display = 'block';
@@ -141,7 +150,8 @@ cabinethwColor1.addEventListener('click', function () {
 
     preferenceData.cabinethw = '1';
 })
-cabinethwColor2.addEventListener('click', function () {
+cabinethwColor2.addEventListener('click', function (e) {
+    e.preventDefault();
     cabinethwImg2.style.display = 'block';
     cabinethwText2.style.display = 'inline-block';
     cabinethwSel2.style.display = 'block';
@@ -163,7 +173,8 @@ cabinethwColor2.addEventListener('click', function () {
 
     preferenceData.cabinethw = '2';
 })
-cabinethwColor3.addEventListener('click', function () {
+cabinethwColor3.addEventListener('click', function (e) {
+    e.preventDefault();
     cabinethwImg3.style.display = 'block';
     cabinethwText3.style.display = 'inline-block';
     cabinethwSel3.style.display = 'block';
