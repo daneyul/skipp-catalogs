@@ -14,17 +14,16 @@ let preferenceData = {
 saveButton = document.querySelector('#save-button');
 
 saveButton.addEventListener('click', function () {
-    let baseUrl = 'https://staging-app.skipp.co?';
     let userParam = 'userData=';
-    let redirectUri = 'redirectUri=';
+    let redirectUri = '';
     if (user) {
         userParam += user;
     }
     if (redirect) {
-        redirectUri += decodeURIComponent(redirect);
+        redirectUri = decodeURIComponent(redirect);
     }
     let dataParam = '&preferenceData=' + btoa(JSON.stringify(preferenceData));
-    location.href = baseUrl + userParam + dataParam;
+    location.href = 'https://' + redirectUri + "?" + userParam + dataParam;
 })
 
 //cabinetry section
