@@ -3,6 +3,7 @@ const urlParams = new URLSearchParams(queryString);
 const user = urlParams.get('userData');
 const redirect = urlParams.get('redirectUri');
 let preferenceData = {
+    designCatalog: '',
     cabinetry: '',
     cabinethw: '',
     countertop: '',
