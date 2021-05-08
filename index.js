@@ -10,22 +10,6 @@ let preferenceData = {
     flooring: '',
 }
 
-//save button
-saveButton = document.querySelector('#save-button');
-
-saveButton.addEventListener('click', function () {
-    let userParam = 'userData=';
-    let redirectUri = '';
-    if (user) {
-        userParam += user;
-    }
-    if (redirect) {
-        redirectUri = decodeURIComponent(redirect);
-    }
-    let dataParam = '&preferenceData=' + btoa(JSON.stringify(preferenceData));
-    location.href = 'https://' + redirectUri + "?" + userParam + dataParam;
-})
-
 //cabinetry section
 cabinetryImg1 = document.querySelector('#cabinetry-images-1');
 cabinetryImg2 = document.querySelector('#cabinetry-images-2');
@@ -64,7 +48,7 @@ cabinetryColor1.addEventListener('click', function (e) {
     cabinetryColor2.style.border = 'none';
     cabinetryColor3.style.border = 'none';
 
-    preferenceData.cabinetry = '1';
+    preferenceData.cabinetry = cabinetryText1.children[0].innerText;
 })
 cabinetryColor2.addEventListener('click', function (e) {
     e.preventDefault();
@@ -83,7 +67,7 @@ cabinetryColor2.addEventListener('click', function (e) {
     cabinetryColor1.style.border = 'none';
     cabinetryColor2.style.border = '5px solid #26cbff';
     cabinetryColor3.style.border = 'none';
-    preferenceData.cabinetry = '2';
+    preferenceData.cabinetry = cabinetryText2.children[0].innerText;;
 })
 cabinetryColor3.addEventListener('click', function (e) {
     e.preventDefault();
@@ -106,7 +90,7 @@ cabinetryColor3.addEventListener('click', function (e) {
     cabinetryColor2.style.border = 'none';
     cabinetryColor3.style.border = '5px solid #26cbff';
 
-    preferenceData.cabinetry = '3';
+    preferenceData.cabinetry = cabinetryText3.children[0].innerText;;
 })
 
 //cabinet hardware section
@@ -147,7 +131,7 @@ cabinethwColor1.addEventListener('click', function (e) {
     cabinethwColor2.style.border = 'none';
     cabinethwColor3.style.border = 'none';
 
-    preferenceData.cabinethw = '1';
+    preferenceData.cabinethw = cabinethwText1.children[0].innerText;
 })
 cabinethwColor2.addEventListener('click', function (e) {
     e.preventDefault();
@@ -170,7 +154,7 @@ cabinethwColor2.addEventListener('click', function (e) {
     cabinethwColor2.style.border = '5px solid #26cbff';
     cabinethwColor3.style.border = 'none';
 
-    preferenceData.cabinethw = '2';
+    preferenceData.cabinethw = cabinethwText2.children[0].innerText;
 })
 cabinethwColor3.addEventListener('click', function (e) {
     e.preventDefault();
@@ -193,7 +177,7 @@ cabinethwColor3.addEventListener('click', function (e) {
     cabinethwColor2.style.border = 'none';
     cabinethwColor3.style.border = '5px solid #26cbff';
 
-    preferenceData.cabinethw = '3';
+    preferenceData.cabinethw = cabinethwText3.children[0].innerText;
 })
 
 //countertops section
@@ -234,7 +218,7 @@ countertopColor1.addEventListener('click', function (e) {
     countertopColor2.style.border = 'none';
     countertopColor3.style.border = 'none';
 
-    preferenceData.countertop = '1';
+    preferenceData.countertop = countertopText1.children[0].innerText;
 })
 countertopColor2.addEventListener('click', function (e) {
     e.preventDefault();
@@ -257,7 +241,7 @@ countertopColor2.addEventListener('click', function (e) {
     countertopColor2.style.border = '5px solid #26cbff';
     countertopColor3.style.border = 'none';
 
-    preferenceData.countertop = '2';
+    preferenceData.countertop = countertopText2.children[0].innerText;
 })
 countertopColor3.addEventListener('click', function (e) {
     e.preventDefault();
@@ -280,7 +264,7 @@ countertopColor3.addEventListener('click', function (e) {
     countertopColor2.style.border = 'none';
     countertopColor3.style.border = '5px solid #26cbff';
 
-    preferenceData.countertop = '3';
+    preferenceData.countertop = countertopText3.children[0].innerText;
 })
 
 //backsplash section
@@ -321,7 +305,7 @@ backsplashColor1.addEventListener('click', function (e) {
     backsplashColor2.style.border = 'none';
     backsplashColor3.style.border = 'none';
 
-    preferenceData.backsplash = '1';
+    preferenceData.backsplash = backsplashText1.children[0].innerText;
 })
 backsplashColor2.addEventListener('click', function (e) {
     e.preventDefault();
@@ -344,7 +328,7 @@ backsplashColor2.addEventListener('click', function (e) {
     backsplashColor2.style.border = '5px solid #26cbff';
     backsplashColor3.style.border = 'none';
 
-    preferenceData.backsplash = '2';
+    preferenceData.backsplash = backsplashText2.children[0].innerText;
 })
 backsplashColor3.addEventListener('click', function (e) {
     e.preventDefault();
@@ -367,7 +351,7 @@ backsplashColor3.addEventListener('click', function (e) {
     backsplashColor2.style.border = 'none';
     backsplashColor3.style.border = '5px solid #26cbff';
 
-    preferenceData.backsplash = '3';
+    preferenceData.backsplash = backsplashText3.children[0].innerText;
 })
 
 //flooring section
@@ -408,7 +392,7 @@ flooringColor1.addEventListener('click', function (e) {
     flooringColor2.style.border = 'none';
     flooringColor3.style.border = 'none';
 
-    preferenceData.flooring = '1';
+    preferenceData.flooring = flooringText1.children[0].innerText;
 })
 flooringColor2.addEventListener('click', function (e) {
     e.preventDefault();
@@ -431,7 +415,7 @@ flooringColor2.addEventListener('click', function (e) {
     flooringColor2.style.border = '5px solid #26cbff';
     flooringColor3.style.border = 'none';
 
-    preferenceData.flooring = '2';
+    preferenceData.flooring = flooringText2.children[0].innerText;
 })
 flooringColor3.addEventListener('click', function (e) {
     e.preventDefault();
@@ -454,6 +438,6 @@ flooringColor3.addEventListener('click', function (e) {
     flooringColor2.style.border = 'none';
     flooringColor3.style.border = '5px solid #26cbff';
 
-    preferenceData.flooring = '3';
+    preferenceData.flooring = flooringText3.children[0].innerText;
 })
 
