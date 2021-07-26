@@ -9,6 +9,8 @@ let preferenceData = {
     countertop: '',
     backsplash: '',
     flooring: '',
+    doorOpt: '',
+    finishOpt: ''
 }
 
 let imgList = {
@@ -35,14 +37,40 @@ cabinetryTit2 = document.querySelector('#cabinetry-title-2');
 cabinetryTit3 = document.querySelector('#cabinetry-title-3');
 
 cabinetryDoor1 = document.querySelector('#cabinetry-door-1');
-cabinetryDoor2= document.querySelector('#cabinetry-door-2');
+cabinetryDoor2 = document.querySelector('#cabinetry-door-2');
 cabinetryDoor3 = document.querySelector('#cabinetry-door-3');
+
+doorOpt1 = document.querySelector('#door-shaker');
+doorOpt2 = document.querySelector('#door-slab');
+doorOpt3 = document.querySelector('#door-quarterline');
 
 cabinetryBtn = document.querySelector('#cabinetry-add-btn');
 
 cabinetryBtn.addEventListener('click', function (e) {
     e.preventDefault();
     cabinetrySel.img.src = imgList.cabinetry;
+})
+
+doorOpt1.addEventListener('click', function(e){
+    e.preventDefault();
+    doorOpt1.classList.add('door-opt-btn-pressed');
+    doorOp2.classList.remove('door-opt-btn-pressed');
+    doorOp3.classList.remove('door-opt-btn-pressed');
+    preferenceData.doorOpt = 'shaker';
+})
+doorOpt2.addEventListener('click', function(e){
+    e.preventDefault();
+    doorOpt2.classList.add('door-opt-btn-pressed');
+    doorOp1.classList.remove('door-opt-btn-pressed');
+    doorOp3.classList.remove('door-opt-btn-pressed');
+    preferenceData.doorOpt = 'slab';
+})
+doorOpt3.addEventListener('click', function(e){
+    e.preventDefault();
+    doorOpt3.classList.add('door-opt-btn-pressed');
+    doorOp2.classList.remove('door-opt-btn-pressed');
+    doorOp1.classList.remove('door-opt-btn-pressed');
+    preferenceData.doorOpt = 'quarterline';
 })
 
 cabinetryColor1.addEventListener('click', function (e) {
@@ -124,11 +152,37 @@ cabinethwTit1 = document.querySelector('#cabinet-hw-title-1');
 cabinethwTit2 = document.querySelector('#cabinet-hw-title-2');
 cabinethwTit3 = document.querySelector('#cabinet-hw-title-3');
 
+finishOpt1 = document.querySelector('#finish-bronze');
+finishOpt2 = document.querySelector('#finish-brass');
+finishOpt3 = document.querySelector('#finish-black');
+
 cabinethwBtn = document.querySelector('#cabinet-hw-add-btn');
 
 cabinethwBtn.addEventListener('click', function (e) {
     e.preventDefault();
     cabinethwSel.img.src = imgList.cabinethw;
+})
+
+floorOpt1.addEventListener('click', function(e){
+    e.preventDefault();
+    floorOpt1.classList.add('door-opt-btn-pressed');
+    floorOp2.classList.remove('door-opt-btn-pressed');
+    floorOp3.classList.remove('door-opt-btn-pressed');
+    preferenceData.floorOpt = 'bronze';
+})
+floorOpt2.addEventListener('click', function(e){
+    e.preventDefault();
+    floorOpt2.classList.add('door-opt-btn-pressed');
+    floorOp1.classList.remove('door-opt-btn-pressed');
+    floorOp3.classList.remove('door-opt-btn-pressed');
+    preferenceData.floorOpt = 'brass';
+})
+floorOpt3.addEventListener('click', function(e){
+    e.preventDefault();
+    floorOpt3.classList.add('door-opt-btn-pressed');
+    floorOp2.classList.remove('door-opt-btn-pressed');
+    floorOp1.classList.remove('door-opt-btn-pressed');
+    preferenceData.floorOpt = 'black';
 })
 
 cabinethwColor1.addEventListener('click', function (e) {
