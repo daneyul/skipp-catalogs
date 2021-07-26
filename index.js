@@ -54,22 +54,22 @@ cabinetryBtn.addEventListener('click', function (e) {
 doorOpt1.addEventListener('click', function(e){
     e.preventDefault();
     doorOpt1.classList.add('door-opt-btn-pressed');
-    doorOp2.classList.remove('door-opt-btn-pressed');
-    doorOp3.classList.remove('door-opt-btn-pressed');
+    doorOpt2.classList.remove('door-opt-btn-pressed');
+    doorOpt3.classList.remove('door-opt-btn-pressed');
     preferenceData.doorOpt = 'shaker';
 })
 doorOpt2.addEventListener('click', function(e){
     e.preventDefault();
     doorOpt2.classList.add('door-opt-btn-pressed');
-    doorOp1.classList.remove('door-opt-btn-pressed');
-    doorOp3.classList.remove('door-opt-btn-pressed');
+    doorOpt1.classList.remove('door-opt-btn-pressed');
+    doorOpt3.classList.remove('door-opt-btn-pressed');
     preferenceData.doorOpt = 'slab';
 })
 doorOpt3.addEventListener('click', function(e){
     e.preventDefault();
     doorOpt3.classList.add('door-opt-btn-pressed');
-    doorOp2.classList.remove('door-opt-btn-pressed');
-    doorOp1.classList.remove('door-opt-btn-pressed');
+    doorOpt2.classList.remove('door-opt-btn-pressed');
+    doorOpt1.classList.remove('door-opt-btn-pressed');
     preferenceData.doorOpt = 'quarterline';
 })
 
@@ -163,26 +163,26 @@ cabinethwBtn.addEventListener('click', function (e) {
     cabinethwSel.img.src = imgList.cabinethw;
 })
 
-floorOpt1.addEventListener('click', function(e){
+finishOpt1.addEventListener('click', function(e){
     e.preventDefault();
-    floorOpt1.classList.add('door-opt-btn-pressed');
-    floorOp2.classList.remove('door-opt-btn-pressed');
-    floorOp3.classList.remove('door-opt-btn-pressed');
-    preferenceData.floorOpt = 'bronze';
+    finishOpt1.classList.add('door-opt-btn-pressed');
+    finishOpt2.classList.remove('door-opt-btn-pressed');
+    finishOpt3.classList.remove('door-opt-btn-pressed');
+    preferenceData.finishOpt = 'bronze';
 })
-floorOpt2.addEventListener('click', function(e){
+finishOpt2.addEventListener('click', function(e){
     e.preventDefault();
-    floorOpt2.classList.add('door-opt-btn-pressed');
-    floorOp1.classList.remove('door-opt-btn-pressed');
-    floorOp3.classList.remove('door-opt-btn-pressed');
-    preferenceData.floorOpt = 'brass';
+    finishOpt2.classList.add('door-opt-btn-pressed');
+    finishOpt1.classList.remove('door-opt-btn-pressed');
+    finishOpt3.classList.remove('door-opt-btn-pressed');
+    preferenceData.finishOpt = 'brass';
 })
-floorOpt3.addEventListener('click', function(e){
+finishOpt3.addEventListener('click', function(e){
     e.preventDefault();
-    floorOpt3.classList.add('door-opt-btn-pressed');
-    floorOp2.classList.remove('door-opt-btn-pressed');
-    floorOp1.classList.remove('door-opt-btn-pressed');
-    preferenceData.floorOpt = 'black';
+    finishOpt3.classList.add('door-opt-btn-pressed');
+    finishOpt2.classList.remove('door-opt-btn-pressed');
+    finishOpt1.classList.remove('door-opt-btn-pressed');
+    preferenceData.finishOpt = 'black';
 })
 
 cabinethwColor1.addEventListener('click', function (e) {
