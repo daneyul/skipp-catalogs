@@ -474,3 +474,26 @@ flooringColor3.addEventListener('click', function (e) {
     imgList.flooring = flooringImg3.children[0].src;
 })
 
+let saveButton1 = document.querySelector('#save-button-1');
+let saveButton2 = document.querySelector('#save-button-2');
+let modal = document.querySelector('#modal');
+
+document.body.addEventListener('change', function () {
+	if (cabinetrySelected && cabinethwSelected && countertopSelected && backsplashSelectedd && flooringSelected && finishSelected) {
+  	saveButton1.classList.add('save-pref-clicked');
+    saveButton2.classList.add('save-pref2-clicked');
+  }
+})
+
+
+savebutton1.addEventListener('click', function () {
+    if (!!(cabinetrySelected && cabinethwSelected && countertopSelected && backsplashSelectedd && flooringSelected && finishSelected)) {
+        modal.style.display = 'block';
+  }
+});
+
+savebutton2.addEventListener('click', function () {
+    if (!!(cabinetrySelected && cabinethwSelected && countertopSelected && backsplashSelectedd && flooringSelected && finishSelected)) {
+	    modal.style.display = 'block';
+  }
+});
