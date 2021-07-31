@@ -10,16 +10,25 @@ let preferenceData = {
     backsplash: '',
     flooring: '',
     doorOpt: '',
-    finishOpt: ''
+    finishOpt: '',
+    supplier: '',
 }
 
 let imgList = {
-    cabinetry: '',
-    cabinethw: '',
-    countertop: '',
-    backsplash: '',
-    flooring: '',
+    cabinetry: document.querySelector('#cabinetry-images-1').children[0].src,
+    cabinethw: document.querySelector('#cabinet-hw-images-1').children[0].src,
+    countertop: document.querySelector('#countertop-images-1').children[0].src,
+    backsplash: document.querySelector('#backsplash-images-1').children[0].src,
+    flooring: document.querySelector('#flooring-images-1').children[0].src,
+    supplier: '',
 }
+
+let cabinetrySelected = false;
+let cabinethwSelected = false;
+let countertopSelected = false;
+let backsplashSelected = false;
+let flooringSelected = false;
+let finishSelected = false;
 
 //cabinetry section
 cabinetryImg1 = document.querySelector('#cabinetry-images-1');
@@ -32,6 +41,7 @@ cabinetryText1 = document.querySelector('#cabinetry-text-1');
 cabinetryText2 = document.querySelector('#cabinetry-text-2');
 cabinetryText3 = document.querySelector('#cabinetry-text-3');
 cabinetrySel = document.querySelector('#cabinetry-select');
+cabinetrySelText = document.querySelector('#cabinetry-sel-text')
 
 cabinetryDoor1 = document.querySelector('#cabinetry-door-1');
 cabinetryDoor2 = document.querySelector('#cabinetry-door-2');
@@ -46,6 +56,8 @@ cabinetryBtn = document.querySelector('#cabinetry-add-btn');
 cabinetryBtn.addEventListener('click', function (e) {
     e.preventDefault();
     cabinetrySel.src = imgList.cabinetry;
+    cabinetrySelText.style.zIndex = "-1";
+    cabinetrySelected = true;
 })
 
 doorOpt1.addEventListener('click', function(e){
@@ -139,6 +151,7 @@ cabinethwSel = document.querySelector('#cabinet-hw-select');
 cabinethwTit1 = document.querySelector('#cabinet-hw-title-1');
 cabinethwTit2 = document.querySelector('#cabinet-hw-title-2');
 cabinethwTit3 = document.querySelector('#cabinet-hw-title-3');
+cabinethwSelText = document.querySelector('#cabinethw-sel-text')
 
 finishOpt1 = document.querySelector('#finish-bronze');
 finishOpt2 = document.querySelector('#finish-brass');
@@ -149,6 +162,8 @@ cabinethwBtn = document.querySelector('#cabinet-hw-add-btn');
 cabinethwBtn.addEventListener('click', function (e) {
     e.preventDefault();
     cabinethwSel.src = imgList.cabinethw;
+    cabinethwSelText.style.zIndex = "-1";
+    cabinethwSelected = true;
 })
 
 finishOpt1.addEventListener('click', function(e){
@@ -239,11 +254,14 @@ countertopText1 = document.querySelector('#countertop-text-1');
 countertopText2 = document.querySelector('#countertop-text-2');
 countertopText3 = document.querySelector('#countertop-text-3');
 countertopSel = document.querySelector('#countertop-select');
+countertopSelText = document.querySelector('#countertop-sel-text')
 
 countertopBtn = document.querySelector('#countertop-add-btn');
 
 countertopBtn.addEventListener('click', function (e) {
     countertopSel.src = imgList.countertop;
+    countertopSelText.style.zIndex = "-1";
+    countertopSelected = true;
 })
 
 countertopColor1.addEventListener('click', function (e) {
@@ -312,11 +330,14 @@ backsplashText1 = document.querySelector('#backsplash-text-1');
 backsplashText2 = document.querySelector('#backsplash-text-2');
 backsplashText3 = document.querySelector('#backsplash-text-3');
 backsplashSel = document.querySelector('#backsplash-select');
+backsplashSelText = document.querySelector('#backsplash-sel-text')
 
 backsplashBtn = document.querySelector('#backsplash-add-btn');
 
 backsplashBtn.addEventListener('click', function (e) {
     backsplashSel.src = imgList.backsplash;
+    backsplashSelText.style.zIndex = "-1";
+    backsplashSelected = true;
 })
 
 backsplashColor1.addEventListener('click', function (e) {
@@ -388,12 +409,14 @@ flooringSel = document.querySelector('#flooring-select');
 flooringTit1 = document.querySelector('#flooring-title-1');
 flooringTit2 = document.querySelector('#flooring-title-2');
 flooringTit3 = document.querySelector('#flooring-title-3');
+flooringSelText = document.querySelector('#flooring-sel-text')
 
 flooringBtn = document.querySelector('#flooring-add-btn');
 
 flooringBtn.addEventListener('click', function (e) {
-    e.preventDefault();
     flooringSel.src = imgList.flooring;
+    flooringSelText.style.zIndex = "-1";
+    flooringSelected = true;
 })
 
 flooringColor1.addEventListener('click', function (e) {
