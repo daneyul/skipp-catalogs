@@ -20,15 +20,97 @@ let imgList = {
     countertop: document.querySelector('#countertop-images-1').children[0].src,
     backsplash: document.querySelector('#backsplash-images-1').children[0].src,
     flooring: document.querySelector('#flooring-images-1').children[0].src,
-    supplier: '',
+    supplier: document.querySelector('#supplier-images-1').children[0].src,
 }
 
+let supplierSelected = false;
 let cabinetrySelected = false;
 let cabinethwSelected = false;
 let countertopSelected = false;
 let backsplashSelected = false;
 let flooringSelected = false;
 let finishSelected = false;
+
+//supplier section
+supplierImg1 = document.querySelector('#supplier-images-1');
+supplierImg2 = document.querySelector('#supplier-images-2');
+supplierImg3 = document.querySelector('#supplier-images-3');
+supplierText1 = document.querySelector('#supplier-text-1');
+supplierText2 = document.querySelector('#supplier-text-2');
+supplierText3 = document.querySelector('#supplier-text-3');
+supplierSel = document.querySelector('#supplier-select');
+supplierSelText = document.querySelector('#supplier-sel-text')
+
+supplierOpt1 = document.querySelector('#supplier-option-1')
+supplierOpt2 = document.querySelector('#supplier-option-2')
+supplierOpt3 = document.querySelector('#supplier-option-3')
+
+supplierSize1 = document.querySelector('#supplier-size-1');
+supplierSize2 = document.querySelector('#supplier-size-2');
+supplierSize3 = document.querySelector('#supplier-size-3');
+
+supplierCost = document.querySelector('#supplier-cost');
+supplierFt = document.querySelector('#supplier-ft');
+supplierCab = document.querySelector('#supplier-cab');
+supplierDraw = document.querySelector('#supplier-draw');
+
+supplierBtn = document.querySelector('#supplier-add-btn');
+supplierBtn2 = document.querySelector('#supplier-add-btn-2');
+
+supplierBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    supplierSel.src = imgList.supplier;
+    supplierSelText.style.zIndex = "-1";
+    supplierSelected = true;
+})
+supplierBtn2.addEventListener('click', function (e) {
+    e.preventDefault();
+    supplierSel.src = imgList.supplier;
+    supplierSelText.style.zIndex = "-1";
+    supplierSelected = true;
+})
+
+supplierOpt1.addEventListener('click', function(e){
+    supplierImg1.style.display = 'block';
+    supplierText1.style.display = 'inline-block';
+
+    supplierImg2.style.display = 'none';
+    supplierText2.style.display = 'none';
+
+    supplierImg3.style.display = 'none';
+    supplierText3.style.display = 'none';
+
+    preferenceData.supplier = supplierOpt1.innerText;
+    imgList.supplier = supplierImg1.src;
+})
+
+supplierOpt2.addEventListener('click', function(e){
+    supplierImg2.style.display = 'block';
+    supplierText2.style.display = 'inline-block';
+
+    supplierImg1.style.display = 'none';
+    supplierText1.style.display = 'none';
+
+    supplierImg3.style.display = 'none';
+    supplierText3.style.display = 'none';
+
+    preferenceData.supplier = supplierOpt2.innerText;
+    imgList.supplier = supplierImg2.src;
+})
+
+supplierOpt3.addEventListener('click', function(e){
+    supplierImg3.style.display = 'block';
+    supplierText3.style.display = 'inline-block';
+
+    supplierImg2.style.display = 'none';
+    supplierText2.style.display = 'none';
+
+    supplierImg1.style.display = 'none';
+    supplierText1.style.display = 'none';
+
+    preferenceData.supplier = supplierOpt3.innerText;
+    imgList.supplier = supplierImg3.src;
+})
 
 //cabinetry section
 cabinetryImg1 = document.querySelector('#cabinetry-images-1');
