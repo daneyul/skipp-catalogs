@@ -64,6 +64,10 @@ supplierVendor1.addEventListener('click', function(e){
     supplierImg3.style.display = 'none';
     supplierText3.style.display = 'none';
 
+    supplierVendor1.classList.add('door-opt-btn-pressed');
+    supplierVendor2.classList.remove('door-opt-btn-pressed');
+    supplierVendor3.classList.remove('door-opt-btn-pressed');
+
     preferenceData.supplier = supplierOpt1.innerText;
     imgList.supplier = supplierImg1.src;
 })
@@ -78,6 +82,10 @@ supplierVendor2.addEventListener('click', function(e){
     supplierImg3.style.display = 'none';
     supplierText3.style.display = 'none';
 
+    supplierVendor2.classList.add('door-opt-btn-pressed');
+    supplierVendor1.classList.remove('door-opt-btn-pressed');
+    supplierVendor3.classList.remove('door-opt-btn-pressed');
+
     preferenceData.supplier = supplierOpt2.innerText;
     imgList.supplier = supplierImg2.src;
 })
@@ -91,6 +99,10 @@ supplierVendor3.addEventListener('click', function(e){
 
     supplierImg1.style.display = 'none';
     supplierText1.style.display = 'none';
+
+    supplierVendor3.classList.add('door-opt-btn-pressed');
+    supplierVendor2.classList.remove('door-opt-btn-pressed');
+    supplierVendor1.classList.remove('door-opt-btn-pressed');
 
     preferenceData.supplier = supplierOpt3.innerText;
     imgList.supplier = supplierImg3.src;
