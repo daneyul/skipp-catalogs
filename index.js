@@ -653,7 +653,7 @@ supplierOpt1.addEventListener('click', function(){
     }
     supplierCost.innerText = pricing.starting;
     supplierDropText.innerText = supplierOpt1.innerText;
-    document.querySelector('.dropdown-list').classList.remove('w--open');
+    document.querySelector('#dropdown-supplier').classList.remove('w--open');
 });
 
 supplierOpt2.addEventListener('click', function(){
@@ -671,7 +671,7 @@ supplierOpt2.addEventListener('click', function(){
     }
     supplierCost.innerText = pricing.starting;
     supplierDropText.innerText = supplierOpt2.innerText;
-    document.querySelector('.dropdown-list').classList.remove('w--open');
+    document.querySelector('#dropdown-supplier').classList.remove('w--open');
 })
 
 supplierOpt3.addEventListener('click', function(){
@@ -689,7 +689,7 @@ supplierOpt3.addEventListener('click', function(){
     }
     supplierCost.innerText = pricing.starting;
     supplierDropText.innerText = supplierOpt3.innerText;
-    document.querySelector('.dropdown-list').classList.remove('w--open');
+    document.querySelector('#dropdown-supplier').classList.remove('w--open');
 })
 
 supplierSize1.addEventListener('click', function(){
@@ -712,7 +712,7 @@ supplierSize1.addEventListener('click', function(){
     supplierCab.innerText = pricing.cabinet;
     supplierDraw.innerText = pricing.drawer;
     layoutDropText.innerText = supplierSize1.innerText;
-    document.querySelector('.dropdown-list').classList.remove('w--open');
+    document.querySelector('#dropdown-layout').classList.remove('w--open');
 })
 supplierSize2.addEventListener('click', function(){
     size2selected = true;
@@ -734,7 +734,7 @@ supplierSize2.addEventListener('click', function(){
     supplierCab.innerText = pricing.cabinet;
     supplierDraw.innerText = pricing.drawer;
     layoutDropText.innerText = supplierSize2.innerText;
-    document.querySelector('.dropdown-list').classList.remove('w--open');
+    document.querySelector('#dropdown-layout').classList.remove('w--open');
 })
 supplierSize3.addEventListener('click', function(){
     size3selected = true;
@@ -756,7 +756,7 @@ supplierSize3.addEventListener('click', function(){
     supplierCab.innerText = pricing.cabinet;
     supplierDraw.innerText = pricing.drawer;
     layoutDropText.innerText = supplierSize3.innerText;
-    document.querySelector('.dropdown-list').classList.remove('w--open');
+    document.querySelector('#dropdown-layout').classList.remove('w--open');
 })
 supplierSize4.addEventListener('click', function(){
     size4selected = true;
@@ -778,6 +778,6 @@ supplierSize4.addEventListener('click', function(){
     supplierCab.innerText = pricing.cabinet;
     supplierDraw.innerText = pricing.drawer;
     layoutDropText.innerText = supplierSize4.innerText;
-    document.querySelector('.dropdown-list').classList.remove('w--open');
+    document.querySelector('#dropdown-layout').classList.remove('w--open');
 })
 
