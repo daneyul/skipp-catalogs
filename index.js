@@ -32,20 +32,20 @@ let flooringSelected = false;
 let finishSelected = false;
 
 //supplier section
-supplierImg1 = document.querySelector('#supplier-images-1');
-supplierImg2 = document.querySelector('#supplier-images-2');
-supplierImg3 = document.querySelector('#supplier-images-3');
-supplierText1 = document.querySelector('#supplier-text-1');
-supplierText2 = document.querySelector('#supplier-text-2');
-supplierText3 = document.querySelector('#supplier-text-3');
-supplierSel = document.querySelector('#supplier-select');
-supplierSelText = document.querySelector('#supplier-sel-text')
+let supplierImg1 = document.querySelector('#supplier-images-1');
+let supplierImg2 = document.querySelector('#supplier-images-2');
+let supplierImg3 = document.querySelector('#supplier-images-3');
+let supplierText1 = document.querySelector('#supplier-text-1');
+let supplierText2 = document.querySelector('#supplier-text-2');
+let supplierText3 = document.querySelector('#supplier-text-3');
+let supplierSel = document.querySelector('#supplier-select');
+let supplierSelText = document.querySelector('#supplier-sel-text')
 
-supplierVendor1 = document.querySelector('#supplier-vendor-1');
-supplierVendor2 = document.querySelector('#supplier-vendor-1');
-supplierVendor3 = document.querySelector('#supplier-vendor-1');
+let supplierVendor1 = document.querySelector('#supplier-vendor-1');
+let supplierVendor2 = document.querySelector('#supplier-vendor-2');
+let supplierVendor3 = document.querySelector('#supplier-vendor-3');
 
-supplierBtn = document.querySelector('#supplier-add-btn');
+let supplierBtn = document.querySelector('#supplier-add-btn');
 
 supplierBtn.addEventListener('click', function (e) {
     e.preventDefault();
@@ -97,28 +97,28 @@ supplierVendor3.addEventListener('click', function(e){
 })
 
 //cabinetry section
-cabinetryImg1 = document.querySelector('#cabinetry-images-1');
-cabinetryImg2 = document.querySelector('#cabinetry-images-2');
-cabinetryImg3 = document.querySelector('#cabinetry-images-3');
-cabinetryColor1 = document.querySelector('#cabinetry-color-1');
-cabinetryColor2 = document.querySelector('#cabinetry-color-2');
-cabinetryColor3 = document.querySelector('#cabinetry-color-3');
-cabinetryText1 = document.querySelector('#cabinetry-text-1');
-cabinetryText2 = document.querySelector('#cabinetry-text-2');
-cabinetryText3 = document.querySelector('#cabinetry-text-3');
-cabinetrySel = document.querySelector('#cabinetry-select');
-cabinetrySelText = document.querySelector('#cabinetry-sel-text')
+let cabinetryImg1 = document.querySelector('#cabinetry-images-1');
+let cabinetryImg2 = document.querySelector('#cabinetry-images-2');
+let cabinetryImg3 = document.querySelector('#cabinetry-images-3');
+let cabinetryColor1 = document.querySelector('#cabinetry-color-1');
+let cabinetryColor2 = document.querySelector('#cabinetry-color-2');
+let cabinetryColor3 = document.querySelector('#cabinetry-color-3');
+let cabinetryText1 = document.querySelector('#cabinetry-text-1');
+let cabinetryText2 = document.querySelector('#cabinetry-text-2');
+let cabinetryText3 = document.querySelector('#cabinetry-text-3');
+let cabinetrySel = document.querySelector('#cabinetry-select');
+let cabinetrySelText = document.querySelector('#cabinetry-sel-text')
 
-cabinetryDoor1 = document.querySelector('#cabinetry-door-1');
-cabinetryDoor2 = document.querySelector('#cabinetry-door-2');
-cabinetryDoor3 = document.querySelector('#cabinetry-door-3');
+let cabinetryDoor1 = document.querySelector('#cabinetry-door-1');
+let cabinetryDoor2 = document.querySelector('#cabinetry-door-2');
+let cabinetryDoor3 = document.querySelector('#cabinetry-door-3');
 
-doorOpt1 = document.querySelector('#door-shaker');
-doorOpt2 = document.querySelector('#door-slab');
-doorOpt3 = document.querySelector('#door-quarterline');
+let doorOpt1 = document.querySelector('#door-shaker');
+let doorOpt2 = document.querySelector('#door-slab');
+let doorOpt3 = document.querySelector('#door-quarterline');
 
-cabinetryBtn = document.querySelector('#cabinetry-add-btn');
-cabinetryBtn2 = document.querySelector('#cabinetry-add-btn-2');
+let cabinetryBtn = document.querySelector('#cabinetry-add-btn');
+let cabinetryBtn2 = document.querySelector('#cabinetry-add-btn-2');
 
 cabinetryBtn.addEventListener('click', function (e) {
     e.preventDefault();
@@ -211,27 +211,27 @@ cabinetryColor3.addEventListener('click', function (e) {
 })
 
 //cabinet hardware section
-cabinethwImg1 = document.querySelector('#cabinet-hw-images-1');
-cabinethwImg2 = document.querySelector('#cabinet-hw-images-2');
-cabinethwImg3 = document.querySelector('#cabinet-hw-images-3');
-cabinethwColor1 = document.querySelector('#cabinet-hw-color-1');
-cabinethwColor2 = document.querySelector('#cabinet-hw-color-2');
-cabinethwColor3 = document.querySelector('#cabinet-hw-color-3');
-cabinethwText1 = document.querySelector('#cabinet-hw-text-1');
-cabinethwText2 = document.querySelector('#cabinet-hw-text-2');
-cabinethwText3 = document.querySelector('#cabinet-hw-text-3');
-cabinethwSel = document.querySelector('#cabinet-hw-select');
-cabinethwTit1 = document.querySelector('#cabinet-hw-title-1');
-cabinethwTit2 = document.querySelector('#cabinet-hw-title-2');
-cabinethwTit3 = document.querySelector('#cabinet-hw-title-3');
-cabinethwSelText = document.querySelector('#cabinethw-sel-text')
+let cabinethwImg1 = document.querySelector('#cabinet-hw-images-1');
+let cabinethwImg2 = document.querySelector('#cabinet-hw-images-2');
+let cabinethwImg3 = document.querySelector('#cabinet-hw-images-3');
+let cabinethwColor1 = document.querySelector('#cabinet-hw-color-1');
+let cabinethwColor2 = document.querySelector('#cabinet-hw-color-2');
+let cabinethwColor3 = document.querySelector('#cabinet-hw-color-3');
+let cabinethwText1 = document.querySelector('#cabinet-hw-text-1');
+let cabinethwText2 = document.querySelector('#cabinet-hw-text-2');
+let cabinethwText3 = document.querySelector('#cabinet-hw-text-3');
+let cabinethwSel = document.querySelector('#cabinet-hw-select');
+let cabinethwTit1 = document.querySelector('#cabinet-hw-title-1');
+let cabinethwTit2 = document.querySelector('#cabinet-hw-title-2');
+let cabinethwTit3 = document.querySelector('#cabinet-hw-title-3');
+let cabinethwSelText = document.querySelector('#cabinethw-sel-text')
 
-finishOpt1 = document.querySelector('#finish-bronze');
-finishOpt2 = document.querySelector('#finish-brass');
-finishOpt3 = document.querySelector('#finish-black');
+let finishOpt1 = document.querySelector('#finish-bronze');
+let finishOpt2 = document.querySelector('#finish-brass');
+let finishOpt3 = document.querySelector('#finish-black');
 
-cabinethwBtn = document.querySelector('#cabinet-hw-add-btn');
-cabinethwBtn2 = document.querySelector('#cabinet-hw-add-btn-2');
+let cabinethwBtn = document.querySelector('#cabinet-hw-add-btn');
+let cabinethwBtn2 = document.querySelector('#cabinet-hw-add-btn-2');
 
 cabinethwBtn.addEventListener('click', function (e) {
     e.preventDefault();
@@ -324,20 +324,20 @@ cabinethwColor3.addEventListener('click', function (e) {
 })
 
 //countertops section
-countertopImg1 = document.querySelector('#countertop-images-1');
-countertopImg2 = document.querySelector('#countertop-images-2');
-countertopImg3 = document.querySelector('#countertop-images-3');
-countertopColor1 = document.querySelector('#countertop-color-1');
-countertopColor2 = document.querySelector('#countertop-color-2');
-countertopColor3 = document.querySelector('#countertop-color-3');
-countertopText1 = document.querySelector('#countertop-text-1');
-countertopText2 = document.querySelector('#countertop-text-2');
-countertopText3 = document.querySelector('#countertop-text-3');
-countertopSel = document.querySelector('#countertop-select');
-countertopSelText = document.querySelector('#countertop-sel-text')
+let countertopImg1 = document.querySelector('#countertop-images-1');
+let countertopImg2 = document.querySelector('#countertop-images-2');
+let countertopImg3 = document.querySelector('#countertop-images-3');
+let countertopColor1 = document.querySelector('#countertop-color-1');
+let countertopColor2 = document.querySelector('#countertop-color-2');
+let countertopColor3 = document.querySelector('#countertop-color-3');
+let countertopText1 = document.querySelector('#countertop-text-1');
+let countertopText2 = document.querySelector('#countertop-text-2');
+let countertopText3 = document.querySelector('#countertop-text-3');
+let countertopSel = document.querySelector('#countertop-select');
+let countertopSelText = document.querySelector('#countertop-sel-text')
 
-countertopBtn = document.querySelector('#countertop-add-btn');
-countertopBtn2 = document.querySelector('#countertop-add-btn-2');
+let countertopBtn = document.querySelector('#countertop-add-btn');
+let countertopBtn2 = document.querySelector('#countertop-add-btn-2');
 
 countertopBtn.addEventListener('click', function (e) {
     countertopSel.src = imgList.countertop;
@@ -406,20 +406,20 @@ countertopColor3.addEventListener('click', function (e) {
 })
 
 //backsplash section
-backsplashImg1 = document.querySelector('#backsplash-images-1');
-backsplashImg2 = document.querySelector('#backsplash-images-2');
-backsplashImg3 = document.querySelector('#backsplash-images-3');
-backsplashColor1 = document.querySelector('#backsplash-color-1');
-backsplashColor2 = document.querySelector('#backsplash-color-2');
-backsplashColor3 = document.querySelector('#backsplash-color-3');
-backsplashText1 = document.querySelector('#backsplash-text-1');
-backsplashText2 = document.querySelector('#backsplash-text-2');
-backsplashText3 = document.querySelector('#backsplash-text-3');
-backsplashSel = document.querySelector('#backsplash-select');
-backsplashSelText = document.querySelector('#backsplash-sel-text')
+let backsplashImg1 = document.querySelector('#backsplash-images-1');
+let backsplashImg2 = document.querySelector('#backsplash-images-2');
+let backsplashImg3 = document.querySelector('#backsplash-images-3');
+let backsplashColor1 = document.querySelector('#backsplash-color-1');
+let backsplashColor2 = document.querySelector('#backsplash-color-2');
+let backsplashColor3 = document.querySelector('#backsplash-color-3');
+let backsplashText1 = document.querySelector('#backsplash-text-1');
+let backsplashText2 = document.querySelector('#backsplash-text-2');
+let backsplashText3 = document.querySelector('#backsplash-text-3');
+let backsplashSel = document.querySelector('#backsplash-select');
+let backsplashSelText = document.querySelector('#backsplash-sel-text')
 
-backsplashBtn = document.querySelector('#backsplash-add-btn');
-backsplashBtn2 = document.querySelector('#backsplash-add-btn-2');
+let backsplashBtn = document.querySelector('#backsplash-add-btn');
+let backsplashBtn2 = document.querySelector('#backsplash-add-btn-2');
 
 backsplashBtn.addEventListener('click', function (e) {
     backsplashSel.src = imgList.backsplash;
@@ -488,23 +488,23 @@ backsplashColor3.addEventListener('click', function (e) {
 })
 
 //flooring section
-flooringImg1 = document.querySelector('#flooring-images-1');
-flooringImg2 = document.querySelector('#flooring-images-2');
-flooringImg3 = document.querySelector('#flooring-images-3');
-flooringColor1 = document.querySelector('#flooring-color-1');
-flooringColor2 = document.querySelector('#flooring-color-2');
-flooringColor3 = document.querySelector('#flooring-color-3');
-flooringText1 = document.querySelector('#flooring-text-1');
-flooringText2 = document.querySelector('#flooring-text-2');
-flooringText3 = document.querySelector('#flooring-text-3');
-flooringSel = document.querySelector('#flooring-select');
-flooringTit1 = document.querySelector('#flooring-title-1');
-flooringTit2 = document.querySelector('#flooring-title-2');
-flooringTit3 = document.querySelector('#flooring-title-3');
-flooringSelText = document.querySelector('#flooring-sel-text')
+let flooringImg1 = document.querySelector('#flooring-images-1');
+let flooringImg2 = document.querySelector('#flooring-images-2');
+let flooringImg3 = document.querySelector('#flooring-images-3');
+let flooringColor1 = document.querySelector('#flooring-color-1');
+let flooringColor2 = document.querySelector('#flooring-color-2');
+let flooringColor3 = document.querySelector('#flooring-color-3');
+let flooringText1 = document.querySelector('#flooring-text-1');
+let flooringText2 = document.querySelector('#flooring-text-2');
+let flooringText3 = document.querySelector('#flooring-text-3');
+let flooringSel = document.querySelector('#flooring-select');
+let flooringTit1 = document.querySelector('#flooring-title-1');
+let flooringTit2 = document.querySelector('#flooring-title-2');
+let flooringTit3 = document.querySelector('#flooring-title-3');
+let flooringSelText = document.querySelector('#flooring-sel-text')
 
-flooringBtn = document.querySelector('#flooring-add-btn');
-flooringBtn2 = document.querySelector('#flooring-add-btn-2');
+let flooringBtn = document.querySelector('#flooring-add-btn');
+let flooringBtn2 = document.querySelector('#flooring-add-btn-2');
 
 flooringBtn.addEventListener('click', function (e) {
     flooringSel.src = imgList.flooring;
@@ -621,22 +621,22 @@ let pricing = {
     drawer: '4',
 }
 
-supplierDropText = document.querySelector('#supplier-dropdown-text');
-layoutDropText = document.querySelector('#layout-dropdown-text');
+let supplierDropText = document.querySelector('#supplier-dropdown-text');
+let layoutDropText = document.querySelector('#layout-dropdown-text');
 
-supplierOpt1 = document.querySelector('#supplier-option-1')
-supplierOpt2 = document.querySelector('#supplier-option-2')
-supplierOpt3 = document.querySelector('#supplier-option-3')
+let supplierOpt1 = document.querySelector('#supplier-option-1')
+let supplierOpt2 = document.querySelector('#supplier-option-2')
+let supplierOpt3 = document.querySelector('#supplier-option-3')
 
-supplierSize1 = document.querySelector('#supplier-size-1');
-supplierSize2 = document.querySelector('#supplier-size-2');
-supplierSize3 = document.querySelector('#supplier-size-3');
-supplierSize4 = document.querySelector('#supplier-size-4');
+let supplierSize1 = document.querySelector('#supplier-size-1');
+let supplierSize2 = document.querySelector('#supplier-size-2');
+let supplierSize3 = document.querySelector('#supplier-size-3');
+let supplierSize4 = document.querySelector('#supplier-size-4');
 
-supplierCost = document.querySelector('#supplier-cost');
-supplierFt = document.querySelector('#supplier-ft');
-supplierCab = document.querySelector('#supplier-cab');
-supplierDraw = document.querySelector('#supplier-draw');
+let supplierCost = document.querySelector('#supplier-cost');
+let supplierFt = document.querySelector('#supplier-ft');
+let supplierCab = document.querySelector('#supplier-cab');
+let supplierDraw = document.querySelector('#supplier-draw');
 
 supplierOpt1.addEventListener('click', function(){
     supplier1selected = true;
