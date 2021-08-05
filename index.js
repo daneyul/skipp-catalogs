@@ -20,7 +20,7 @@ let imgList = {
     countertop: document.querySelector('#countertop-images-1').children[0].src,
     backsplash: document.querySelector('#backsplash-images-1').children[0].src,
     flooring: document.querySelector('#flooring-images-1').children[0].src,
-    supplier: document.querySelector('#supplier-images-1').children[0].src,
+    supplier: document.querySelector('#supplier-images-1').src,
 }
 
 let supplierSelected = false;
@@ -46,15 +46,8 @@ supplierVendor2 = document.querySelector('#supplier-vendor-1');
 supplierVendor3 = document.querySelector('#supplier-vendor-1');
 
 supplierBtn = document.querySelector('#supplier-add-btn');
-supplierBtn2 = document.querySelector('#supplier-add-btn-2');
 
 supplierBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-    supplierSel.src = imgList.supplier;
-    supplierSelText.style.zIndex = "-1";
-    supplierSelected = true;
-})
-supplierBtn2.addEventListener('click', function (e) {
     e.preventDefault();
     supplierSel.src = imgList.supplier;
     supplierSelText.style.zIndex = "-1";
@@ -628,6 +621,9 @@ let pricing = {
     drawer: '4',
 }
 
+supplierDropText = document.querySelector('#supplier-dropdown-text');
+layoutDropText = document.querySelector('#layout-dropdown-text');
+
 supplierOpt1 = document.querySelector('#supplier-option-1')
 supplierOpt2 = document.querySelector('#supplier-option-2')
 supplierOpt3 = document.querySelector('#supplier-option-3')
@@ -656,6 +652,7 @@ supplierOpt1.addEventListener('click', function(){
         pricing.starting = '$14,400';
     }
     supplierCost.innerText = pricing.starting;
+    supplierDropText.innerText = supplierOpt1.innerText
 });
 
 supplierOpt2.addEventListener('click', function(){
@@ -675,6 +672,7 @@ supplierOpt2.addEventListener('click', function(){
     supplierFt.innerText = pricing.linear;
     supplierCab.innerText = pricing.cabinet;
     supplierDraw.innerText = pricing.drawer;
+    supplierDropText.innerText = supplierOpt2.innerText
 })
 
 supplierOpt3.addEventListener('click', function(){
@@ -694,6 +692,7 @@ supplierOpt3.addEventListener('click', function(){
     supplierFt.innerText = pricing.linear;
     supplierCab.innerText = pricing.cabinet;
     supplierDraw.innerText = pricing.drawer;
+    supplierDropText.innerText = supplierOpt3.innerText
 })
 
 supplierSize1.addEventListener('click', function(){
@@ -715,6 +714,7 @@ supplierSize1.addEventListener('click', function(){
     supplierFt.innerText = pricing.linear;
     supplierCab.innerText = pricing.cabinet;
     supplierDraw.innerText = pricing.drawer;
+    layoutDropText.innerText = supplierSize1.innerText
 })
 supplierSize2.addEventListener('click', function(){
     size2selected = true;
@@ -735,6 +735,7 @@ supplierSize2.addEventListener('click', function(){
     supplierFt.innerText = pricing.linear;
     supplierCab.innerText = pricing.cabinet;
     supplierDraw.innerText = pricing.drawer;
+    layoutDropText.innerText = supplierSize2.innerText
 })
 supplierSize3.addEventListener('click', function(){
     size3selected = true;
@@ -755,6 +756,7 @@ supplierSize3.addEventListener('click', function(){
     supplierFt.innerText = pricing.linear;
     supplierCab.innerText = pricing.cabinet;
     supplierDraw.innerText = pricing.drawer;
+    layoutDropText.innerText = supplierSize3.innerText
 })
 supplierSize4.addEventListener('click', function(){
     size4selected = true;
@@ -775,5 +777,6 @@ supplierSize4.addEventListener('click', function(){
     supplierFt.innerText = pricing.linear;
     supplierCab.innerText = pricing.cabinet;
     supplierDraw.innerText = pricing.drawer;
+    layoutDropText.innerText = supplierSize4.innerText
 })
 
