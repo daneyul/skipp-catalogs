@@ -41,18 +41,9 @@ supplierText3 = document.querySelector('#supplier-text-3');
 supplierSel = document.querySelector('#supplier-select');
 supplierSelText = document.querySelector('#supplier-sel-text')
 
-supplierOpt1 = document.querySelector('#supplier-option-1')
-supplierOpt2 = document.querySelector('#supplier-option-2')
-supplierOpt3 = document.querySelector('#supplier-option-3')
-
-supplierSize1 = document.querySelector('#supplier-size-1');
-supplierSize2 = document.querySelector('#supplier-size-2');
-supplierSize3 = document.querySelector('#supplier-size-3');
-
-supplierCost = document.querySelector('#supplier-cost');
-supplierFt = document.querySelector('#supplier-ft');
-supplierCab = document.querySelector('#supplier-cab');
-supplierDraw = document.querySelector('#supplier-draw');
+supplierVendor1 = document.querySelector('#supplier-vendor-1');
+supplierVendor2 = document.querySelector('#supplier-vendor-1');
+supplierVendor3 = document.querySelector('#supplier-vendor-1');
 
 supplierBtn = document.querySelector('#supplier-add-btn');
 supplierBtn2 = document.querySelector('#supplier-add-btn-2');
@@ -70,7 +61,7 @@ supplierBtn2.addEventListener('click', function (e) {
     supplierSelected = true;
 })
 
-supplierOpt1.addEventListener('click', function(e){
+supplierVendor1.addEventListener('click', function(e){
     supplierImg1.style.display = 'block';
     supplierText1.style.display = 'inline-block';
 
@@ -84,7 +75,7 @@ supplierOpt1.addEventListener('click', function(e){
     imgList.supplier = supplierImg1.src;
 })
 
-supplierOpt2.addEventListener('click', function(e){
+supplierVendor2.addEventListener('click', function(e){
     supplierImg2.style.display = 'block';
     supplierText2.style.display = 'inline-block';
 
@@ -98,7 +89,7 @@ supplierOpt2.addEventListener('click', function(e){
     imgList.supplier = supplierImg2.src;
 })
 
-supplierOpt3.addEventListener('click', function(e){
+supplierVendor3.addEventListener('click', function(e){
     supplierImg3.style.display = 'block';
     supplierText3.style.display = 'inline-block';
 
@@ -619,3 +610,170 @@ saveButton2.addEventListener('click', function () {
       prefText.style.color = '#c43927';
   }
 });
+
+// Pricing calculator
+
+let supplier1selected = true;
+let supplier2selected = false;
+let supplier3selected = false;
+let size1selected = true;
+let size2selected = false;
+let size3selected = false;
+let size4selected = false;
+
+let pricing = {
+    starting: '$5,500',
+    linear: '12',
+    cabinet: '8',
+    drawer: '4',
+}
+
+supplierOpt1 = document.querySelector('#supplier-option-1')
+supplierOpt2 = document.querySelector('#supplier-option-2')
+supplierOpt3 = document.querySelector('#supplier-option-3')
+
+supplierSize1 = document.querySelector('#supplier-size-1');
+supplierSize2 = document.querySelector('#supplier-size-2');
+supplierSize3 = document.querySelector('#supplier-size-3');
+supplierSize4 = document.querySelector('#supplier-size-4');
+
+supplierCost = document.querySelector('#supplier-cost');
+supplierFt = document.querySelector('#supplier-ft');
+supplierCab = document.querySelector('#supplier-cab');
+supplierDraw = document.querySelector('#supplier-draw');
+
+supplierOpt1.addEventListener('click', function(){
+    supplier1selected = true;
+    supplier2selected = false;
+    supplier3selected = false;
+    if (size1selected){
+        pricing.starting = '$5,500';
+    } else if (size2selected){
+        pricing.starting = '$8,300';
+    } else if (size3selected){
+        pricing.starting = '$11,500';
+    } else if (size4selected){
+        pricing.starting = '$14,400';
+    }
+    supplierCost.innerText = pricing.starting;
+});
+
+supplierOpt2.addEventListener('click', function(){
+    supplier2selected = true;
+    supplier1selected = false;
+    supplier3selected = false;
+    if (size1selected){
+        pricing.starting = '$6,000';
+    } else if (size2selected){
+        pricing.starting = '$8,700';
+    } else if (size3selected){
+        pricing.starting = '$12,500';
+    } else if (size4selected){
+        pricing.starting = '$16,000';
+    }
+    supplierCost.innerText = pricing.starting;
+    supplierFt.innerText = pricing.linear;
+    supplierCab.innerText = pricing.cabinet;
+    supplierDraw.innerText = pricing.drawer;
+})
+
+supplierOpt3.addEventListener('click', function(){
+    supplier3selected = true;
+    supplier1selected = false;
+    supplier2selected = false;
+    if (size1selected){
+        pricing.starting = '$7,900';
+    } else if (size2selected){
+        pricing.starting = '$11,400';
+    } else if (size3selected){
+        pricing.starting = '$17,300';
+    } else if (size4selected){
+        pricing.starting = '$22,300';
+    }
+    supplierCost.innerText = pricing.starting;
+    supplierFt.innerText = pricing.linear;
+    supplierCab.innerText = pricing.cabinet;
+    supplierDraw.innerText = pricing.drawer;
+})
+
+supplierSize1.addEventListener('click', function(){
+    size1selected = true;
+    size2selected = false;
+    size3selected = false;
+    size4selected = false;
+    pricing.linear = '12';
+    pricing.cabinet = '8';
+    pricing.drawer = '4';
+    if (supplier1selected){
+        pricing.starting = '$5,500';
+    } else if (supplier2selected){
+        pricing.starting = '$6,000';
+    } else if (supplier3selected){
+        pricing.starting = '$7,900'
+    }
+    supplierCost.innerText = pricing.starting;
+    supplierFt.innerText = pricing.linear;
+    supplierCab.innerText = pricing.cabinet;
+    supplierDraw.innerText = pricing.drawer;
+})
+supplierSize2.addEventListener('click', function(){
+    size2selected = true;
+    size1selected = false;
+    size3selected = false;
+    size4selected = false;
+    pricing.linear = '19';
+    pricing.cabinet = '10';
+    pricing.drawer = '4';
+    if (supplier1selected){
+        pricing.starting = '$8,300';
+    } else if (supplier2selected){
+        pricing.starting = '$8,700';
+    } else if (supplier3selected){
+        pricing.starting = '$11,400'
+    }
+    supplierCost.innerText = pricing.starting;
+    supplierFt.innerText = pricing.linear;
+    supplierCab.innerText = pricing.cabinet;
+    supplierDraw.innerText = pricing.drawer;
+})
+supplierSize3.addEventListener('click', function(){
+    size3selected = true;
+    size1selected = false;
+    size2selected = false;
+    size4selected = false;
+    pricing.linear = '28';
+    pricing.cabinet = '13';
+    pricing.drawer = '7';
+    if (supplier1selected){
+        pricing.starting = '$11,500';
+    } else if (supplier2selected){
+        pricing.starting = '$12,500';
+    } else if (supplier3selected){
+        pricing.starting = '$17,300'
+    }
+    supplierCost.innerText = pricing.starting;
+    supplierFt.innerText = pricing.linear;
+    supplierCab.innerText = pricing.cabinet;
+    supplierDraw.innerText = pricing.drawer;
+})
+supplierSize4.addEventListener('click', function(){
+    size4selected = true;
+    size1selected = false;
+    size2selected = false;
+    size3selected = false;
+    pricing.linear = '35';
+    pricing.cabinet = '16';
+    pricing.drawer = '12';
+    if (supplier1selected){
+        pricing.starting = '$14,400';
+    } else if (supplier2selected){
+        pricing.starting = '$16,000';
+    } else if (supplier3selected){
+        pricing.starting = '$22,300'
+    }
+    supplierCost.innerText = pricing.starting;
+    supplierFt.innerText = pricing.linear;
+    supplierCab.innerText = pricing.cabinet;
+    supplierDraw.innerText = pricing.drawer;
+})
+
