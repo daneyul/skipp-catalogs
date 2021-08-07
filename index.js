@@ -23,13 +23,19 @@ let imgList = {
     supplier: document.querySelector('#supplier-images-1').src,
 }
 
+function saveClassChange() {
+	if (cabinetrySelected && cabinethwSelected && countertopSelected && backsplashSelected && flooringSelected && supplierSelected) {
+  	saveButton1.classList.add('save-pref-clicked');
+    saveButton2.classList.add('save-pref2-clicked');
+    saveButton3.classList.add('save-pref-clicked');
+}
+
 let supplierSelected = false;
 let cabinetrySelected = false;
 let cabinethwSelected = false;
 let countertopSelected = false;
 let backsplashSelected = false;
 let flooringSelected = false;
-let finishSelected = false;
 
 //supplier section
 let supplierImg1 = document.querySelector('#supplier-images-1');
@@ -52,6 +58,7 @@ supplierBtn.addEventListener('click', function (e) {
     supplierSel.src = imgList.supplier;
     supplierSelText.style.zIndex = "-1";
     supplierSelected = true;
+    saveClassChange();
 })
 
 supplierVendor1.addEventListener('click', function(e){
@@ -124,10 +131,6 @@ let cabinetryText3 = document.querySelector('#cabinetry-text-3');
 let cabinetrySel = document.querySelector('#cabinetry-select');
 let cabinetrySelText = document.querySelector('#cabinetry-sel-text')
 
-let cabinetryDoor1 = document.querySelector('#cabinetry-door-1');
-let cabinetryDoor2 = document.querySelector('#cabinetry-door-2');
-let cabinetryDoor3 = document.querySelector('#cabinetry-door-3');
-
 let doorOpt1 = document.querySelector('#door-shaker');
 let doorOpt2 = document.querySelector('#door-slab');
 let doorOpt3 = document.querySelector('#door-quarterline');
@@ -140,12 +143,14 @@ cabinetryBtn.addEventListener('click', function (e) {
     cabinetrySel.src = imgList.cabinetry;
     cabinetrySelText.style.zIndex = "-1";
     cabinetrySelected = true;
+    saveClassChange();
 })
 cabinetryBtn2.addEventListener('click', function (e) {
     e.preventDefault();
     cabinetrySel.src = imgList.cabinetry;
     cabinetrySelText.style.zIndex = "-1";
     cabinetrySelected = true;
+    saveClassChange();
 })
 
 doorOpt1.addEventListener('click', function(e){
@@ -236,9 +241,6 @@ let cabinethwText1 = document.querySelector('#cabinet-hw-text-1');
 let cabinethwText2 = document.querySelector('#cabinet-hw-text-2');
 let cabinethwText3 = document.querySelector('#cabinet-hw-text-3');
 let cabinethwSel = document.querySelector('#cabinet-hw-select');
-let cabinethwTit1 = document.querySelector('#cabinet-hw-title-1');
-let cabinethwTit2 = document.querySelector('#cabinet-hw-title-2');
-let cabinethwTit3 = document.querySelector('#cabinet-hw-title-3');
 let cabinethwSelText = document.querySelector('#cabinethw-sel-text')
 
 let finishOpt1 = document.querySelector('#finish-bronze');
@@ -253,12 +255,14 @@ cabinethwBtn.addEventListener('click', function (e) {
     cabinethwSel.src = imgList.cabinethw;
     cabinethwSelText.style.zIndex = "-1";
     cabinethwSelected = true;
+    saveClassChange();
 })
 cabinethwBtn2.addEventListener('click', function (e) {
     e.preventDefault();
     cabinethwSel.src = imgList.cabinethw;
     cabinethwSelText.style.zIndex = "-1";
     cabinethwSelected = true;
+    saveClassChange();
 })
 
 finishOpt1.addEventListener('click', function(e){
@@ -358,11 +362,13 @@ countertopBtn.addEventListener('click', function (e) {
     countertopSel.src = imgList.countertop;
     countertopSelText.style.zIndex = "-1";
     countertopSelected = true;
+    saveClassChange();
 })
 countertopBtn2.addEventListener('click', function (e) {
     countertopSel.src = imgList.countertop;
     countertopSelText.style.zIndex = "-1";
     countertopSelected = true;
+    saveClassChange();
 })
 
 countertopColor1.addEventListener('click', function (e) {
@@ -440,11 +446,13 @@ backsplashBtn.addEventListener('click', function (e) {
     backsplashSel.src = imgList.backsplash;
     backsplashSelText.style.zIndex = "-1";
     backsplashSelected = true;
+    saveClassChange();
 })
 backsplashBtn2.addEventListener('click', function (e) {
     backsplashSel.src = imgList.backsplash;
     backsplashSelText.style.zIndex = "-1";
     backsplashSelected = true;
+    saveClassChange();
 })
 
 backsplashColor1.addEventListener('click', function (e) {
@@ -513,9 +521,6 @@ let flooringText1 = document.querySelector('#flooring-text-1');
 let flooringText2 = document.querySelector('#flooring-text-2');
 let flooringText3 = document.querySelector('#flooring-text-3');
 let flooringSel = document.querySelector('#flooring-select');
-let flooringTit1 = document.querySelector('#flooring-title-1');
-let flooringTit2 = document.querySelector('#flooring-title-2');
-let flooringTit3 = document.querySelector('#flooring-title-3');
 let flooringSelText = document.querySelector('#flooring-sel-text')
 
 let flooringBtn = document.querySelector('#flooring-add-btn');
@@ -525,11 +530,13 @@ flooringBtn.addEventListener('click', function (e) {
     flooringSel.src = imgList.flooring;
     flooringSelText.style.zIndex = "-1";
     flooringSelected = true;
+    saveClassChange();
 })
 flooringBtn2.addEventListener('click', function (e) {
     flooringSel.src = imgList.flooring;
     flooringSelText.style.zIndex = "-1";
     flooringSelected = true;
+    saveClassChange();
 })
 
 flooringColor1.addEventListener('click', function (e) {
@@ -585,7 +592,7 @@ flooringColor3.addEventListener('click', function (e) {
 
     preferenceData.flooring = flooringText3.children[0].innerText;
     imgList.flooring = flooringImg3.children[0].src;
-})
+}) 
 
 let saveButton1 = document.querySelector('#save-button-1');
 let saveButton2 = document.querySelector('#save-button-2');
@@ -594,17 +601,17 @@ let modal = document.querySelector('#modal');
 let errorText = document.querySelector('.text-block-26.error-text');
 let prefText = document.querySelector('.pref-text');
 
-document.body.addEventListener('change', function () {
-	if (cabinetrySelected && cabinethwSelected && countertopSelected && backsplashSelected && flooringSelected && finishSelected) {
-  	saveButton1.classList.add('save-pref-clicked');
-    saveButton2.classList.add('save-pref2-clicked');
-    saveButton3.classList.add('save-pref-clicked');
-  }
-})
-
-
 saveButton1.addEventListener('click', function () {
-    if ((cabinetrySelected && cabinethwSelected && countertopSelected && backsplashSelected && flooringSelected && finishSelected)) {
+    if ((cabinetrySelected && cabinethwSelected && countertopSelected && backsplashSelected && flooringSelected)) {
+        modal.style.display = 'block';
+    } else {
+      errorText.style.display = 'block';
+      prefText.style.color = '#c43927';
+  }
+});
+
+saveButton3.addEventListener('click', function () {
+    if ((cabinetrySelected && cabinethwSelected && countertopSelected && backsplashSelected && flooringSelected)) {
         modal.style.display = 'block';
     } else {
       errorText.style.display = 'block';
@@ -613,7 +620,7 @@ saveButton1.addEventListener('click', function () {
 });
 
 saveButton2.addEventListener('click', function () {
-    if ((cabinetrySelected && cabinethwSelected && countertopSelected && backsplashSelected && flooringSelected && finishSelected)) {
+    if ((cabinetrySelected && cabinethwSelected && countertopSelected && backsplashSelected && flooringSelected)) {
 	    modal.style.display = 'block';
     } else {
       errorText.style.display = 'block';
