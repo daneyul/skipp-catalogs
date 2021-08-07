@@ -55,6 +55,7 @@ supplierBtn.addEventListener('click', function (e) {
 })
 
 supplierVendor1.addEventListener('click', function(e){
+    e.preventDefault();
     supplierImg1.style.display = 'block';
     supplierText1.style.display = 'inline-block';
 
@@ -73,6 +74,7 @@ supplierVendor1.addEventListener('click', function(e){
 })
 
 supplierVendor2.addEventListener('click', function(e){
+    e.preventDefault();
     supplierImg2.style.display = 'block';
     supplierText2.style.display = 'inline-block';
 
@@ -91,6 +93,7 @@ supplierVendor2.addEventListener('click', function(e){
 })
 
 supplierVendor3.addEventListener('click', function(e){
+    e.preventDefault();
     supplierImg3.style.display = 'block';
     supplierText3.style.display = 'inline-block';
 
@@ -586,20 +589,22 @@ flooringColor3.addEventListener('click', function (e) {
 
 let saveButton1 = document.querySelector('#save-button-1');
 let saveButton2 = document.querySelector('#save-button-2');
+let saveButton3 = document.querySelector('#save-button-3');
 let modal = document.querySelector('#modal');
 let errorText = document.querySelector('.text-block-26.error-text');
 let prefText = document.querySelector('.pref-text');
 
 document.body.addEventListener('change', function () {
-	if (cabinetrySelected && cabinethwSelected && countertopSelected && backsplashSelectedd && flooringSelected && finishSelected) {
+	if (cabinetrySelected && cabinethwSelected && countertopSelected && backsplashSelected && flooringSelected && finishSelected) {
   	saveButton1.classList.add('save-pref-clicked');
     saveButton2.classList.add('save-pref2-clicked');
+    saveButton3.classList.add('save-pref-clicked');
   }
 })
 
 
 saveButton1.addEventListener('click', function () {
-    if ((cabinetrySelected && cabinethwSelected && countertopSelected && backsplashSelectedd && flooringSelected && finishSelected)) {
+    if ((cabinetrySelected && cabinethwSelected && countertopSelected && backsplashSelected && flooringSelected && finishSelected)) {
         modal.style.display = 'block';
     } else {
       errorText.style.display = 'block';
@@ -608,7 +613,7 @@ saveButton1.addEventListener('click', function () {
 });
 
 saveButton2.addEventListener('click', function () {
-    if ((cabinetrySelected && cabinethwSelected && countertopSelected && backsplashSelectedd && flooringSelected && finishSelected)) {
+    if ((cabinetrySelected && cabinethwSelected && countertopSelected && backsplashSelected && flooringSelected && finishSelected)) {
 	    modal.style.display = 'block';
     } else {
       errorText.style.display = 'block';
