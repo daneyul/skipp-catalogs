@@ -25,9 +25,10 @@ let imgList = {
 
 function saveClassChange() {
 	if (cabinetrySelected && cabinethwSelected && countertopSelected && backsplashSelected && flooringSelected && supplierSelected) {
-  	saveButton1.classList.add('save-pref-clicked');
-    saveButton2.classList.add('save-pref2-clicked');
-    saveButton3.classList.add('save-pref-clicked');
+        saveButton1.classList.add('save-pref-clicked');
+        saveButton2.classList.add('save-pref2-clicked');
+        saveButton3.classList.add('save-pref-clicked');
+    }
 }
 
 let supplierSelected = false;
@@ -359,12 +360,14 @@ let countertopBtn = document.querySelector('#countertop-add-btn');
 let countertopBtn2 = document.querySelector('#countertop-add-btn-2');
 
 countertopBtn.addEventListener('click', function (e) {
+    e.preventDefault();
     countertopSel.src = imgList.countertop;
     countertopSelText.style.zIndex = "-1";
     countertopSelected = true;
     saveClassChange();
 })
 countertopBtn2.addEventListener('click', function (e) {
+    e.preventDefault();
     countertopSel.src = imgList.countertop;
     countertopSelText.style.zIndex = "-1";
     countertopSelected = true;
@@ -443,12 +446,14 @@ let backsplashBtn = document.querySelector('#backsplash-add-btn');
 let backsplashBtn2 = document.querySelector('#backsplash-add-btn-2');
 
 backsplashBtn.addEventListener('click', function (e) {
+    e.preventDefault();
     backsplashSel.src = imgList.backsplash;
     backsplashSelText.style.zIndex = "-1";
     backsplashSelected = true;
     saveClassChange();
 })
 backsplashBtn2.addEventListener('click', function (e) {
+    e.preventDefault();
     backsplashSel.src = imgList.backsplash;
     backsplashSelText.style.zIndex = "-1";
     backsplashSelected = true;
@@ -527,12 +532,14 @@ let flooringBtn = document.querySelector('#flooring-add-btn');
 let flooringBtn2 = document.querySelector('#flooring-add-btn-2');
 
 flooringBtn.addEventListener('click', function (e) {
+    e.preventDefault();
     flooringSel.src = imgList.flooring;
     flooringSelText.style.zIndex = "-1";
     flooringSelected = true;
     saveClassChange();
 })
 flooringBtn2.addEventListener('click', function (e) {
+    e.preventDefault();
     flooringSel.src = imgList.flooring;
     flooringSelText.style.zIndex = "-1";
     flooringSelected = true;
@@ -662,7 +669,8 @@ let supplierFt = document.querySelector('#supplier-ft');
 let supplierCab = document.querySelector('#supplier-cab');
 let supplierDraw = document.querySelector('#supplier-draw');
 
-supplierOpt1.addEventListener('click', function(){
+supplierOpt1.addEventListener('click', function(e){
+    e.preventDefault();
     supplier1selected = true;
     supplier2selected = false;
     supplier3selected = false;
@@ -680,7 +688,8 @@ supplierOpt1.addEventListener('click', function(){
     document.querySelector('#dropdown-supplier').classList.remove('w--open');
 });
 
-supplierOpt2.addEventListener('click', function(){
+supplierOpt2.addEventListener('click', function(e){
+    e.preventDefault();
     supplier2selected = true;
     supplier1selected = false;
     supplier3selected = false;
@@ -698,7 +707,8 @@ supplierOpt2.addEventListener('click', function(){
     document.querySelector('#dropdown-supplier').classList.remove('w--open');
 })
 
-supplierOpt3.addEventListener('click', function(){
+supplierOpt3.addEventListener('click', function(e){
+    e.preventDefault();
     supplier3selected = true;
     supplier1selected = false;
     supplier2selected = false;
@@ -716,7 +726,8 @@ supplierOpt3.addEventListener('click', function(){
     document.querySelector('#dropdown-supplier').classList.remove('w--open');
 })
 
-supplierSize1.addEventListener('click', function(){
+supplierSize1.addEventListener('click', function(e){
+    e.preventDefault();
     size1selected = true;
     size2selected = false;
     size3selected = false;
@@ -738,7 +749,8 @@ supplierSize1.addEventListener('click', function(){
     layoutDropText.innerText = supplierSize1.innerText;
     document.querySelector('#dropdown-layout').classList.remove('w--open');
 })
-supplierSize2.addEventListener('click', function(){
+supplierSize2.addEventListener('click', function(e){
+    e.preventDefault();
     size2selected = true;
     size1selected = false;
     size3selected = false;
@@ -760,7 +772,8 @@ supplierSize2.addEventListener('click', function(){
     layoutDropText.innerText = supplierSize2.innerText;
     document.querySelector('#dropdown-layout').classList.remove('w--open');
 })
-supplierSize3.addEventListener('click', function(){
+supplierSize3.addEventListener('click', function(e){
+    e.preventDefault();
     size3selected = true;
     size1selected = false;
     size2selected = false;
@@ -782,7 +795,8 @@ supplierSize3.addEventListener('click', function(){
     layoutDropText.innerText = supplierSize3.innerText;
     document.querySelector('#dropdown-layout').classList.remove('w--open');
 })
-supplierSize4.addEventListener('click', function(){
+supplierSize4.addEventListener('click', function(e){
+    e.preventDefault();
     size4selected = true;
     size1selected = false;
     size2selected = false;
