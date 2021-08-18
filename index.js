@@ -9,8 +9,6 @@ let preferenceData = {
     countertop: '',
     backsplash: '',
     flooring: '',
-    doorOpt: '',
-    finishOpt: '',
     supplier: '',
 }
 
@@ -145,10 +143,6 @@ let cabinetryText3 = document.querySelector('#cabinetry-text-3');
 let cabinetrySel = document.querySelector('#cabinetry-select');
 let cabinetrySelText = document.querySelector('#cabinetry-sel-text')
 
-let doorOpt1 = document.querySelector('#door-shaker');
-let doorOpt2 = document.querySelector('#door-slab');
-let doorOpt3 = document.querySelector('#door-quarterline');
-
 let cabinetryBtn = document.querySelector('#cabinetry-add-btn');
 let cabinetryBtn2 = document.querySelector('#cabinetry-add-btn-2');
 
@@ -165,28 +159,6 @@ cabinetryBtn2.addEventListener('click', function (e) {
     cabinetrySelText.style.zIndex = "-1";
     cabinetrySelected = true;
     saveClassChange();
-})
-
-doorOpt1.addEventListener('click', function(e){
-    e.preventDefault();
-    doorOpt1.classList.add('door-opt-btn-pressed');
-    doorOpt2.classList.remove('door-opt-btn-pressed');
-    doorOpt3.classList.remove('door-opt-btn-pressed');
-    preferenceData.doorOpt = 'shaker';
-})
-doorOpt2.addEventListener('click', function(e){
-    e.preventDefault();
-    doorOpt2.classList.add('door-opt-btn-pressed');
-    doorOpt1.classList.remove('door-opt-btn-pressed');
-    doorOpt3.classList.remove('door-opt-btn-pressed');
-    preferenceData.doorOpt = 'slab';
-})
-doorOpt3.addEventListener('click', function(e){
-    e.preventDefault();
-    doorOpt3.classList.add('door-opt-btn-pressed');
-    doorOpt2.classList.remove('door-opt-btn-pressed');
-    doorOpt1.classList.remove('door-opt-btn-pressed');
-    preferenceData.doorOpt = 'quarterline';
 })
 
 cabinetryColor1.addEventListener('click', function (e) {
@@ -269,10 +241,6 @@ let cabinethwText3 = document.querySelector('#cabinet-hw-text-3');
 let cabinethwSel = document.querySelector('#cabinet-hw-select');
 let cabinethwSelText = document.querySelector('#cabinethw-sel-text')
 
-let finishOpt1 = document.querySelector('#finish-bronze');
-let finishOpt2 = document.querySelector('#finish-brass');
-let finishOpt3 = document.querySelector('#finish-black');
-
 let cabinethwBtn = document.querySelector('#cabinet-hw-add-btn');
 let cabinethwBtn2 = document.querySelector('#cabinet-hw-add-btn-2');
 
@@ -289,28 +257,6 @@ cabinethwBtn2.addEventListener('click', function (e) {
     cabinethwSelText.style.zIndex = "-1";
     cabinethwSelected = true;
     saveClassChange();
-})
-
-finishOpt1.addEventListener('click', function(e){
-    e.preventDefault();
-    finishOpt1.classList.add('door-opt-btn-pressed');
-    finishOpt2.classList.remove('door-opt-btn-pressed');
-    finishOpt3.classList.remove('door-opt-btn-pressed');
-    preferenceData.finishOpt = 'bronze';
-})
-finishOpt2.addEventListener('click', function(e){
-    e.preventDefault();
-    finishOpt2.classList.add('door-opt-btn-pressed');
-    finishOpt1.classList.remove('door-opt-btn-pressed');
-    finishOpt3.classList.remove('door-opt-btn-pressed');
-    preferenceData.finishOpt = 'brass';
-})
-finishOpt3.addEventListener('click', function(e){
-    e.preventDefault();
-    finishOpt3.classList.add('door-opt-btn-pressed');
-    finishOpt2.classList.remove('door-opt-btn-pressed');
-    finishOpt1.classList.remove('door-opt-btn-pressed');
-    preferenceData.finishOpt = 'black';
 })
 
 cabinethwColor1.addEventListener('click', function (e) {
