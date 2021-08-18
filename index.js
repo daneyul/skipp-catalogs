@@ -131,15 +131,27 @@ supplierVendor3.addEventListener('click', function(e){
 let cabinetryImg1 = document.querySelector('#cabinetry-images-1');
 let cabinetryImg2 = document.querySelector('#cabinetry-images-2');
 let cabinetryImg3 = document.querySelector('#cabinetry-images-3');
+let cabinetryImg4 = document.querySelector('#cabinetry-images-4');
+let cabinetryImg5 = document.querySelector('#cabinetry-images-5');
+let cabinetryImg6 = document.querySelector('#cabinetry-images-6');
 let cabinetryHeader1 = document.querySelector('#cabinetry-header-1');
 let cabinetryHeader2 = document.querySelector('#cabinetry-header-2');
 let cabinetryHeader3 = document.querySelector('#cabinetry-header-3');
+let cabinetryHeader4 = document.querySelector('#cabinetry-header-4');
+let cabinetryHeader5 = document.querySelector('#cabinetry-header-5');
+let cabinetryHeader6 = document.querySelector('#cabinetry-header-6');
 let cabinetryColor1 = document.querySelector('#cabinetry-color-1');
 let cabinetryColor2 = document.querySelector('#cabinetry-color-2');
 let cabinetryColor3 = document.querySelector('#cabinetry-color-3');
+let cabinetryColor4 = document.querySelector('#cabinetry-color-4');
+let cabinetryColor5 = document.querySelector('#cabinetry-color-5');
+let cabinetryColor6 = document.querySelector('#cabinetry-color-6');
 let cabinetryText1 = document.querySelector('#cabinetry-text-1');
 let cabinetryText2 = document.querySelector('#cabinetry-text-2');
 let cabinetryText3 = document.querySelector('#cabinetry-text-3');
+let cabinetryText4 = document.querySelector('#cabinetry-text-4');
+let cabinetryText5 = document.querySelector('#cabinetry-text-5');
+let cabinetryText6 = document.querySelector('#cabinetry-text-6');
 let cabinetrySel = document.querySelector('#cabinetry-select');
 let cabinetrySelText = document.querySelector('#cabinetry-sel-text')
 
@@ -175,9 +187,24 @@ cabinetryColor1.addEventListener('click', function (e) {
     cabinetryText3.style.display = 'none';
     cabinetryHeader3.style.display = 'none';
 
+    cabinetryImg4.style.display = 'none';
+    cabinetryText4.style.display = 'none';
+    cabinetryHeader4.style.display = 'none';
+
+    cabinetryImg5.style.display = 'none';
+    cabinetryText5.style.display = 'none';
+    cabinetryHeader5.style.display = 'none';
+
+    cabinetryImg6.style.display = 'none';
+    cabinetryText6.style.display = 'none';
+    cabinetryHeader6.style.display = 'none';
+
     cabinetryColor1.style.border = '5px solid #26cbff';
     cabinetryColor2.style.border = 'none';
     cabinetryColor3.style.border = 'none';
+    cabinetryColor4.style.border = 'none';
+    cabinetryColor5.style.border = 'none';
+    cabinetryColor6.style.border = 'none';
 
     preferenceData.cabinetry = cabinetryText1.children[0].innerText;
     imgList.cabinetry = cabinetryImg1.children[0].src;
@@ -199,6 +226,25 @@ cabinetryColor2.addEventListener('click', function (e) {
     cabinetryColor1.style.border = 'none';
     cabinetryColor2.style.border = '5px solid #26cbff';
     cabinetryColor3.style.border = 'none';
+
+    cabinetryImg4.style.display = 'none';
+    cabinetryText4.style.display = 'none';
+    cabinetryHeader4.style.display = 'none';
+
+    cabinetryImg5.style.display = 'none';
+    cabinetryText5.style.display = 'none';
+    cabinetryHeader5.style.display = 'none';
+
+    cabinetryImg6.style.display = 'none';
+    cabinetryText6.style.display = 'none';
+    cabinetryHeader6.style.display = 'none';
+
+    cabinetryColor1.style.border = 'none';
+    cabinetryColor2.style.border = '5px solid #26cbff';
+    cabinetryColor3.style.border = 'none';
+    cabinetryColor4.style.border = 'none';
+    cabinetryColor5.style.border = 'none';
+    cabinetryColor6.style.border = 'none';
     
     preferenceData.cabinetry = cabinetryText2.children[0].innerText;
     imgList.cabinetry = cabinetryImg2.children[0].src;
@@ -216,28 +262,163 @@ cabinetryColor3.addEventListener('click', function (e) {
     cabinetryImg2.style.display = 'none';
     cabinetryText2.style.display = 'none';
     cabinetryHeader2.style.display = 'none';
+    
+    cabinetryImg4.style.display = 'none';
+    cabinetryText4.style.display = 'none';
+    cabinetryHeader4.style.display = 'none';
+
+    cabinetryImg5.style.display = 'none';
+    cabinetryText5.style.display = 'none';
+    cabinetryHeader5.style.display = 'none';
+
+    cabinetryImg6.style.display = 'none';
+    cabinetryText6.style.display = 'none';
+    cabinetryHeader6.style.display = 'none';
 
     cabinetryColor1.style.border = 'none';
     cabinetryColor2.style.border = 'none';
     cabinetryColor3.style.border = '5px solid #26cbff';
+    cabinetryColor4.style.border = 'none';
+    cabinetryColor5.style.border = 'none';
+    cabinetryColor6.style.border = 'none';
 
     preferenceData.cabinetry = cabinetryText3.children[0].innerText;
     imgList.cabinetry = cabinetryImg3.children[0].src;
+})
+cabinetryColor4.addEventListener('click', function (e) {
+    e.preventDefault();
+    cabinetryImg4.style.display = 'block';
+    cabinetryText4.style.display = 'inline-block';
+    cabinetryHeader4.style.display = 'inline-block';
+
+    cabinetryImg1.style.display = 'none';
+    cabinetryText1.style.display = 'none';
+    cabinetryHeader1.style.display = 'none';
+
+    cabinetryImg2.style.display = 'none';
+    cabinetryText2.style.display = 'none';
+    cabinetryHeader2.style.display = 'none';
+    
+    cabinetryImg3.style.display = 'none';
+    cabinetryText3.style.display = 'none';
+    cabinetryHeader3.style.display = 'none';
+
+    cabinetryImg5.style.display = 'none';
+    cabinetryText5.style.display = 'none';
+    cabinetryHeader5.style.display = 'none';
+
+    cabinetryImg6.style.display = 'none';
+    cabinetryText6.style.display = 'none';
+    cabinetryHeader6.style.display = 'none';
+
+    cabinetryColor1.style.border = 'none';
+    cabinetryColor2.style.border = 'none';
+    cabinetryColor3.style.border = 'none';
+    cabinetryColor4.style.border = '5px solid #26cbff';
+    cabinetryColor5.style.border = 'none';
+    cabinetryColor6.style.border = 'none';
+
+    preferenceData.cabinetry = cabinetryText4.children[0].innerText;
+    imgList.cabinetry = cabinetryImg4.children[0].src;
+})
+cabinetryColor5.addEventListener('click', function (e) {
+    e.preventDefault();
+    cabinetryImg5.style.display = 'block';
+    cabinetryText5.style.display = 'inline-block';
+    cabinetryHeader5.style.display = 'inline-block';
+
+    cabinetryImg1.style.display = 'none';
+    cabinetryText1.style.display = 'none';
+    cabinetryHeader1.style.display = 'none';
+
+    cabinetryImg2.style.display = 'none';
+    cabinetryText2.style.display = 'none';
+    cabinetryHeader2.style.display = 'none';
+    
+    cabinetryImg3.style.display = 'none';
+    cabinetryText3.style.display = 'none';
+    cabinetryHeader3.style.display = 'none';
+
+    cabinetryImg4.style.display = 'none';
+    cabinetryText4.style.display = 'none';
+    cabinetryHeader4.style.display = 'none';
+
+    cabinetryImg6.style.display = 'none';
+    cabinetryText6.style.display = 'none';
+    cabinetryHeader6.style.display = 'none';
+
+    cabinetryColor1.style.border = 'none';
+    cabinetryColor2.style.border = 'none';
+    cabinetryColor3.style.border = 'none';
+    cabinetryColor4.style.border = 'none';
+    cabinetryColor5.style.border = '5px solid #26cbff';
+    cabinetryColor6.style.border = 'none';
+
+    preferenceData.cabinetry = cabinetryText5.children[0].innerText;
+    imgList.cabinetry = cabinetryImg5.children[0].src;
+})
+cabinetryColor6.addEventListener('click', function (e) {
+    e.preventDefault();
+    cabinetryImg6.style.display = 'block';
+    cabinetryText6.style.display = 'inline-block';
+    cabinetryHeader6.style.display = 'inline-block';
+
+    cabinetryImg1.style.display = 'none';
+    cabinetryText1.style.display = 'none';
+    cabinetryHeader1.style.display = 'none';
+
+    cabinetryImg2.style.display = 'none';
+    cabinetryText2.style.display = 'none';
+    cabinetryHeader2.style.display = 'none';
+    
+    cabinetryImg3.style.display = 'none';
+    cabinetryText3.style.display = 'none';
+    cabinetryHeader3.style.display = 'none';
+
+    cabinetryImg4.style.display = 'none';
+    cabinetryText4.style.display = 'none';
+    cabinetryHeader4.style.display = 'none';
+
+    cabinetryImg5.style.display = 'none';
+    cabinetryText5.style.display = 'none';
+    cabinetryHeader5.style.display = 'none';
+
+    cabinetryColor1.style.border = 'none';
+    cabinetryColor2.style.border = 'none';
+    cabinetryColor3.style.border = 'none';
+    cabinetryColor4.style.border = 'none';
+    cabinetryColor5.style.border = 'none';
+    cabinetryColor6.style.border = '5px solid #26cbff';
+
+    preferenceData.cabinetry = cabinetryText6.children[0].innerText;
+    imgList.cabinetry = cabinetryImg6.children[0].src;
 })
 
 //cabinet hardware section
 let cabinethwImg1 = document.querySelector('#cabinet-hw-images-1');
 let cabinethwImg2 = document.querySelector('#cabinet-hw-images-2');
 let cabinethwImg3 = document.querySelector('#cabinet-hw-images-3');
+let cabinethwImg4 = document.querySelector('#cabinet-hw-images-4');
+let cabinethwImg5 = document.querySelector('#cabinet-hw-images-5');
+let cabinethwImg6 = document.querySelector('#cabinet-hw-images-6');
 let cabinethwHeader1 = document.querySelector('#cabinet-hw-header-1');
 let cabinethwHeader2 = document.querySelector('#cabinet-hw-header-2');
 let cabinethwHeader3 = document.querySelector('#cabinet-hw-header-3');
+let cabinethwHeader4 = document.querySelector('#cabinet-hw-header-4');
+let cabinethwHeader5 = document.querySelector('#cabinet-hw-header-5');
+let cabinethwHeader6 = document.querySelector('#cabinet-hw-header-6');
 let cabinethwColor1 = document.querySelector('#cabinet-hw-color-1');
 let cabinethwColor2 = document.querySelector('#cabinet-hw-color-2');
 let cabinethwColor3 = document.querySelector('#cabinet-hw-color-3');
+let cabinethwColor4 = document.querySelector('#cabinet-hw-color-4');
+let cabinethwColor5 = document.querySelector('#cabinet-hw-color-5');
+let cabinethwColor6 = document.querySelector('#cabinet-hw-color-6');
 let cabinethwText1 = document.querySelector('#cabinet-hw-text-1');
 let cabinethwText2 = document.querySelector('#cabinet-hw-text-2');
 let cabinethwText3 = document.querySelector('#cabinet-hw-text-3');
+let cabinethwText4 = document.querySelector('#cabinet-hw-text-4');
+let cabinethwText5 = document.querySelector('#cabinet-hw-text-5');
+let cabinethwText6 = document.querySelector('#cabinet-hw-text-6');
 let cabinethwSel = document.querySelector('#cabinet-hw-select');
 let cabinethwSelText = document.querySelector('#cabinethw-sel-text')
 
@@ -273,9 +454,24 @@ cabinethwColor1.addEventListener('click', function (e) {
     cabinethwText3.style.display = 'none';
     cabinethwHeader3.style.display = 'none';
 
+    cabinethwImg4.style.display = 'none';
+    cabinethwText4.style.display = 'none';
+    cabinethwHeader4.style.display = 'none';
+
+    cabinethwImg5.style.display = 'none';
+    cabinethwText5.style.display = 'none';
+    cabinethwHeader5.style.display = 'none';
+
+    cabinethwImg6.style.display = 'none';
+    cabinethwText6.style.display = 'none';
+    cabinethwHeader6.style.display = 'none';
+
     cabinethwColor1.style.border = '5px solid #26cbff';
     cabinethwColor2.style.border = 'none';
     cabinethwColor3.style.border = 'none';
+    cabinethwColor4.style.border = 'none';
+    cabinethwColor5.style.border = 'none';
+    cabinethwColor6.style.border = 'none';
 
     preferenceData.cabinethw = cabinethwText1.children[0].innerText;
     imgList.cabinethw = cabinethwImg1.children[0].src
@@ -294,9 +490,24 @@ cabinethwColor2.addEventListener('click', function (e) {
     cabinethwText3.style.display = 'none';
     cabinethwHeader3.style.display = 'none';
 
+    cabinethwImg4.style.display = 'none';
+    cabinethwText4.style.display = 'none';
+    cabinethwHeader4.style.display = 'none';
+
+    cabinethwImg5.style.display = 'none';
+    cabinethwText5.style.display = 'none';
+    cabinethwHeader5.style.display = 'none';
+
+    cabinethwImg6.style.display = 'none';
+    cabinethwText6.style.display = 'none';
+    cabinethwHeader6.style.display = 'none';
+
     cabinethwColor1.style.border = 'none';
     cabinethwColor2.style.border = '5px solid #26cbff';
     cabinethwColor3.style.border = 'none';
+    cabinethwColor4.style.border = 'none';
+    cabinethwColor5.style.border = 'none';
+    cabinethwColor6.style.border = 'none';
 
     preferenceData.cabinethw = cabinethwText2.children[0].innerText;
     imgList.cabinethw = cabinethwImg2.children[0].src
@@ -315,12 +526,135 @@ cabinethwColor3.addEventListener('click', function (e) {
     cabinethwText2.style.display = 'none';
     cabinethwHeader2.style.display = 'none';
 
+    cabinethwImg4.style.display = 'none';
+    cabinethwText4.style.display = 'none';
+    cabinethwHeader4.style.display = 'none';
+
+    cabinethwImg5.style.display = 'none';
+    cabinethwText5.style.display = 'none';
+    cabinethwHeader5.style.display = 'none';
+
+    cabinethwImg6.style.display = 'none';
+    cabinethwText6.style.display = 'none';
+    cabinethwHeader6.style.display = 'none';
+
     cabinethwColor1.style.border = 'none';
     cabinethwColor2.style.border = 'none';
     cabinethwColor3.style.border = '5px solid #26cbff';
+    cabinethwColor4.style.border = 'none';
+    cabinethwColor5.style.border = 'none';
+    cabinethwColor6.style.border = 'none';
 
     preferenceData.cabinethw = cabinethwText3.children[0].innerText;
     imgList.cabinethw = cabinethwImg3.children[0].src
+})
+cabinethwColor4.addEventListener('click', function (e) {
+    e.preventDefault();
+    cabinethwImg4.style.display = 'block';
+    cabinethwText4.style.display = 'inline-block';
+    cabinethwHeader4.style.display = 'inline-block';
+
+    cabinethwImg1.style.display = 'none';
+    cabinethwText1.style.display = 'none';
+    cabinethwHeader1.style.display = 'none';
+
+    cabinethwImg2.style.display = 'none';
+    cabinethwText2.style.display = 'none';
+    cabinethwHeader2.style.display = 'none';
+
+    cabinethwImg3.style.display = 'none';
+    cabinethwText3.style.display = 'none';
+    cabinethwHeader3.style.display = 'none';
+
+    cabinethwImg5.style.display = 'none';
+    cabinethwText5.style.display = 'none';
+    cabinethwHeader5.style.display = 'none';
+
+    cabinethwImg6.style.display = 'none';
+    cabinethwText6.style.display = 'none';
+    cabinethwHeader6.style.display = 'none';
+
+    cabinethwColor1.style.border = 'none';
+    cabinethwColor2.style.border = 'none';
+    cabinethwColor3.style.border = 'none';
+    cabinethwColor4.style.border = '5px solid #26cbff';
+    cabinethwColor5.style.border = 'none';
+    cabinethwColor6.style.border = 'none';
+
+    preferenceData.cabinethw = cabinethwText4.children[0].innerText;
+    imgList.cabinethw = cabinethwImg4.children[0].src
+})
+cabinethwColor5.addEventListener('click', function (e) {
+    e.preventDefault();
+    cabinethwImg5.style.display = 'block';
+    cabinethwText5.style.display = 'inline-block';
+    cabinethwHeader5.style.display = 'inline-block';
+
+    cabinethwImg1.style.display = 'none';
+    cabinethwText1.style.display = 'none';
+    cabinethwHeader1.style.display = 'none';
+
+    cabinethwImg2.style.display = 'none';
+    cabinethwText2.style.display = 'none';
+    cabinethwHeader2.style.display = 'none';
+
+    cabinethwImg3.style.display = 'none';
+    cabinethwText3.style.display = 'none';
+    cabinethwHeader3.style.display = 'none';
+
+    cabinethwImg4.style.display = 'none';
+    cabinethwText4.style.display = 'none';
+    cabinethwHeader4.style.display = 'none';
+
+    cabinethwImg6.style.display = 'none';
+    cabinethwText6.style.display = 'none';
+    cabinethwHeader6.style.display = 'none';
+
+    cabinethwColor1.style.border = 'none';
+    cabinethwColor2.style.border = 'none';
+    cabinethwColor3.style.border = 'none';
+    cabinethwColor4.style.border = 'none';
+    cabinethwColor5.style.border = '5px solid #26cbff';
+    cabinethwColor6.style.border = 'none';
+
+    preferenceData.cabinethw = cabinethwText5.children[0].innerText;
+    imgList.cabinethw = cabinethwImg5.children[0].src
+})
+cabinethwColor6.addEventListener('click', function (e) {
+    e.preventDefault();
+    cabinethwImg6.style.display = 'block';
+    cabinethwText6.style.display = 'inline-block';
+    cabinethwHeader6.style.display = 'inline-block';
+
+    cabinethwImg1.style.display = 'none';
+    cabinethwText1.style.display = 'none';
+    cabinethwHeader1.style.display = 'none';
+
+    cabinethwImg2.style.display = 'none';
+    cabinethwText2.style.display = 'none';
+    cabinethwHeader2.style.display = 'none';
+
+    cabinethwImg3.style.display = 'none';
+    cabinethwText3.style.display = 'none';
+    cabinethwHeader3.style.display = 'none';
+
+    cabinethwImg4.style.display = 'none';
+    cabinethwText4.style.display = 'none';
+    cabinethwHeader4.style.display = 'none';
+
+    cabinethwImg5.style.display = 'none';
+    cabinethwText5.style.display = 'none';
+    cabinethwHeader5.style.display = 'none';
+
+    cabinethwColor1.style.border = 'none';
+    cabinethwColor2.style.border = 'none';
+    cabinethwColor3.style.border = 'none';
+    cabinethwColor4.style.border = 'none';
+    cabinethwColor5.style.border = 'none';
+    cabinethwColor6.style.border = '5px solid #26cbff';
+
+    preferenceData.cabinethw = cabinethwText6.children[0].innerText;
+    imgList.cabinethw = cabinethwImg6.children[0].src
 })
 
 //countertops section
