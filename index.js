@@ -661,15 +661,27 @@ cabinethwColor6.addEventListener('click', function (e) {
 let countertopImg1 = document.querySelector('#countertop-images-1');
 let countertopImg2 = document.querySelector('#countertop-images-2');
 let countertopImg3 = document.querySelector('#countertop-images-3');
+let countertopImg4 = document.querySelector('#countertop-images-4');
+let countertopImg5 = document.querySelector('#countertop-images-5');
+let countertopImg6 = document.querySelector('#countertop-images-6');
 let countertopHeader1 = document.querySelector('#countertop-header-1');
 let countertopHeader2 = document.querySelector('#countertop-header-2');
 let countertopHeader3 = document.querySelector('#countertop-header-3');
+let countertopHeader4 = document.querySelector('#countertop-header-3');
+let countertopHeader5 = document.querySelector('#countertop-header-3');
+let countertopHeader6 = document.querySelector('#countertop-header-3');
 let countertopColor1 = document.querySelector('#countertop-color-1');
 let countertopColor2 = document.querySelector('#countertop-color-2');
 let countertopColor3 = document.querySelector('#countertop-color-3');
+let countertopColor4 = document.querySelector('#countertop-color-4');
+let countertopColor5 = document.querySelector('#countertop-color-5');
+let countertopColor6 = document.querySelector('#countertop-color-6');
 let countertopText1 = document.querySelector('#countertop-text-1');
 let countertopText2 = document.querySelector('#countertop-text-2');
 let countertopText3 = document.querySelector('#countertop-text-3');
+let countertopText4 = document.querySelector('#countertop-text-4');
+let countertopText5 = document.querySelector('#countertop-text-5');
+let countertopText6 = document.querySelector('#countertop-text-6');
 let countertopSel = document.querySelector('#countertop-select');
 let countertopSelText = document.querySelector('#countertop-sel-text')
 
@@ -705,9 +717,24 @@ countertopColor1.addEventListener('click', function (e) {
     countertopText3.style.display = 'none';
     countertopHeader3.style.display = 'none';
 
+    countertopImg4.style.display = 'none';
+    countertopText4.style.display = 'none';
+    countertopHeader4.style.display = 'none';
+
+    countertopImg5.style.display = 'none';
+    countertopText5.style.display = 'none';
+    countertopHeader5.style.display = 'none';
+
+    countertopImg6.style.display = 'none';
+    countertopText6.style.display = 'none';
+    countertopHeader6.style.display = 'none';
+
     countertopColor1.style.border = '5px solid #26cbff';
     countertopColor2.style.border = 'none';
     countertopColor3.style.border = 'none';
+    countertopColor4.style.border = 'none';
+    countertopColor5.style.border = 'none';
+    countertopColor6.style.border = 'none';
 
     preferenceData.countertop = countertopText1.children[0].innerText;
     imgList.countertop = countertopImg1.children[0].src
@@ -726,9 +753,24 @@ countertopColor2.addEventListener('click', function (e) {
     countertopText3.style.display = 'none';
     countertopHeader3.style.display = 'none';
 
+    countertopImg4.style.display = 'none';
+    countertopText4.style.display = 'none';
+    countertopHeader4.style.display = 'none';
+
+    countertopImg5.style.display = 'none';
+    countertopText5.style.display = 'none';
+    countertopHeader5.style.display = 'none';
+
+    countertopImg6.style.display = 'none';
+    countertopText6.style.display = 'none';
+    countertopHeader6.style.display = 'none';
+
     countertopColor1.style.border = 'none';
     countertopColor2.style.border = '5px solid #26cbff';
     countertopColor3.style.border = 'none';
+    countertopColor4.style.border = 'none';
+    countertopColor5.style.border = 'none';
+    countertopColor6.style.border = 'none';
 
     preferenceData.countertop = countertopText2.children[0].innerText;
     imgList.countertop = countertopImg2.children[0].src
@@ -747,27 +789,162 @@ countertopColor3.addEventListener('click', function (e) {
     countertopText2.style.display = 'none';
     countertopHeader2.style.display = 'none';
 
+    countertopImg4.style.display = 'none';
+    countertopText4.style.display = 'none';
+    countertopHeader4.style.display = 'none';
+
+    countertopImg5.style.display = 'none';
+    countertopText5.style.display = 'none';
+    countertopHeader5.style.display = 'none';
+
+    countertopImg6.style.display = 'none';
+    countertopText6.style.display = 'none';
+    countertopHeader6.style.display = 'none';
+
     countertopColor1.style.border = 'none';
     countertopColor2.style.border = 'none';
     countertopColor3.style.border = '5px solid #26cbff';
+    countertopColor4.style.border = 'none';
+    countertopColor5.style.border = 'none';
+    countertopColor6.style.border = 'none';
 
     preferenceData.countertop = countertopText3.children[0].innerText;
     imgList.countertop = countertopImg3.children[0].src
+})
+countertopColor4.addEventListener('click', function (e) {
+    e.preventDefault();
+    countertopImg4.style.display = 'block';
+    countertopText4.style.display = 'inline-block';
+    countertopHeader4.style.display = 'inline-block';
+
+    countertopImg1.style.display = 'none';
+    countertopText1.style.display = 'none';
+    countertopHeader1.style.display = 'none';
+
+    countertopImg2.style.display = 'none';
+    countertopText2.style.display = 'none';
+    countertopHeader2.style.display = 'none';
+
+    countertopImg3.style.display = 'none';
+    countertopText3.style.display = 'none';
+    countertopHeader3.style.display = 'none';
+
+    countertopImg5.style.display = 'none';
+    countertopText5.style.display = 'none';
+    countertopHeader5.style.display = 'none';
+
+    countertopImg6.style.display = 'none';
+    countertopText6.style.display = 'none';
+    countertopHeader6.style.display = 'none';
+
+    countertopColor1.style.border = 'none';
+    countertopColor2.style.border = 'none';
+    countertopColor3.style.border = 'none';
+    countertopColor4.style.border = '5px solid #26cbff';
+    countertopColor5.style.border = 'none';
+    countertopColor6.style.border = 'none';
+
+    preferenceData.countertop = countertopText4.children[0].innerText;
+    imgList.countertop = countertopImg4.children[0].src
+})
+countertopColor5.addEventListener('click', function (e) {
+    e.preventDefault();
+    countertopImg5.style.display = 'block';
+    countertopText5.style.display = 'inline-block';
+    countertopHeader5.style.display = 'inline-block';
+
+    countertopImg1.style.display = 'none';
+    countertopText1.style.display = 'none';
+    countertopHeader1.style.display = 'none';
+
+    countertopImg2.style.display = 'none';
+    countertopText2.style.display = 'none';
+    countertopHeader2.style.display = 'none';
+
+    countertopImg3.style.display = 'none';
+    countertopText3.style.display = 'none';
+    countertopHeader3.style.display = 'none';
+
+    countertopImg5.style.display = 'none';
+    countertopText5.style.display = 'none';
+    countertopHeader5.style.display = 'none';
+
+    countertopImg6.style.display = 'none';
+    countertopText6.style.display = 'none';
+    countertopHeader6.style.display = 'none';
+
+    countertopColor1.style.border = 'none';
+    countertopColor2.style.border = 'none';
+    countertopColor3.style.border = 'none';
+    countertopColor4.style.border = 'none';
+    countertopColor5.style.border = '5px solid #26cbff';
+    countertopColor6.style.border = 'none';
+
+    preferenceData.countertop = countertopText5.children[0].innerText;
+    imgList.countertop = countertopImg5.children[0].src
+})
+countertopColor6.addEventListener('click', function (e) {
+    e.preventDefault();
+    countertopImg6.style.display = 'block';
+    countertopText6.style.display = 'inline-block';
+    countertopHeader6.style.display = 'inline-block';
+
+    countertopImg1.style.display = 'none';
+    countertopText1.style.display = 'none';
+    countertopHeader1.style.display = 'none';
+
+    countertopImg2.style.display = 'none';
+    countertopText2.style.display = 'none';
+    countertopHeader2.style.display = 'none';
+
+    countertopImg3.style.display = 'none';
+    countertopText3.style.display = 'none';
+    countertopHeader3.style.display = 'none';
+
+    countertopImg5.style.display = 'none';
+    countertopText5.style.display = 'none';
+    countertopHeader5.style.display = 'none';
+
+    countertopImg4.style.display = 'none';
+    countertopText4.style.display = 'none';
+    countertopHeader4.style.display = 'none';
+
+    countertopColor1.style.border = 'none';
+    countertopColor2.style.border = 'none';
+    countertopColor3.style.border = 'none';
+    countertopColor4.style.border = 'none';
+    countertopColor5.style.border = 'none';
+    countertopColor6.style.border = '5px solid #26cbff';
+
+    preferenceData.countertop = countertopText6.children[0].innerText;
+    imgList.countertop = countertopImg6.children[0].src
 })
 
 //backsplash section
 let backsplashImg1 = document.querySelector('#backsplash-images-1');
 let backsplashImg2 = document.querySelector('#backsplash-images-2');
 let backsplashImg3 = document.querySelector('#backsplash-images-3');
+let backsplashImg4 = document.querySelector('#backsplash-images-4');
+let backsplashImg5 = document.querySelector('#backsplash-images-5');
+let backsplashImg6 = document.querySelector('#backsplash-images-6');
 let backsplashHeader1 = document.querySelector('#backsplash-header-1');
 let backsplashHeader2 = document.querySelector('#backsplash-header-2');
 let backsplashHeader3 = document.querySelector('#backsplash-header-3');
+let backsplashHeader4 = document.querySelector('#backsplash-header-4');
+let backsplashHeader5 = document.querySelector('#backsplash-header-5');
+let backsplashHeader6 = document.querySelector('#backsplash-header-6');
 let backsplashColor1 = document.querySelector('#backsplash-color-1');
 let backsplashColor2 = document.querySelector('#backsplash-color-2');
 let backsplashColor3 = document.querySelector('#backsplash-color-3');
+let backsplashColor4 = document.querySelector('#backsplash-color-4');
+let backsplashColor5 = document.querySelector('#backsplash-color-5');
+let backsplashColor6 = document.querySelector('#backsplash-color-6');
 let backsplashText1 = document.querySelector('#backsplash-text-1');
 let backsplashText2 = document.querySelector('#backsplash-text-2');
 let backsplashText3 = document.querySelector('#backsplash-text-3');
+let backsplashText4 = document.querySelector('#backsplash-text-4');
+let backsplashText5 = document.querySelector('#backsplash-text-5');
+let backsplashText6 = document.querySelector('#backsplash-text-6');
 let backsplashSel = document.querySelector('#backsplash-select');
 let backsplashSelText = document.querySelector('#backsplash-sel-text')
 
@@ -803,9 +980,24 @@ backsplashColor1.addEventListener('click', function (e) {
     backsplashText3.style.display = 'none';
     backsplashHeader3.style.display = 'none';
 
+    backsplashImg4.style.display = 'none';
+    backsplashText4.style.display = 'none';
+    backsplashHeader4.style.display = 'none';
+
+    backsplashImg5.style.display = 'none';
+    backsplashText5.style.display = 'none';
+    backsplashHeader5.style.display = 'none';
+
+    backsplashImg6.style.display = 'none';
+    backsplashText6.style.display = 'none';
+    backsplashHeader6.style.display = 'none';
+
     backsplashColor1.style.border = '5px solid #26cbff';
     backsplashColor2.style.border = 'none';
     backsplashColor3.style.border = 'none';
+    backsplashColor4.style.border = 'none';
+    backsplashColor5.style.border = 'none';
+    backsplashColor6.style.border = 'none';
 
     preferenceData.backsplash = backsplashText1.children[0].innerText;
     imgList.backsplash = backsplashImg1.children[0].src;
@@ -824,9 +1016,24 @@ backsplashColor2.addEventListener('click', function (e) {
     backsplashText3.style.display = 'none';
     backsplashHeader3.style.display = 'none';
 
+    backsplashImg4.style.display = 'none';
+    backsplashText4.style.display = 'none';
+    backsplashHeader4.style.display = 'none';
+
+    backsplashImg5.style.display = 'none';
+    backsplashText5.style.display = 'none';
+    backsplashHeader5.style.display = 'none';
+
+    backsplashImg6.style.display = 'none';
+    backsplashText6.style.display = 'none';
+    backsplashHeader6.style.display = 'none';
+
     backsplashColor1.style.border = 'none';
     backsplashColor2.style.border = '5px solid #26cbff';
     backsplashColor3.style.border = 'none';
+    backsplashColor4.style.border = 'none';
+    backsplashColor5.style.border = 'none';
+    backsplashColor6.style.border = 'none';
 
     preferenceData.backsplash = backsplashText2.children[0].innerText;
     imgList.backsplash = backsplashImg2.children[0].src;
@@ -845,12 +1052,135 @@ backsplashColor3.addEventListener('click', function (e) {
     backsplashText2.style.display = 'none';
     backsplashHeader2.style.display = 'none';
 
+    backsplashImg4.style.display = 'none';
+    backsplashText4.style.display = 'none';
+    backsplashHeader4.style.display = 'none';
+
+    backsplashImg5.style.display = 'none';
+    backsplashText5.style.display = 'none';
+    backsplashHeader5.style.display = 'none';
+
+    backsplashImg6.style.display = 'none';
+    backsplashText6.style.display = 'none';
+    backsplashHeader6.style.display = 'none';
+
     backsplashColor1.style.border = 'none';
     backsplashColor2.style.border = 'none';
     backsplashColor3.style.border = '5px solid #26cbff';
+    backsplashColor4.style.border = 'none';
+    backsplashColor5.style.border = 'none';
+    backsplashColor6.style.border = 'none';
 
     preferenceData.backsplash = backsplashText3.children[0].innerText;
     imgList.backsplash = backsplashImg3.children[0].src;
+})
+backsplashColor4.addEventListener('click', function (e) {
+    e.preventDefault();
+    backsplashImg4.style.display = 'block';
+    backsplashText4.style.display = 'inline-block';
+    backsplashHeader4.style.display = 'inline-block';
+
+    backsplashImg1.style.display = 'none';
+    backsplashText1.style.display = 'none';
+    backsplashHeader1.style.display = 'none';
+
+    backsplashImg2.style.display = 'none';
+    backsplashText2.style.display = 'none';
+    backsplashHeader2.style.display = 'none';
+
+    backsplashImg3.style.display = 'none';
+    backsplashText3.style.display = 'none';
+    backsplashHeader3.style.display = 'none';
+
+    backsplashImg5.style.display = 'none';
+    backsplashText5.style.display = 'none';
+    backsplashHeader5.style.display = 'none';
+
+    backsplashImg6.style.display = 'none';
+    backsplashText6.style.display = 'none';
+    backsplashHeader6.style.display = 'none';
+
+    backsplashColor1.style.border = 'none';
+    backsplashColor2.style.border = 'none';
+    backsplashColor3.style.border = 'none';
+    backsplashColor4.style.border = '5px solid #26cbff';
+    backsplashColor5.style.border = 'none';
+    backsplashColor6.style.border = 'none';
+
+    preferenceData.backsplash = backsplashText4.children[0].innerText;
+    imgList.backsplash = backsplashImg4.children[0].src;
+})
+backsplashColor5.addEventListener('click', function (e) {
+    e.preventDefault();
+    backsplashImg5.style.display = 'block';
+    backsplashText5.style.display = 'inline-block';
+    backsplashHeader5.style.display = 'inline-block';
+
+    backsplashImg1.style.display = 'none';
+    backsplashText1.style.display = 'none';
+    backsplashHeader1.style.display = 'none';
+
+    backsplashImg2.style.display = 'none';
+    backsplashText2.style.display = 'none';
+    backsplashHeader2.style.display = 'none';
+
+    backsplashImg3.style.display = 'none';
+    backsplashText3.style.display = 'none';
+    backsplashHeader3.style.display = 'none';
+
+    backsplashImg4.style.display = 'none';
+    backsplashText4.style.display = 'none';
+    backsplashHeader4.style.display = 'none';
+
+    backsplashImg6.style.display = 'none';
+    backsplashText6.style.display = 'none';
+    backsplashHeader6.style.display = 'none';
+
+    backsplashColor1.style.border = 'none';
+    backsplashColor2.style.border = 'none';
+    backsplashColor3.style.border = 'none';
+    backsplashColor4.style.border = 'none';
+    backsplashColor5.style.border = '5px solid #26cbff';
+    backsplashColor6.style.border = 'none';
+
+    preferenceData.backsplash = backsplashText5.children[0].innerText;
+    imgList.backsplash = backsplashImg5.children[0].src;
+})
+backsplashColor6.addEventListener('click', function (e) {
+    e.preventDefault();
+    backsplashImg6.style.display = 'block';
+    backsplashText6.style.display = 'inline-block';
+    backsplashHeader6.style.display = 'inline-block';
+
+    backsplashImg1.style.display = 'none';
+    backsplashText1.style.display = 'none';
+    backsplashHeader1.style.display = 'none';
+
+    backsplashImg2.style.display = 'none';
+    backsplashText2.style.display = 'none';
+    backsplashHeader2.style.display = 'none';
+
+    backsplashImg3.style.display = 'none';
+    backsplashText3.style.display = 'none';
+    backsplashHeader3.style.display = 'none';
+
+    backsplashImg5.style.display = 'none';
+    backsplashText5.style.display = 'none';
+    backsplashHeader5.style.display = 'none';
+
+    backsplashImg4.style.display = 'none';
+    backsplashText4.style.display = 'none';
+    backsplashHeader4.style.display = 'none';
+
+    backsplashColor1.style.border = 'none';
+    backsplashColor2.style.border = 'none';
+    backsplashColor3.style.border = 'none';
+    backsplashColor4.style.border = 'none';
+    backsplashColor5.style.border = 'none';
+    backsplashColor6.style.border = '5px solid #26cbff';
+
+    preferenceData.backsplash = backsplashText6.children[0].innerText;
+    imgList.backsplash = backsplashImg6.children[0].src;
 })
 
 //flooring section
