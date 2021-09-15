@@ -877,9 +877,9 @@ countertopColor5.addEventListener('click', function (e) {
     countertopText3.style.display = 'none';
     countertopHeader3.style.display = 'none';
 
-    countertopImg5.style.display = 'none';
-    countertopText5.style.display = 'none';
-    countertopHeader5.style.display = 'none';
+    countertopImg4.style.display = 'none';
+    countertopText4.style.display = 'none';
+    countertopHeader4.style.display = 'none';
 
     countertopImg6.style.display = 'none';
     countertopText6.style.display = 'none';
