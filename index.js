@@ -87,6 +87,7 @@ supplierVendor1.addEventListener('click', function(e){
     supplierVendor3.classList.remove('door-opt-btn-pressed');
 
     preferenceData.supplier = supplierOpt1.innerText;
+    imgList.supplier = supplierImg1.children[0].src;
 })
 
 supplierVendor2.addEventListener('click', function(e){
@@ -106,6 +107,7 @@ supplierVendor2.addEventListener('click', function(e){
     supplierVendor3.classList.remove('door-opt-btn-pressed');
 
     preferenceData.supplier = supplierOpt2.innerText;
+    imgList.supplier = supplierImg2.children[0].src;
 })
 
 supplierVendor3.addEventListener('click', function(e){
@@ -125,6 +127,7 @@ supplierVendor3.addEventListener('click', function(e){
     supplierVendor1.classList.remove('door-opt-btn-pressed');
 
     preferenceData.supplier = supplierOpt3.innerText;
+    imgList.supplier = supplierImg3.children[0].src;
 })
 
 //cabinetry section
