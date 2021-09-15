@@ -81,6 +81,9 @@ supplierVendor1.addEventListener('click', function(e){
     supplierBullet1.style.display = 'inline-block';
     supplierBullet2.style.display = 'none';
     supplierBullet3.style.display = 'none';
+    supplierImg1.style.display = 'inline-block';
+    supplierImg2.style.display = 'none';
+    supplierImg3.style.display = 'none';
 
     supplierVendor1.classList.add('door-opt-btn-pressed');
     supplierVendor2.classList.remove('door-opt-btn-pressed');
@@ -101,6 +104,9 @@ supplierVendor2.addEventListener('click', function(e){
     supplierBullet2.style.display = 'inline-block';
     supplierBullet1.style.display = 'none';
     supplierBullet3.style.display = 'none';
+    supplierImg1.style.display = 'none';
+    supplierImg2.style.display = 'inline-block';
+    supplierImg3.style.display = 'none';
 
     supplierVendor2.classList.add('door-opt-btn-pressed');
     supplierVendor1.classList.remove('door-opt-btn-pressed');
@@ -121,6 +127,9 @@ supplierVendor3.addEventListener('click', function(e){
     supplierBullet3.style.display = 'inline-block';
     supplierBullet2.style.display = 'none';
     supplierBullet1.style.display = 'none';
+    supplierImg1.style.display = 'none';
+    supplierImg2.style.display = 'none';
+    supplierImg3.style.display = 'inline-block';
 
     supplierVendor3.classList.add('door-opt-btn-pressed');
     supplierVendor2.classList.remove('door-opt-btn-pressed');
