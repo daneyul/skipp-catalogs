@@ -35,14 +35,28 @@ let cabinetrySelected = true;
 let cabinethwSelected = true;
 let countertopSelected = true;
 let backsplashSelected = true;
-let flooringSelected = true;
+let flooringSelected = true;// Pricing calculator
+
+let supplier1selected = true;
+let supplier2selected = false;
+let supplier3selected = false;
+let size1selected = true;
+let size2selected = false;
+let size3selected = false;
+let size4selected = false;
+
+let pricing = {
+    starting: '$5,500',
+    linear: '12',
+    cabinet: '8',
+    drawer: '4',
+}
 
 //supplier section
 let supplierText1 = document.querySelector('#supplier-text-1');
 let supplierText2 = document.querySelector('#supplier-text-2');
 let supplierText3 = document.querySelector('#supplier-text-3');
 let supplierSel = document.querySelector('#supplier-select');
-// let supplierSelText = document.querySelector('#supplier-sel-text')
 let supplierHeader1 = document.querySelector('#supplier-header-1');
 let supplierHeader2 = document.querySelector('#supplier-header-2');
 let supplierHeader3 = document.querySelector('#supplier-header-3');
@@ -58,12 +72,26 @@ let supplierOpt1 = document.querySelector('#supplier-option-1')
 let supplierOpt2 = document.querySelector('#supplier-option-2')
 let supplierOpt3 = document.querySelector('#supplier-option-3')
 
+let supplierSize1 = document.querySelector('#supplier-size-1');
+let supplierSize2 = document.querySelector('#supplier-size-2');
+let supplierSize3 = document.querySelector('#supplier-size-3');
+let supplierSize4 = document.querySelector('#supplier-size-4');
+
+let supplierCost = document.querySelector('#supplier-cost');
+let supplierFt = document.querySelector('#supplier-ft');
+let supplierCab = document.querySelector('#supplier-cab');
+let supplierDraw = document.querySelector('#supplier-draw');
+
+let layoutImg1 = document.querySelector('#layout-images-1');
+let layoutImg2 = document.querySelector('#layout-images-2');
+let layoutImg3 = document.querySelector('#layout-images-3');
+let layoutImg4 = document.querySelector('#layout-images-4');
+
 let supplierBtn = document.querySelector('#supplier-add-btn');
 
 supplierBtn.addEventListener('click', function (e) {
     e.preventDefault();
     supplierSel.src = imgList.layout;
-    // supplierSelText.style.zIndex = "-1";
     supplierSelected = true;
     saveClassChange();
 })
@@ -84,6 +112,23 @@ supplierVendor1.addEventListener('click', function(e){
     supplierVendor2.classList.remove('door-opt-btn-pressed');
     supplierVendor3.classList.remove('door-opt-btn-pressed');
 
+    supplier1selected = true;
+    supplier2selected = false;
+    supplier3selected = false;
+    if (size1selected){
+        pricing.starting = '$5,500';
+    } else if (size2selected){
+        pricing.starting = '$8,300';
+    } else if (size3selected){
+        pricing.starting = '$11,500';
+    } else if (size4selected){
+        pricing.starting = '$14,400';
+    }
+    supplierCost.innerText = pricing.starting;
+    supplierDropText.innerText = supplierVendor1.innerText;
+    imgList.layout = supplierImg1.src;
+    document.querySelector('#dropdown-supplier').classList.remove('w--open');
+
     preferenceData.supplier = supplierOpt1.innerText;
     imgList.layout = layoutImg1.children[0].src;
 })
@@ -103,6 +148,23 @@ supplierVendor2.addEventListener('click', function(e){
     supplierVendor2.classList.add('door-opt-btn-pressed');
     supplierVendor1.classList.remove('door-opt-btn-pressed');
     supplierVendor3.classList.remove('door-opt-btn-pressed');
+
+    supplier2selected = true;
+    supplier1selected = false;
+    supplier3selected = false;
+    if (size1selected){
+        pricing.starting = '$6,000';
+    } else if (size2selected){
+        pricing.starting = '$8,700';
+    } else if (size3selected){
+        pricing.starting = '$12,500';
+    } else if (size4selected){
+        pricing.starting = '$16,000';
+    }
+    supplierCost.innerText = pricing.starting;
+    supplierDropText.innerText = supplierVendor2.innerText;
+    imgList.layout = supplierImg2.src;
+    document.querySelector('#dropdown-supplier').classList.remove('w--open');
 
     preferenceData.supplier = supplierOpt2.innerText;
     imgList.layout = layoutImg2.children[0].src;
@@ -127,8 +189,162 @@ supplierVendor3.addEventListener('click', function(e){
     supplierVendor2.classList.remove('door-opt-btn-pressed');
     supplierVendor1.classList.remove('door-opt-btn-pressed');
 
+    supplier3selected = true;
+    supplier1selected = false;
+    supplier2selected = false;
+    if (size1selected){
+        pricing.starting = '$7,900';
+    } else if (size2selected){
+        pricing.starting = '$11,400';
+    } else if (size3selected){
+        pricing.starting = '$17,300';
+    } else if (size4selected){
+        pricing.starting = '$22,300';
+    }
+    supplierCost.innerText = pricing.starting;
+    supplierDropText.innerText = supplierVendor3.innerText;
+    imgList.layout = supplierImg3.src;
+    document.querySelector('#dropdown-supplier').classList.remove('w--open');
+
     preferenceData.supplier = supplierOpt3.innerText;
     imgList.layout = layoutImg3.children[0].src;
+})
+
+supplierSize1.addEventListener('click', function(e){
+    e.preventDefault();
+    size1selected = true;
+    size2selected = false;
+    size3selected = false;
+    size4selected = false;
+    pricing.linear = '12';
+    pricing.cabinet = '8';
+    pricing.drawer = '4';
+    if (supplier1selected){
+        pricing.starting = '$5,500';
+    } else if (supplier2selected){
+        pricing.starting = '$6,000';
+    } else if (supplier3selected){
+        pricing.starting = '$7,900'
+    }
+    supplierCost.innerText = pricing.starting;
+    supplierFt.innerText = pricing.linear;
+    supplierCab.innerText = pricing.cabinet;
+    supplierDraw.innerText = pricing.drawer;
+    document.querySelector('#dropdown-layout').classList.remove('w--open');
+
+    layoutImg1.style.display = 'block';
+    layoutImg2.style.display = 'none';
+    layoutImg3.style.display = 'none';
+    layoutImg4.style.display = 'none';
+
+    supplierSize1.classList.add('door-opt-btn-pressed');
+    supplierSize2.classList.remove('door-opt-btn-pressed');
+    supplierSize3.classList.remove('door-opt-btn-pressed');
+    supplierSize4.classList.remove('door-opt-btn-pressed');
+
+    preferenceData.layout = supplierSize1.innerText;
+})
+supplierSize2.addEventListener('click', function(e){
+    e.preventDefault();
+    size2selected = true;
+    size1selected = false;
+    size3selected = false;
+    size4selected = false;
+    pricing.linear = '19';
+    pricing.cabinet = '10';
+    pricing.drawer = '4';
+    if (supplier1selected){
+        pricing.starting = '$8,300';
+    } else if (supplier2selected){
+        pricing.starting = '$8,700';
+    } else if (supplier3selected){
+        pricing.starting = '$11,400'
+    }
+    supplierCost.innerText = pricing.starting;
+    supplierFt.innerText = pricing.linear;
+    supplierCab.innerText = pricing.cabinet;
+    supplierDraw.innerText = pricing.drawer;
+    document.querySelector('#dropdown-layout').classList.remove('w--open');
+
+    layoutImg1.style.display = 'none';
+    layoutImg2.style.display = 'block';
+    layoutImg3.style.display = 'none';
+    layoutImg4.style.display = 'none';
+
+    supplierSize1.classList.remove('door-opt-btn-pressed');
+    supplierSize2.classList.add('door-opt-btn-pressed');
+    supplierSize3.classList.remove('door-opt-btn-pressed');
+    supplierSize4.classList.remove('door-opt-btn-pressed');
+
+    preferenceData.layout = supplierSize2.innerText;
+})
+supplierSize3.addEventListener('click', function(e){
+    e.preventDefault();
+    size3selected = true;
+    size1selected = false;
+    size2selected = false;
+    size4selected = false;
+    pricing.linear = '28';
+    pricing.cabinet = '13';
+    pricing.drawer = '7';
+    if (supplier1selected){
+        pricing.starting = '$11,500';
+    } else if (supplier2selected){
+        pricing.starting = '$12,500';
+    } else if (supplier3selected){
+        pricing.starting = '$17,300'
+    }
+    supplierCost.innerText = pricing.starting;
+    supplierFt.innerText = pricing.linear;
+    supplierCab.innerText = pricing.cabinet;
+    supplierDraw.innerText = pricing.drawer;
+    document.querySelector('#dropdown-layout').classList.remove('w--open');
+
+    layoutImg1.style.display = 'none';
+    layoutImg2.style.display = 'none';
+    layoutImg3.style.display = 'block';
+    layoutImg4.style.display = 'none';
+
+    supplierSize1.classList.remove('door-opt-btn-pressed');
+    supplierSize2.classList.remove('door-opt-btn-pressed');
+    supplierSize3.classList.add('door-opt-btn-pressed');
+    supplierSize4.classList.remove('door-opt-btn-pressed');
+
+    preferenceData.layout = supplierSize3.innerText;
+})
+supplierSize4.addEventListener('click', function(e){
+    e.preventDefault();
+    size4selected = true;
+    size1selected = false;
+    size2selected = false;
+    size3selected = false;
+    pricing.linear = '35';
+    pricing.cabinet = '16';
+    pricing.drawer = '12';
+    if (supplier1selected){
+        pricing.starting = '$14,400';
+    } else if (supplier2selected){
+        pricing.starting = '$16,000';
+    } else if (supplier3selected){
+        pricing.starting = '$22,300'
+    }
+    supplierCost.innerText = pricing.starting;
+    supplierFt.innerText = pricing.linear;
+    supplierCab.innerText = pricing.cabinet;
+    supplierDraw.innerText = pricing.drawer;
+    document.querySelector('#dropdown-layout').classList.remove('w--open');
+
+    layoutImg1.style.display = 'none';
+    layoutImg2.style.display = 'none';
+    layoutImg3.style.display = 'none';
+    layoutImg4.style.display = 'block';
+
+    supplierSize1.classList.remove('door-opt-btn-pressed');
+    supplierSize2.classList.remove('door-opt-btn-pressed');
+    supplierSize3.classList.remove('door-opt-btn-pressed');
+    supplierSize4.classList.add('door-opt-btn-pressed');
+
+    preferenceData.layout = supplierSize4.innerText;
 })
 
 //cabinetry section
@@ -1285,30 +1501,10 @@ flooringColor3.addEventListener('click', function (e) {
     imgList.flooring = flooringImg3.children[0].src;
 }) 
 
-// let saveButton1 = document.querySelector('#save-button-1');
 let saveButton2 = document.querySelector('#save-button-2');
-// let saveButton3 = document.querySelector('#save-button-3');
 let modal = document.querySelector('#modal');
 let errorText = document.querySelector('.text-block-26.error-text');
 let prefText = document.querySelector('.pref-text');
-
-// saveButton1.addEventListener('click', function () {
-//     if ((cabinetrySelected && cabinethwSelected && countertopSelected && backsplashSelected && flooringSelected)) {
-//         modal.style.display = 'block';
-//     } else {
-//       errorText.style.display = 'block';
-//       prefText.style.color = '#c43927';
-//   }
-// });
-
-// saveButton3.addEventListener('click', function () {
-//     if ((cabinetrySelected && cabinethwSelected && countertopSelected && backsplashSelected && flooringSelected)) {
-//         modal.style.display = 'block';
-//     } else {
-//       errorText.style.display = 'block';
-//       prefText.style.color = '#c43927';
-//   }
-// });
 
 saveButton2.addEventListener('click', function () {
     if ((cabinetrySelected && cabinethwSelected && countertopSelected && backsplashSelected && flooringSelected)) {
@@ -1318,217 +1514,4 @@ saveButton2.addEventListener('click', function () {
       prefText.style.color = '#c43927';
   }
 });
-
-// Pricing calculator
-
-let supplier1selected = true;
-let supplier2selected = false;
-let supplier3selected = false;
-let size1selected = true;
-let size2selected = false;
-let size3selected = false;
-let size4selected = false;
-
-let pricing = {
-    starting: '$5,500',
-    linear: '12',
-    cabinet: '8',
-    drawer: '4',
-}
-
-let supplierSize1 = document.querySelector('#supplier-size-1');
-let supplierSize2 = document.querySelector('#supplier-size-2');
-let supplierSize3 = document.querySelector('#supplier-size-3');
-let supplierSize4 = document.querySelector('#supplier-size-4');
-
-let supplierCost = document.querySelector('#supplier-cost');
-let supplierFt = document.querySelector('#supplier-ft');
-let supplierCab = document.querySelector('#supplier-cab');
-let supplierDraw = document.querySelector('#supplier-draw');
-
-let layoutImg1 = document.querySelector('#layout-images-1');
-let layoutImg2 = document.querySelector('#layout-images-2');
-let layoutImg3 = document.querySelector('#layout-images-3');
-let layoutImg4 = document.querySelector('#layout-images-4');
-
-supplierVendor1.addEventListener('click', function(e){
-    e.preventDefault();
-    supplier1selected = true;
-    supplier2selected = false;
-    supplier3selected = false;
-    if (size1selected){
-        pricing.starting = '$5,500';
-    } else if (size2selected){
-        pricing.starting = '$8,300';
-    } else if (size3selected){
-        pricing.starting = '$11,500';
-    } else if (size4selected){
-        pricing.starting = '$14,400';
-    }
-    supplierCost.innerText = pricing.starting;
-    supplierDropText.innerText = supplierVendor1.innerText;
-    imgList.layout = supplierImg1.src;
-    document.querySelector('#dropdown-supplier').classList.remove('w--open');
-});
-
-supplierVendor2.addEventListener('click', function(e){
-    e.preventDefault();
-    supplier2selected = true;
-    supplier1selected = false;
-    supplier3selected = false;
-    if (size1selected){
-        pricing.starting = '$6,000';
-    } else if (size2selected){
-        pricing.starting = '$8,700';
-    } else if (size3selected){
-        pricing.starting = '$12,500';
-    } else if (size4selected){
-        pricing.starting = '$16,000';
-    }
-    supplierCost.innerText = pricing.starting;
-    supplierDropText.innerText = supplierVendor2.innerText;
-    imgList.layout = supplierImg2.src;
-    document.querySelector('#dropdown-supplier').classList.remove('w--open');
-})
-
-supplierVendor3.addEventListener('click', function(e){
-    e.preventDefault();
-    supplier3selected = true;
-    supplier1selected = false;
-    supplier2selected = false;
-    if (size1selected){
-        pricing.starting = '$7,900';
-    } else if (size2selected){
-        pricing.starting = '$11,400';
-    } else if (size3selected){
-        pricing.starting = '$17,300';
-    } else if (size4selected){
-        pricing.starting = '$22,300';
-    }
-    supplierCost.innerText = pricing.starting;
-    supplierDropText.innerText = supplierVendor3.innerText;
-    imgList.layout = supplierImg3.src;
-    document.querySelector('#dropdown-supplier').classList.remove('w--open');
-})
-
-supplierSize1.addEventListener('click', function(e){
-    e.preventDefault();
-    size1selected = true;
-    size2selected = false;
-    size3selected = false;
-    size4selected = false;
-    pricing.linear = '12';
-    pricing.cabinet = '8';
-    pricing.drawer = '4';
-    if (supplier1selected){
-        pricing.starting = '$5,500';
-    } else if (supplier2selected){
-        pricing.starting = '$6,000';
-    } else if (supplier3selected){
-        pricing.starting = '$7,900'
-    }
-    supplierCost.innerText = pricing.starting;
-    supplierFt.innerText = pricing.linear;
-    supplierCab.innerText = pricing.cabinet;
-    supplierDraw.innerText = pricing.drawer;
-    layoutDropText.innerText = supplierSize1.innerText;
-    document.querySelector('#dropdown-layout').classList.remove('w--open');
-
-    layoutImg1.style.display = 'block';
-    layoutImg2.style.display = 'none';
-    layoutImg3.style.display = 'none';
-    layoutImg4.style.display = 'none';
-
-    preferenceData.layout = supplierSize1.innerText;
-})
-supplierSize2.addEventListener('click', function(e){
-    e.preventDefault();
-    size2selected = true;
-    size1selected = false;
-    size3selected = false;
-    size4selected = false;
-    pricing.linear = '19';
-    pricing.cabinet = '10';
-    pricing.drawer = '4';
-    if (supplier1selected){
-        pricing.starting = '$8,300';
-    } else if (supplier2selected){
-        pricing.starting = '$8,700';
-    } else if (supplier3selected){
-        pricing.starting = '$11,400'
-    }
-    supplierCost.innerText = pricing.starting;
-    supplierFt.innerText = pricing.linear;
-    supplierCab.innerText = pricing.cabinet;
-    supplierDraw.innerText = pricing.drawer;
-    layoutDropText.innerText = supplierSize2.innerText;
-    document.querySelector('#dropdown-layout').classList.remove('w--open');
-
-    layoutImg1.style.display = 'none';
-    layoutImg2.style.display = 'block';
-    layoutImg3.style.display = 'none';
-    layoutImg4.style.display = 'none';
-
-    preferenceData.layout = supplierSize2.innerText;
-})
-supplierSize3.addEventListener('click', function(e){
-    e.preventDefault();
-    size3selected = true;
-    size1selected = false;
-    size2selected = false;
-    size4selected = false;
-    pricing.linear = '28';
-    pricing.cabinet = '13';
-    pricing.drawer = '7';
-    if (supplier1selected){
-        pricing.starting = '$11,500';
-    } else if (supplier2selected){
-        pricing.starting = '$12,500';
-    } else if (supplier3selected){
-        pricing.starting = '$17,300'
-    }
-    supplierCost.innerText = pricing.starting;
-    supplierFt.innerText = pricing.linear;
-    supplierCab.innerText = pricing.cabinet;
-    supplierDraw.innerText = pricing.drawer;
-    layoutDropText.innerText = supplierSize3.innerText;
-    document.querySelector('#dropdown-layout').classList.remove('w--open');
-
-    layoutImg1.style.display = 'none';
-    layoutImg2.style.display = 'none';
-    layoutImg3.style.display = 'block';
-    layoutImg4.style.display = 'none';
-
-    preferenceData.layout = supplierSize3.innerText;
-})
-supplierSize4.addEventListener('click', function(e){
-    e.preventDefault();
-    size4selected = true;
-    size1selected = false;
-    size2selected = false;
-    size3selected = false;
-    pricing.linear = '35';
-    pricing.cabinet = '16';
-    pricing.drawer = '12';
-    if (supplier1selected){
-        pricing.starting = '$14,400';
-    } else if (supplier2selected){
-        pricing.starting = '$16,000';
-    } else if (supplier3selected){
-        pricing.starting = '$22,300'
-    }
-    supplierCost.innerText = pricing.starting;
-    supplierFt.innerText = pricing.linear;
-    supplierCab.innerText = pricing.cabinet;
-    supplierDraw.innerText = pricing.drawer;
-    layoutDropText.innerText = supplierSize4.innerText;
-    document.querySelector('#dropdown-layout').classList.remove('w--open');
-
-    layoutImg1.style.display = 'none';
-    layoutImg2.style.display = 'none';
-    layoutImg3.style.display = 'none';
-    layoutImg4.style.display = 'block';
-
-    preferenceData.layout = supplierSize4.innerText;
-})
 
