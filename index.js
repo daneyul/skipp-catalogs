@@ -125,8 +125,6 @@ supplierVendor1.addEventListener('click', function(e){
         pricing.starting = '$14,400';
     }
     supplierCost.innerText = pricing.starting;
-    supplierDropText.innerText = supplierVendor1.innerText;
-    imgList.layout = supplierImg1.src;
     document.querySelector('#dropdown-supplier').classList.remove('w--open');
 
     preferenceData.supplier = supplierOpt1.innerText;
@@ -162,8 +160,6 @@ supplierVendor2.addEventListener('click', function(e){
         pricing.starting = '$16,000';
     }
     supplierCost.innerText = pricing.starting;
-    supplierDropText.innerText = supplierVendor2.innerText;
-    imgList.layout = supplierImg2.src;
     document.querySelector('#dropdown-supplier').classList.remove('w--open');
 
     preferenceData.supplier = supplierOpt2.innerText;
@@ -181,9 +177,6 @@ supplierVendor3.addEventListener('click', function(e){
     supplierBullet3.style.display = 'inline-block';
     supplierBullet2.style.display = 'none';
     supplierBullet1.style.display = 'none';
-    supplierImg1.style.display = 'none';
-    supplierImg2.style.display = 'none';
-    supplierImg3.style.display = 'inline-block';
 
     supplierVendor3.classList.add('door-opt-btn-pressed');
     supplierVendor2.classList.remove('door-opt-btn-pressed');
@@ -202,8 +195,6 @@ supplierVendor3.addEventListener('click', function(e){
         pricing.starting = '$22,300';
     }
     supplierCost.innerText = pricing.starting;
-    supplierDropText.innerText = supplierVendor3.innerText;
-    imgList.layout = supplierImg3.src;
     document.querySelector('#dropdown-supplier').classList.remove('w--open');
 
     preferenceData.supplier = supplierOpt3.innerText;
@@ -230,7 +221,6 @@ supplierSize1.addEventListener('click', function(e){
     supplierFt.innerText = pricing.linear;
     supplierCab.innerText = pricing.cabinet;
     supplierDraw.innerText = pricing.drawer;
-    document.querySelector('#dropdown-layout').classList.remove('w--open');
 
     layoutImg1.style.display = 'block';
     layoutImg2.style.display = 'none';
@@ -264,7 +254,6 @@ supplierSize2.addEventListener('click', function(e){
     supplierFt.innerText = pricing.linear;
     supplierCab.innerText = pricing.cabinet;
     supplierDraw.innerText = pricing.drawer;
-    document.querySelector('#dropdown-layout').classList.remove('w--open');
 
     layoutImg1.style.display = 'none';
     layoutImg2.style.display = 'block';
@@ -298,7 +287,6 @@ supplierSize3.addEventListener('click', function(e){
     supplierFt.innerText = pricing.linear;
     supplierCab.innerText = pricing.cabinet;
     supplierDraw.innerText = pricing.drawer;
-    document.querySelector('#dropdown-layout').classList.remove('w--open');
 
     layoutImg1.style.display = 'none';
     layoutImg2.style.display = 'none';
@@ -332,7 +320,6 @@ supplierSize4.addEventListener('click', function(e){
     supplierFt.innerText = pricing.linear;
     supplierCab.innerText = pricing.cabinet;
     supplierDraw.innerText = pricing.drawer;
-    document.querySelector('#dropdown-layout').classList.remove('w--open');
 
     layoutImg1.style.display = 'none';
     layoutImg2.style.display = 'none';
