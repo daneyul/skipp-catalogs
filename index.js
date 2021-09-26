@@ -85,7 +85,7 @@ let supplierBtn = document.querySelector('#supplier-add-btn');
 
 supplierBtn.addEventListener('click', function (e) {
     e.preventDefault();
-    supplierSel.src = imgList.layout;
+    supplierSel.srcset = imgList.layout;
     supplierSelected = true;
     saveClassChange();
 })
@@ -119,7 +119,6 @@ supplierVendor1.addEventListener('click', function(e){
         pricing.starting = '$14,400';
     }
     supplierCost.innerText = pricing.starting;
-    document.querySelector('#dropdown-supplier').classList.remove('w--open');
 
     preferenceData.supplier = supplierOpt1.innerText;
 })
@@ -153,7 +152,6 @@ supplierVendor2.addEventListener('click', function(e){
         pricing.starting = '$16,000';
     }
     supplierCost.innerText = pricing.starting;
-    document.querySelector('#dropdown-supplier').classList.remove('w--open');
 
     preferenceData.supplier = supplierOpt2.innerText;
 })
@@ -187,7 +185,6 @@ supplierVendor3.addEventListener('click', function(e){
         pricing.starting = '$22,300';
     }
     supplierCost.innerText = pricing.starting;
-    document.querySelector('#dropdown-supplier').classList.remove('w--open');
 
     preferenceData.supplier = supplierOpt3.innerText;
 })
