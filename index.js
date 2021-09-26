@@ -3,14 +3,14 @@ const urlParams = new URLSearchParams(queryString);
 const user = urlParams.get('userData');
 const redirect = urlParams.get('redirectUri');
 let preferenceData = {
-    designCatalog: '',
-    cabinetry: '',
-    cabinethw: '',
-    countertop: '',
-    backsplash: '',
-    flooring: '',
-    supplier: '',
-    layout: '',
+    designCatalog: document.querySelector('#design-title').innerText,
+    cabinetry: document.querySelector('#cabinetry-text-1').children[0].innerText,
+    cabinethw: document.querySelector('#cabinet-hw-text-1').children[0].innerText,
+    countertop: document.querySelector('#countertop-text-1').children[0].innerText,
+    backsplash: document.querySelector('#backsplash-text-1').children[0].innerText,
+    flooring: document.querySelector('#flooring-text-1').children[0].innerText,
+    supplier: document.querySelector('#supplier-option-1').innerText,
+    layout: document.querySelector('#supplier-size-1').innerText,
 }
 
 let imgList = {
@@ -24,9 +24,7 @@ let imgList = {
 
 function saveClassChange() {
 	if (cabinetrySelected && cabinethwSelected && countertopSelected && backsplashSelected && flooringSelected && supplierSelected) {
-        saveButton1.classList.add('save-pref-clicked');
         saveButton2.classList.add('save-pref2-clicked');
-        saveButton3.classList.add('save-pref-clicked');
     }
 }
 
@@ -128,7 +126,6 @@ supplierVendor1.addEventListener('click', function(e){
     document.querySelector('#dropdown-supplier').classList.remove('w--open');
 
     preferenceData.supplier = supplierOpt1.innerText;
-    imgList.layout = layoutImg1.children[0].src;
 })
 
 supplierVendor2.addEventListener('click', function(e){
@@ -163,7 +160,6 @@ supplierVendor2.addEventListener('click', function(e){
     document.querySelector('#dropdown-supplier').classList.remove('w--open');
 
     preferenceData.supplier = supplierOpt2.innerText;
-    imgList.layout = layoutImg2.children[0].src;
 })
 
 supplierVendor3.addEventListener('click', function(e){
@@ -198,7 +194,6 @@ supplierVendor3.addEventListener('click', function(e){
     document.querySelector('#dropdown-supplier').classList.remove('w--open');
 
     preferenceData.supplier = supplierOpt3.innerText;
-    imgList.layout = layoutImg3.children[0].src;
 })
 
 supplierSize1.addEventListener('click', function(e){
@@ -233,6 +228,7 @@ supplierSize1.addEventListener('click', function(e){
     supplierSize4.classList.remove('door-opt-btn-pressed');
 
     preferenceData.layout = supplierSize1.innerText;
+    imgList.layout = layoutImg1.children[0].src
 })
 supplierSize2.addEventListener('click', function(e){
     e.preventDefault();
@@ -266,6 +262,7 @@ supplierSize2.addEventListener('click', function(e){
     supplierSize4.classList.remove('door-opt-btn-pressed');
 
     preferenceData.layout = supplierSize2.innerText;
+    imgList.layout = layoutImg2.children[0].src
 })
 supplierSize3.addEventListener('click', function(e){
     e.preventDefault();
@@ -299,6 +296,7 @@ supplierSize3.addEventListener('click', function(e){
     supplierSize4.classList.remove('door-opt-btn-pressed');
 
     preferenceData.layout = supplierSize3.innerText;
+    imgList.layout = layoutImg3.children[0].src
 })
 supplierSize4.addEventListener('click', function(e){
     e.preventDefault();
@@ -332,6 +330,7 @@ supplierSize4.addEventListener('click', function(e){
     supplierSize4.classList.add('door-opt-btn-pressed');
 
     preferenceData.layout = supplierSize4.innerText;
+    imgList.layout = layoutImg4.children[0].src
 })
 
 //cabinetry section
