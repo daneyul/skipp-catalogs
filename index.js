@@ -9,7 +9,7 @@ let preferenceData = {
     countertop: document.querySelector('#countertop-text-1').children[0].innerText,
     backsplash: document.querySelector('#backsplash-text-1').children[0].innerText,
     flooring: document.querySelector('#flooring-text-1').children[0].innerText,
-    supplier: document.querySelector('#supplier-option-1').innerText,
+    supplier: document.querySelector('#supplier-vendor-1').innerText,
     layout: document.querySelector('#supplier-size-1').innerText,
 }
 
@@ -65,10 +65,6 @@ let supplierBullet3 = document.querySelector('#supplier-bullet-3');
 let supplierVendor1 = document.querySelector('#supplier-vendor-1');
 let supplierVendor2 = document.querySelector('#supplier-vendor-2');
 let supplierVendor3 = document.querySelector('#supplier-vendor-3');
-
-let supplierOpt1 = document.querySelector('#supplier-option-1')
-let supplierOpt2 = document.querySelector('#supplier-option-2')
-let supplierOpt3 = document.querySelector('#supplier-option-3')
 
 let supplierSize1 = document.querySelector('#supplier-size-1');
 let supplierSize2 = document.querySelector('#supplier-size-2');
