@@ -3,23 +3,23 @@ const urlParams = new URLSearchParams(queryString);
 const user = urlParams.get('userData');
 const redirect = urlParams.get('redirectUri');
 let preferenceData = {
-    designCatalog: '',
-    cabinetry: '',
-    cabinethw: '',
-    countertop: '',
-    backsplash: '',
-    flooring: '',
-    supplier: '',
-    layout: ''
+    designCatalog: document.querySelector('#design-title').innerText,
+    cabinetry: document.querySelector('#cabinetry-text-1').children[0].innerText,
+    cabinethw: document.querySelector('#cabinet-hw-text-1').children[0].innerText,
+    countertop: document.querySelector('#countertop-text-1').children[0].innerText,
+    backsplash: document.querySelector('#backsplash-text-1').children[0].innerText,
+    flooring: document.querySelector('#flooring-text-1').children[0].innerText,
+    supplier: document.querySelector('#supplier-vendor-1').innerText,
+    layout: document.querySelector('#supplier-size-1').innerText,
 }
 
 let imgList = {
-    cabinetry: '',
-    cabinethw: '',
-    countertop: '',
-    backsplash: '',
-    flooring: '',
-    supplier: ''
+    cabinetry: document.querySelector('#cabinetry-images-1').children[0].src,
+    cabinethw: document.querySelector('#cabinet-hw-images-1').children[0].src,
+    countertop: document.querySelector('#countertop-images-1').children[0].src,
+    backsplash: document.querySelector('#backsplash-images-1').children[0].src,
+    flooring: document.querySelector('#flooring-images-1').children[0].src,
+    supplier: document.querySelector('#supplier-image-1').src
 }
 
 function saveClassChange() {
@@ -89,7 +89,7 @@ let supplierBtn = document.querySelector('#supplier-add-btn');
 
 supplierBtn.addEventListener('click', function (e) {
     e.preventDefault();
-    supplierSel.srcset = imgList.layout;
+    supplierSel.srcset = imgList.supplier;
     supplierSelected = true;
     saveClassChange();
 })
@@ -124,7 +124,7 @@ supplierVendor1.addEventListener('click', function(e){
     }
     supplierCost.innerText = pricing.starting;
 
-    preferenceData.supplier = supplierOpt1.innerText;
+    preferenceData.supplier = supplierVendor1.innerText;
     imgList.supplier = supplierImage1.src
 })
 
@@ -158,7 +158,7 @@ supplierVendor2.addEventListener('click', function(e){
     }
     supplierCost.innerText = pricing.starting;
 
-    preferenceData.supplier = supplierOpt2.innerText;
+    preferenceData.supplier = supplierVendor2.innerText;
     imgList.supplier = supplierImage2.src
 })
 
@@ -192,7 +192,7 @@ supplierVendor3.addEventListener('click', function(e){
     }
     supplierCost.innerText = pricing.starting;
 
-    preferenceData.supplier = supplierOpt3.innerText;
+    preferenceData.supplier = supplierVendor3.innerText;
     imgList.supplier = supplierImage3.src
 })
 
