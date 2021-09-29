@@ -55,6 +55,7 @@ let supplierText1 = document.querySelector('#supplier-text-1');
 let supplierText2 = document.querySelector('#supplier-text-2');
 let supplierText3 = document.querySelector('#supplier-text-3');
 let supplierSel = document.querySelector('#supplier-select');
+let supplierSelText = document.querySelector('#supplier-sel-text')
 let supplierHeader1 = document.querySelector('#supplier-header-1');
 let supplierHeader2 = document.querySelector('#supplier-header-2');
 let supplierHeader3 = document.querySelector('#supplier-header-3');
@@ -90,6 +91,7 @@ let supplierBtn = document.querySelector('#supplier-add-btn');
 supplierBtn.addEventListener('click', function (e) {
     e.preventDefault();
     supplierSel.srcset = imgList.supplier;
+    supplierSelText.style.zIndex = "-1";
     supplierSelected = true;
     saveClassChange();
 })
