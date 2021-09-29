@@ -3,23 +3,23 @@ const urlParams = new URLSearchParams(queryString);
 const user = urlParams.get('userData');
 const redirect = urlParams.get('redirectUri');
 let preferenceData = {
-    designCatalog: document.querySelector('#design-title').innerText,
-    cabinetry: document.querySelector('#cabinetry-text-1').children[0].innerText,
-    cabinethw: document.querySelector('#cabinet-hw-text-1').children[0].innerText,
-    countertop: document.querySelector('#countertop-text-1').children[0].innerText,
-    backsplash: document.querySelector('#backsplash-text-1').children[0].innerText,
-    flooring: document.querySelector('#flooring-text-1').children[0].innerText,
-    supplier: document.querySelector('#supplier-vendor-1').innerText,
-    layout: document.querySelector('#supplier-size-1').innerText,
+    designCatalog: '',
+    cabinetry: '',
+    cabinethw: '',
+    countertop: '',
+    backsplash: '',
+    flooring: '',
+    supplier: '',
+    layout: ''
 }
 
 let imgList = {
-    cabinetry: document.querySelector('#cabinetry-images-1').children[0].src,
-    cabinethw: document.querySelector('#cabinet-hw-images-1').children[0].src,
-    countertop: document.querySelector('#countertop-images-1').children[0].src,
-    backsplash: document.querySelector('#backsplash-images-1').children[0].src,
-    flooring: document.querySelector('#flooring-images-1').children[0].src,
-    layout: document.querySelector('#layout-images-1').src,
+    cabinetry: '',
+    cabinethw: '',
+    countertop: '',
+    backsplash: '',
+    flooring: '',
+    supplier: ''
 }
 
 function saveClassChange() {
@@ -65,6 +65,10 @@ let supplierBullet3 = document.querySelector('#supplier-bullet-3');
 let supplierVendor1 = document.querySelector('#supplier-vendor-1');
 let supplierVendor2 = document.querySelector('#supplier-vendor-2');
 let supplierVendor3 = document.querySelector('#supplier-vendor-3');
+
+let supplierImage1 = document.querySelector('#supplier-image-1');
+let supplierImage2 = document.querySelector('#supplier-image-2');
+let supplierImage3 = document.querySelector('#supplier-image-3');
 
 let supplierSize1 = document.querySelector('#supplier-size-1');
 let supplierSize2 = document.querySelector('#supplier-size-2');
@@ -121,6 +125,7 @@ supplierVendor1.addEventListener('click', function(e){
     supplierCost.innerText = pricing.starting;
 
     preferenceData.supplier = supplierOpt1.innerText;
+    imgList.supplier = supplierImage1.src
 })
 
 supplierVendor2.addEventListener('click', function(e){
@@ -154,6 +159,7 @@ supplierVendor2.addEventListener('click', function(e){
     supplierCost.innerText = pricing.starting;
 
     preferenceData.supplier = supplierOpt2.innerText;
+    imgList.supplier = supplierImage2.src
 })
 
 supplierVendor3.addEventListener('click', function(e){
@@ -187,6 +193,7 @@ supplierVendor3.addEventListener('click', function(e){
     supplierCost.innerText = pricing.starting;
 
     preferenceData.supplier = supplierOpt3.innerText;
+    imgList.supplier = supplierImage3.src
 })
 
 supplierSize1.addEventListener('click', function(e){
@@ -358,14 +365,12 @@ let cabinetryBtn = document.querySelector('#cabinetry-add-btn');
 let cabinetryBtn2 = document.querySelector('#cabinetry-add-btn-2');
 
 cabinetryBtn.addEventListener('click', function (e) {
-    e.preventDefault();
     cabinetrySel.src = imgList.cabinetry;
     cabinetrySelText.style.zIndex = "-1";
     cabinetrySelected = true;
     saveClassChange();
 })
 cabinetryBtn2.addEventListener('click', function (e) {
-    e.preventDefault();
     cabinetrySel.src = imgList.cabinetry;
     cabinetrySelText.style.zIndex = "-1";
     cabinetrySelected = true;
