@@ -87,8 +87,16 @@ let layoutImg3 = document.querySelector('#layout-images-3');
 let layoutImg4 = document.querySelector('#layout-images-4');
 
 let supplierBtn = document.querySelector('#supplier-add-btn');
+let supplierBtn2 = document.querySelector('#supplier-add-btn-2');
 
 supplierBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    supplierSel.srcset = imgList.supplier;
+    supplierSelText.style.zIndex = "-1";
+    supplierSelected = true;
+    saveClassChange();
+})
+supplierBtn2.addEventListener('click', function (e) {
     e.preventDefault();
     supplierSel.srcset = imgList.supplier;
     supplierSelText.style.zIndex = "-1";
