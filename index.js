@@ -4,11 +4,11 @@ const user = urlParams.get('userData');
 const redirect = urlParams.get('redirectUri');
 let preferenceData = {
     designCatalog: document.querySelector('#design-title').innerText,
-    cabinetry: document.querySelector('#cabinetry-text-1').children[0].innerText,
-    cabinethw: document.querySelector('#cabinet-hw-text-1').children[0].innerText,
-    countertop: document.querySelector('#countertop-text-1').children[0].innerText,
-    backsplash: document.querySelector('#backsplash-text-1').children[0].innerText,
-    flooring: document.querySelector('#flooring-text-1').children[0].innerText,
+    cabinetry: document.querySelector('#cabinetry-header-1').innerText,
+    cabinethw: document.querySelector('#cabinet-hw-header-1').innerText,
+    countertop: document.querySelector('#countertop-header-1').innerText,
+    backsplash: document.querySelector('#backsplash-header-1').innerText,
+    flooring: document.querySelector('#flooring-header-1').innerText,
     supplier: document.querySelector('#supplier-vendor-1').innerText,
     layout: document.querySelector('#supplier-size-1').innerText,
 }
@@ -420,7 +420,7 @@ cabinetryColor1.addEventListener('click', function (e) {
     cabinetryColor5.style.border = 'none';
     cabinetryColor6.style.border = 'none';
 
-    preferenceData.cabinetry = cabinetryText1.children[0].innerText;
+    preferenceData.cabinetry = cabinetryHeader1.innerText;
     imgList.cabinetry = cabinetryImg1.children[0].src;
 })
 cabinetryColor2.addEventListener('click', function (e) {
@@ -604,7 +604,7 @@ cabinetryColor6.addEventListener('click', function (e) {
     cabinetryColor5.style.border = 'none';
     cabinetryColor6.style.border = '5px solid #26cbff';
 
-    preferenceData.cabinetry = cabinetryText6.children[0].innerText;
+    preferenceData.cabinetry = cabinetryHeader6.innerText;
     imgList.cabinetry = cabinetryImg6.children[0].src;
 })
 
@@ -687,7 +687,7 @@ cabinethwColor1.addEventListener('click', function (e) {
     cabinethwColor5.style.border = 'none';
     cabinethwColor6.style.border = 'none';
 
-    preferenceData.cabinethw = cabinethwText1.children[0].innerText;
+    preferenceData.cabinethw = cabinethwHeader1.innerText;
     imgList.cabinethw = cabinethwImg1.children[0].src
 })
 cabinethwColor2.addEventListener('click', function (e) {
@@ -723,7 +723,7 @@ cabinethwColor2.addEventListener('click', function (e) {
     cabinethwColor5.style.border = 'none';
     cabinethwColor6.style.border = 'none';
 
-    preferenceData.cabinethw = cabinethwText2.children[0].innerText;
+    preferenceData.cabinethw = cabinethwHeader2.innerText;
     imgList.cabinethw = cabinethwImg2.children[0].src
 })
 cabinethwColor3.addEventListener('click', function (e) {
@@ -759,7 +759,7 @@ cabinethwColor3.addEventListener('click', function (e) {
     cabinethwColor5.style.border = 'none';
     cabinethwColor6.style.border = 'none';
 
-    preferenceData.cabinethw = cabinethwText3.children[0].innerText;
+    preferenceData.cabinethw = cabinethwHeader3.innerText;
     imgList.cabinethw = cabinethwImg3.children[0].src
 })
 cabinethwColor4.addEventListener('click', function (e) {
@@ -795,7 +795,7 @@ cabinethwColor4.addEventListener('click', function (e) {
     cabinethwColor5.style.border = 'none';
     cabinethwColor6.style.border = 'none';
 
-    preferenceData.cabinethw = cabinethwText4.children[0].innerText;
+    preferenceData.cabinethw = cabinethwHeader4.innerText;
     imgList.cabinethw = cabinethwImg4.children[0].src
 })
 cabinethwColor5.addEventListener('click', function (e) {
@@ -831,7 +831,7 @@ cabinethwColor5.addEventListener('click', function (e) {
     cabinethwColor5.style.border = '5px solid #26cbff';
     cabinethwColor6.style.border = 'none';
 
-    preferenceData.cabinethw = cabinethwText5.children[0].innerText;
+    preferenceData.cabinethw = cabinethwHeader5.innerText;
     imgList.cabinethw = cabinethwImg5.children[0].src
 })
 cabinethwColor6.addEventListener('click', function (e) {
@@ -867,7 +867,7 @@ cabinethwColor6.addEventListener('click', function (e) {
     cabinethwColor5.style.border = 'none';
     cabinethwColor6.style.border = '5px solid #26cbff';
 
-    preferenceData.cabinethw = cabinethwText6.children[0].innerText;
+    preferenceData.cabinethw = cabinethwHeader6.innerText;
     imgList.cabinethw = cabinethwImg6.children[0].src
 })
 
@@ -950,7 +950,7 @@ countertopColor1.addEventListener('click', function (e) {
     countertopColor5.style.border = 'none';
     countertopColor6.style.border = 'none';
 
-    preferenceData.countertop = countertopText1.children[0].innerText;
+    preferenceData.countertop = countertopHeader1.innerText;
     imgList.countertop = countertopImg1.children[0].src
 })
 countertopColor2.addEventListener('click', function (e) {
@@ -986,7 +986,7 @@ countertopColor2.addEventListener('click', function (e) {
     countertopColor5.style.border = 'none';
     countertopColor6.style.border = 'none';
 
-    preferenceData.countertop = countertopText2.children[0].innerText;
+    preferenceData.countertop = countertopHeader2.innerText;
     imgList.countertop = countertopImg2.children[0].src
 })
 countertopColor3.addEventListener('click', function (e) {
@@ -1022,7 +1022,7 @@ countertopColor3.addEventListener('click', function (e) {
     countertopColor5.style.border = 'none';
     countertopColor6.style.border = 'none';
 
-    preferenceData.countertop = countertopText3.children[0].innerText;
+    preferenceData.countertop = countertopHeader3.innerText;
     imgList.countertop = countertopImg3.children[0].src
 })
 countertopColor4.addEventListener('click', function (e) {
@@ -1058,7 +1058,7 @@ countertopColor4.addEventListener('click', function (e) {
     countertopColor5.style.border = 'none';
     countertopColor6.style.border = 'none';
 
-    preferenceData.countertop = countertopText4.children[0].innerText;
+    preferenceData.countertop = countertopHeader4.innerText;
     imgList.countertop = countertopImg4.children[0].src
 })
 countertopColor5.addEventListener('click', function (e) {
@@ -1094,7 +1094,7 @@ countertopColor5.addEventListener('click', function (e) {
     countertopColor5.style.border = '5px solid #26cbff';
     countertopColor6.style.border = 'none';
 
-    preferenceData.countertop = countertopText5.children[0].innerText;
+    preferenceData.countertop = countertopHeader5.innerText;
     imgList.countertop = countertopImg5.children[0].src
 })
 countertopColor6.addEventListener('click', function (e) {
@@ -1130,7 +1130,7 @@ countertopColor6.addEventListener('click', function (e) {
     countertopColor5.style.border = 'none';
     countertopColor6.style.border = '5px solid #26cbff';
 
-    preferenceData.countertop = countertopText6.children[0].innerText;
+    preferenceData.countertop = countertopHeader6.innerText;
     imgList.countertop = countertopImg6.children[0].src
 })
 
@@ -1213,7 +1213,7 @@ backsplashColor1.addEventListener('click', function (e) {
     backsplashColor5.style.border = 'none';
     backsplashColor6.style.border = 'none';
 
-    preferenceData.backsplash = backsplashText1.children[0].innerText;
+    preferenceData.backsplash = backsplashHeader1.innerText;
     imgList.backsplash = backsplashImg1.children[0].src;
 })
 backsplashColor2.addEventListener('click', function (e) {
@@ -1249,7 +1249,7 @@ backsplashColor2.addEventListener('click', function (e) {
     backsplashColor5.style.border = 'none';
     backsplashColor6.style.border = 'none';
 
-    preferenceData.backsplash = backsplashText2.children[0].innerText;
+    preferenceData.backsplash = backsplashHeader2.innerText;
     imgList.backsplash = backsplashImg2.children[0].src;
 })
 backsplashColor3.addEventListener('click', function (e) {
@@ -1285,7 +1285,7 @@ backsplashColor3.addEventListener('click', function (e) {
     backsplashColor5.style.border = 'none';
     backsplashColor6.style.border = 'none';
 
-    preferenceData.backsplash = backsplashText3.children[0].innerText;
+    preferenceData.backsplash = backsplashHeader3.innerText;
     imgList.backsplash = backsplashImg3.children[0].src;
 })
 backsplashColor4.addEventListener('click', function (e) {
@@ -1321,7 +1321,7 @@ backsplashColor4.addEventListener('click', function (e) {
     backsplashColor5.style.border = 'none';
     backsplashColor6.style.border = 'none';
 
-    preferenceData.backsplash = backsplashText4.children[0].innerText;
+    preferenceData.backsplash = backsplashHeader4.innerText;
     imgList.backsplash = backsplashImg4.children[0].src;
 })
 backsplashColor5.addEventListener('click', function (e) {
@@ -1357,7 +1357,7 @@ backsplashColor5.addEventListener('click', function (e) {
     backsplashColor5.style.border = '5px solid #26cbff';
     backsplashColor6.style.border = 'none';
 
-    preferenceData.backsplash = backsplashText5.children[0].innerText;
+    preferenceData.backsplash = backsplashHeader5.innerText;
     imgList.backsplash = backsplashImg5.children[0].src;
 })
 backsplashColor6.addEventListener('click', function (e) {
@@ -1393,7 +1393,7 @@ backsplashColor6.addEventListener('click', function (e) {
     backsplashColor5.style.border = 'none';
     backsplashColor6.style.border = '5px solid #26cbff';
 
-    preferenceData.backsplash = backsplashText6.children[0].innerText;
+    preferenceData.backsplash = backsplashHeader6.innerText;
     imgList.backsplash = backsplashImg6.children[0].src;
 })
 
@@ -1449,7 +1449,7 @@ flooringColor1.addEventListener('click', function (e) {
     flooringColor2.style.border = 'none';
     flooringColor3.style.border = 'none';
 
-    preferenceData.flooring = flooringText1.children[0].innerText;
+    preferenceData.flooring = flooringHeader1.innerText;
     imgList.flooring = flooringImg1.children[0].src;
 })
 flooringColor2.addEventListener('click', function (e) {
@@ -1470,7 +1470,7 @@ flooringColor2.addEventListener('click', function (e) {
     flooringColor2.style.border = '5px solid #26cbff';
     flooringColor3.style.border = 'none';
 
-    preferenceData.flooring = flooringText2.children[0].innerText;
+    preferenceData.flooring = flooringHeader2.innerText;
     imgList.flooring = flooringImg2.children[0].src;
 })
 flooringColor3.addEventListener('click', function (e) {
@@ -1491,7 +1491,7 @@ flooringColor3.addEventListener('click', function (e) {
     flooringColor2.style.border = 'none';
     flooringColor3.style.border = '5px solid #26cbff';
 
-    preferenceData.flooring = flooringText3.children[0].innerText;
+    preferenceData.flooring = flooringHeader3.innerText;
     imgList.flooring = flooringImg3.children[0].src;
 }) 
 
