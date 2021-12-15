@@ -460,7 +460,7 @@ cabinetryColor2.addEventListener('click', function (e) {
     cabinetryColor5.style.border = 'none';
     cabinetryColor6.style.border = 'none';
     
-    preferenceData.cabinetry = cabinetryText2.children[0].innerText;
+    preferenceData.cabinetry = cabinetryHeader2.innerText;
     imgList.cabinetry = cabinetryImg2.children[0].src;
 })
 cabinetryColor3.addEventListener('click', function (e) {
@@ -496,7 +496,7 @@ cabinetryColor3.addEventListener('click', function (e) {
     cabinetryColor5.style.border = 'none';
     cabinetryColor6.style.border = 'none';
 
-    preferenceData.cabinetry = cabinetryText3.children[0].innerText;
+    preferenceData.cabinetry = cabinetryHeader3.innerText;
     imgList.cabinetry = cabinetryImg3.children[0].src;
 })
 cabinetryColor4.addEventListener('click', function (e) {
@@ -532,7 +532,7 @@ cabinetryColor4.addEventListener('click', function (e) {
     cabinetryColor5.style.border = 'none';
     cabinetryColor6.style.border = 'none';
 
-    preferenceData.cabinetry = cabinetryText4.children[0].innerText;
+    preferenceData.cabinetry = cabinetryHeader4.innerText;
     imgList.cabinetry = cabinetryImg4.children[0].src;
 })
 cabinetryColor5.addEventListener('click', function (e) {
@@ -568,7 +568,7 @@ cabinetryColor5.addEventListener('click', function (e) {
     cabinetryColor5.style.border = '5px solid #26cbff';
     cabinetryColor6.style.border = 'none';
 
-    preferenceData.cabinetry = cabinetryText5.children[0].innerText;
+    preferenceData.cabinetry = cabinetryHeader5.innerText;
     imgList.cabinetry = cabinetryImg5.children[0].src;
 })
 cabinetryColor6.addEventListener('click', function (e) {
