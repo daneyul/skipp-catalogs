@@ -8,3 +8,6 @@ This JS file is referenced in Webflow in the page settings of the `Catalog Templ
 ## Hosting
 This JS file is hosted on my personal npm account currently. To move it somewhere else, please create an npmjs.com account and publish this repo locally by running `npm publish` (you need to log into your npm account via npm on terminal). Whenever I make changes to this file, I edit the `package.json` file and bump the version up. Then, I publish it to npm and update the snippet's version on Webflow (go into the `Catalog Templates` page settings, find `<script src="https://cdn.jsdelivr.net/npm/skipp-catalog@9.9.0/index.js"></script>
 ` and bump up the `skipp-catalog@9.9.0` part to `skipp-catalog@9.9.1` or whatever you've changed the version to.
+
+## Code
+This code is very inefficient and lengthy. It is a bunch of query selectors finding tags on the page and adding/removing CSS styles.
